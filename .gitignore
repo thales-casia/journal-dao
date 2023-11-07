@@ -6,4 +6,7 @@
 
 *.bkp
 *.dtmp
+
+*.bbl
+*.blg
 /opt
