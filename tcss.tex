@@ -86,8 +86,6 @@ DAO(Decentralized Autonomous Organization) is an organizational structure that o
 %DAO是一种组织形式，它基于区块链技术，旨在实现自动化决策和运营，无需传统的中央管理。DAO的决策是通过代币持有者的投票进行的，规则和流程是由智能合同编码的，而不是由中央管理机构。这种自动化的方式可以提高透明度、减少信任成本，并为社区参与提供平等的机会。
 
 
-%本文着重讲DAO让论文彻底有了归属权，论文创造的任何价值都可以直接跟作者绑定。
-
 \textbf{Application of DAO in Article and Journal:}
 
 \begin{itemize}
@@ -120,29 +118,46 @@ DAO(Decentralized Autonomous Organization) is an organizational structure that o
 These application examples highlight the potential value of blockchain, smart contracts, and DAO technology in academic publishing and journal management. They enhance transparency, protect intellectual property, verify identity, automate processes, and encourage collaboration. As these technologies continue to evolve, they hold promise for further innovation and efficiency in academia.
 %这些应用示例突显了区块链、智能合约和DAO技术在学术出版和杂志管理方面的潜在应用，提高了透明度、知识产权保护、身份验证和自动化审稿流程。随着这些技术的不断发展，它们将有望为学术界提供更多的创新和效率。
 
+This paper emphasizes the transformative impact of DAOs in establishing an explicit ownership of academic research papers by their authors. DAOs empower authors to retain complete control over their works, ensuring that any value generated from these papers is intrinsically linked to the original creators. Through the implementation of DAO, this paper explores the means by which academic papers can be securely attributed to their authors, facilitating a transparent and impartial relationship between the authors and the intellectual assets they produce.
+%本文强调了 DAO 在建立作者对其学术研究论文的明确所有权方面的变革性影响。 DAO 使作者能够保留对其作品的完全控制，确保这些论文产生的任何价值都与原始创作者有着内在的联系。通过实施DAO，本文探讨了学术论文可以安全地归属于作者的方法，促进作者与其产生的知识资产之间建立透明和公平的关系
 
-DAOs have several advantages over traditional organizations, such as:
+\section{Ownership of Research Data}
 
-\begin{itemize}
-\item{Lower costs: DAOs eliminate the need for intermediaries, lawyers, accountants, or managers, reducing the overhead and bureaucracy involved in running an organization.}
-\item{Higher efficiency: DAOs enable faster and more accurate decision-making, as well as automated execution of tasks and transactions.}
-\item{Greater innovation: DAOs foster a culture of experimentation and creativity, as anyone can propose and contribute to new ideas or initiatives.}
-\item{Enhanced security: DAOs are protected by cryptography and consensus mechanisms, making them immune to hacking, fraud, or manipulation.}
-\item{Increased inclusivity: DAOs are open and accessible to anyone who shares the vision and values of the organization, regardless of their location, background, or status.}
-\end{itemize}
+This chapter delves into the intricate matter of research data ownership. In the realm of academic research, the question of who possesses, controls, and manages research data is of paramount importance, involving researchers, academic institutions, publishers, and various stakeholders within society. This chapter explores how data ownership impacts academic research, knowledge dissemination, and scientific collaboration. We examine the legal and policy landscape surrounding data ownership in different fields and countries, as well as the management, sharing, and protection of research data. We also investigate existing data-sharing models and open-access policies and their potential effects on the academic community and knowledge innovation. By delving into the issue of research data ownership, we gain a deeper understanding of the challenges and opportunities in today's academic environment, offering new perspectives for future research and collaboration.
+%本章将深入探讨论文数据的所有权问题。在学术研究领域，谁拥有、控制和管理研究数据是一个关键议题，涉及到研究人员、学术机构、出版商和社会的各个利益相关方。我们将探讨数据的所有权如何影响学术研究、知识传播和科学合作。此章将考察不同领域和国家对论文数据所有权的法律和政策，以及如何管理、分享和保护研究数据。我们还将研究现有的数据共享模式和开放获取政策，以及它们对学术社区和知识创新的潜在影响。通过深入研究论文数据的所有权问题，我们将更好地理解当前学术环境中的挑战和机遇，为未来的研究和合作提供新的思考。
 
-DAOs are not without challenges, however. Some of the main challenges include:
+From a physical perspective, the data of articles is stored in the database of the journal website (Look at Figure \ref{fig:journalsite}). When regular users access the journal website, they can browse and download articles of interest. The interaction between users and the journal website typically involves the following steps:
+%从物理层出发，期刊网站的数据库是文章数据的关键存储点。这些数据库通常位于服务器上，这些服务器可以分布在数据中心或云服务提供商的设施中。当普通用户访问期刊网站时，他们可以通过网络连接访问这些数据库以浏览和下载感兴趣的论文。
 
-\begin{itemize}
-\item{Legal uncertainty: DAOs operate in a gray area of the law, as they do not fit into existing legal frameworks or jurisdictions. This creates risks and liabilities for the participants and the beneficiaries of the DAO.}
-\item{Ethical dilemmas: DAOs may face ethical issues or conflicts of interest, as they may not align with the moral values or social norms of the wider society.}
-\item{Technical complexity: DAOs rely on complex and experimental technologies, such as blockchain and smart contracts, which may have bugs, vulnerabilities, or unforeseen consequences.}
-\item{Governance issues: DAOs may struggle to achieve consensus, resolve disputes, or adapt to changing circumstances, as they lack a clear leadership or authority structure.}
-\end{itemize}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=3in]{assets/journalsite.png}
+  \label{fig:journalsite}
+  \caption{Article in Database}
+\end{figure}
 
+When an article is uploaded to a blockchain(Look at Figure \ref{fig:journalchain}), its content, timestamp, and relevant metadata are all recorded on the blockchain. This means that anyone can verify the existence, content, and timestamp of the article. This provides a high level of assurance for the immutability and transparency of documents, particularly with potential significance in research, intellectual property protection, and copyright. Uploading articles to the blockchain also enables decentralized data storage, reducing reliance on centralized institutions. This offers a more open and trustworthy means of data sharing for the academic community and other domains.
+%当一篇文章被上链到区块链中，它的内容、时间戳以及相关的元数据都会被记录在区块链上。这意味着任何人都可以验证这篇文章的存在、内容和时间。这为文献的不可篡改性和透明性提供了极高的保障，尤其在科研、知识产权保护和版权方面具有潜在的重要应用。上链文章还可以实现去中心化的数据存储，减少对中央化机构的依赖。这为学术界和其他领域提供了更开放和可信的数据共享方式。
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=3in]{assets/journalchain.png}
+  \label{fig:journalchain}
+  \caption{Article in Blockchain}
+\end{figure}
+
+Uploading an article to a blockchain, as compared to storing it in a traditional database, provides the author with a clear and objective ownership of the article. In a traditional database, the ownership of the data and the integrity of the database are controlled by the entity or organization managing the database. Authors and other stakeholders may not have direct control or visibility into the ownership and usage of the data.
+%将文章上传至区块链，与将其存储在传统数据库中相比，可以让作者更明确且客观地拥有文章。在传统数据库中，数据的所有权和数据库的完整性由管理数据库的实体或组织控制。作者和其他利益相关方可能无法直接控制或了解数据的所有权和使用情况。
+
+On the other hand, when an article is uploaded to a blockchain, the author can have greater confidence in their ownership and control over the article. The blockchain's decentralized and immutable nature ensures that the ownership records are transparent, tamper-resistant, and not under the sole control of a centralized authority. This empowers authors to have a direct and verifiable claim to their work, which can be particularly important for intellectual property protection, copyright, and ensuring that the author's rights are respected.
+%另一方面，当文章上传至区块链时，作者可以更有信心地拥有和控制文章。区块链的去中心化和不可篡改性确保了所有权记录的透明性、防篡改性，并不受中心化权威的独立控制。这使作者能够直接并且可验证地主张他们的作品，这对于知识产权保护、版权以及确保作者的权利得到尊重尤为重要。
+
+In summary, using a blockchain for article storage offers authors a more objective and transparent means of claiming ownership of their work compared to traditional database systems.
+%总之，使用区块链进行文章存储相对于传统数据库系统，为作者提供了更客观和透明的方式来主张他们的作品所有权
 
 \section{Author Finance from Journal}
 
+% 电子期刊以来，网站作为论文的载体，用户的论文虽然属于自己，但是杂志用论文创造的财富往往属于杂志，并不属于作者。
 
 App that enables users to download papers and make money could be designed:
 
@@ -253,20 +268,39 @@ Defi deduced is a term that could be used to describe the process of applying de
 
 
 \section{Conclusion}
-The conclusion goes here.
 
 
-\section*{Acknowledgments}
-This should be a simple paragraph before the References to thank those individuals and institutions who have supported your work on this article.
+DAOs have several advantages over traditional organizations, such as:
+
+\begin{itemize}
+\item{Lower costs: DAOs eliminate the need for intermediaries, lawyers, accountants, or managers, reducing the overhead and bureaucracy involved in running an organization.}
+\item{Higher efficiency: DAOs enable faster and more accurate decision-making, as well as automated execution of tasks and transactions.}
+\item{Greater innovation: DAOs foster a culture of experimentation and creativity, as anyone can propose and contribute to new ideas or initiatives.}
+\item{Enhanced security: DAOs are protected by cryptography and consensus mechanisms, making them immune to hacking, fraud, or manipulation.}
+\item{Increased inclusivity: DAOs are open and accessible to anyone who shares the vision and values of the organization, regardless of their location, background, or status.}
+\end{itemize}
+
+DAOs are not without challenges, however. Some of the main challenges include:
+
+\begin{itemize}
+\item{Legal uncertainty: DAOs operate in a gray area of the law, as they do not fit into existing legal frameworks or jurisdictions. This creates risks and liabilities for the participants and the beneficiaries of the DAO.}
+\item{Ethical dilemmas: DAOs may face ethical issues or conflicts of interest, as they may not align with the moral values or social norms of the wider society.}
+\item{Technical complexity: DAOs rely on complex and experimental technologies, such as blockchain and smart contracts, which may have bugs, vulnerabilities, or unforeseen consequences.}
+\item{Governance issues: DAOs may struggle to achieve consensus, resolve disputes, or adapt to changing circumstances, as they lack a clear leadership or authority structure.}
+\end{itemize}
+
+
+% \section*{Acknowledgments}
+% This should be a simple paragraph before the References to thank those individuals and institutions who have supported your work on this article.
 
 
 
-{\appendix[Proof of the Zonklar Equations]
-Use $\backslash${\tt{appendix}} if you have a single appendix:
-Do not use $\backslash${\tt{section}} anymore after $\backslash${\tt{appendix}}, only $\backslash${\tt{section*}}.
-If you have multiple appendixes use $\backslash${\tt{appendices}} then use $\backslash${\tt{section}} to start each appendix.
-You must declare a $\backslash${\tt{section}} before using any $\backslash${\tt{subsection}} or using $\backslash${\tt{label}} ($\backslash${\tt{appendices}} by itself
- starts a section numbered zero.)}
+% {\appendix[Proof of the Zonklar Equations]
+% Use $\backslash${\tt{appendix}} if you have a single appendix:
+% Do not use $\backslash${\tt{section}} anymore after $\backslash${\tt{appendix}}, only $\backslash${\tt{section*}}.
+% If you have multiple appendixes use $\backslash${\tt{appendices}} then use $\backslash${\tt{section}} to start each appendix.
+% You must declare a $\backslash${\tt{section}} before using any $\backslash${\tt{subsection}} or using $\backslash${\tt{label}} ($\backslash${\tt{appendices}} by itself
+%  starts a section numbered zero.)}
 
 
 
