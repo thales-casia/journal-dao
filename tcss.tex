@@ -15,7 +15,7 @@
 
 \begin{document}
 
-\title{Journal DAO}
+\title{Journal DAO: A New Framework for Ownership of Author in Web 3.0}
 
 \author{Tai Jiang,~\IEEEmembership{Follow,~IEEE,}
         % <-this % stops a space
@@ -126,8 +126,11 @@ This paper emphasizes the transformative impact of DAOs in establishing an expli
 This chapter delves into the intricate matter of research data ownership. In the realm of academic research, the question of who possesses, controls, and manages research data is of paramount importance, involving researchers, academic institutions, publishers, and various stakeholders within society. This chapter explores how data ownership impacts academic research, knowledge dissemination, and scientific collaboration. We examine the legal and policy landscape surrounding data ownership in different fields and countries, as well as the management, sharing, and protection of research data. We also investigate existing data-sharing models and open-access policies and their potential effects on the academic community and knowledge innovation. By delving into the issue of research data ownership, we gain a deeper understanding of the challenges and opportunities in today's academic environment, offering new perspectives for future research and collaboration.
 %本章将深入探讨论文数据的所有权问题。在学术研究领域，谁拥有、控制和管理研究数据是一个关键议题，涉及到研究人员、学术机构、出版商和社会的各个利益相关方。我们将探讨数据的所有权如何影响学术研究、知识传播和科学合作。此章将考察不同领域和国家对论文数据所有权的法律和政策，以及如何管理、分享和保护研究数据。我们还将研究现有的数据共享模式和开放获取政策，以及它们对学术社区和知识创新的潜在影响。通过深入研究论文数据的所有权问题，我们将更好地理解当前学术环境中的挑战和机遇，为未来的研究和合作提供新的思考。
 
-From a physical perspective, the data of articles is stored in the database of the journal website (Look at Figure \ref{fig:journalsite}). When regular users access the journal website, they can browse and download articles of interest. The interaction between users and the journal website typically involves the following steps:
+
+From a physical perspective, the data of articles is stored in the database of the journal website (Look at Figure \ref{fig:journalsite}). When regular users access the journal website, they can browse and download articles of interest. The interaction between users and the journal website typically involves the following steps.
 %从物理层出发，期刊网站的数据库是文章数据的关键存储点。这些数据库通常位于服务器上，这些服务器可以分布在数据中心或云服务提供商的设施中。当普通用户访问期刊网站时，他们可以通过网络连接访问这些数据库以浏览和下载感兴趣的论文。
+
+
 
 \begin{figure}[h]
   \centering
@@ -152,12 +155,53 @@ Uploading an article to a blockchain, as compared to storing it in a traditional
 On the other hand, when an article is uploaded to a blockchain, the author can have greater confidence in their ownership and control over the article. The blockchain's decentralized and immutable nature ensures that the ownership records are transparent, tamper-resistant, and not under the sole control of a centralized authority. This empowers authors to have a direct and verifiable claim to their work, which can be particularly important for intellectual property protection, copyright, and ensuring that the author's rights are respected.
 %另一方面，当文章上传至区块链时，作者可以更有信心地拥有和控制文章。区块链的去中心化和不可篡改性确保了所有权记录的透明性、防篡改性，并不受中心化权威的独立控制。这使作者能够直接并且可验证地主张他们的作品，这对于知识产权保护、版权以及确保作者的权利得到尊重尤为重要。
 
-In summary, using a blockchain for article storage offers authors a more objective and transparent means of claiming ownership of their work compared to traditional database systems.
-%总之，使用区块链进行文章存储相对于传统数据库系统，为作者提供了更客观和透明的方式来主张他们的作品所有权
+
+
+\textbf{Compared with traditional journals, articles on the chain belong entirely to the author.}
+%相比于传统期刊，链上的文章完全属于作者。
+
+
+\paragraph{Traditional Databases}
+%传统数据库:
+
+Traditional databases are typically controlled by a central entity or organization, with database administrators responsible for management and access control. This centralization may result in less transparent ownership.
+%传统数据库通常由中央机构或组织控制，数据库管理员负责管理和授予访问权限。这可能导致数据的所有权不够透明。
+
+Access to and modification of data in traditional databases often depend on access controls set by database administrators. This can lead to disputes or lack of transparency regarding data access.
+%数据的访问和修改通常依赖于数据库管理员设置的访问控制。这可能导致对数据访问权限的争议或不透明性。
+
+Data in traditional databases can be relatively easily modified or deleted. This may raise concerns about data security and integrity, especially in cases where intellectual property protection is crucial.
+%传统数据库中的数据可以相对容易地被修改或删除。这可能引发数据安全性和完整性的问题，尤其是在需要保护知识产权时。
+
+Ownership and control of data are typically centralized with the database administrator. This centralization introduces a single point of control over data usage, increasing the risk of misuse or improper handling.
+%数据的所有权和控制通常集中在数据库的管理者手中。这可能导致对数据使用的单一控制点，增加了数据被滥用或不当处理的风险。
+
+\paragraph{Blockchain}
+%区块链:
+
+Every transaction on the blockchain has a clear timestamp, documenting the transfer of ownership. This provides authors with a transparent, immutable record of ownership. Authors can trace ownership back to each stage of the data's lifecycle.
+%区块链上的每个交易都有明确的时间戳，记录了数据的所有权转移。这为作者提供了清晰、透明且不可篡改的所有权记录。作者可以追溯到每个阶段数据的所有者。
+
+Blockchain utilizes smart contracts to define and enforce data access permissions. This allows dynamic adjustments of data access rights based on different conditions, such as paid access or specific usage licenses.
+%区块链可以使用智能合约来定义和执行数据的使用权限。这使得在不同的条件下，如付费访问或特定使用许可下，可以动态地调整数据的访问权限。
+
+Blockchain is decentralized, with data stored across multiple nodes in the network. This ensures that no single central entity can unilaterally control ownership, enhancing data security and tamper resistance.
+%区块链是去中心化的，数据存储在网络的多个节点上。这意味着没有单一的中央机构能够单方面控制数据的所有权，增加了数据的安全性和防篡改性。
+
+Once data is written to the blockchain, it is nearly impossible to modify or delete. This ensures the immutability of data, providing robust protection for the author's rights.
+% 一旦数据被写入区块链，几乎不可能对其进行修改或删除。这确保了数据的不可篡改性，作者的权利得到了更强有力的保护。
+
+In summary, blockchain offers a more transparent, immutable, and decentralized ownership mechanism, providing stronger protection for authors' intellectual property and data rights. This is particularly advantageous in scenarios where emphasis is placed on data security, traceability, and transparency.using a blockchain for article storage offers authors a more objective and transparent means of claiming ownership of their work compared to traditional database systems.
+%综合而言，区块链提供了更为透明、不可篡改、去中心化的拥有权机制，更好地保护了作者的知识产权和数据权益。这对于需要强调数据的安全性、可追溯性和透明性的应用场景非常有利。使用区块链进行文章存储相对于传统数据库系统，为作者提供了更客观和透明的方式来主张他们的作品所有权
 
 \section{Author Finance from Journal}
 
-% 电子期刊以来，网站作为论文的载体，用户的论文虽然属于自己，但是杂志用论文创造的财富往往属于杂志，并不属于作者。
+
+In the evolution of electronic journals, websites have become the primary medium for disseminating research papers. Although the content of users' papers remains the intellectual property of the authors, the wealth generated by journals through these papers often belongs predominantly to the journals rather than the authors.
+%在电子期刊的发展历程中，论文的载体逐渐从传统的印刷版本过渡到了数字化的网站形式。尽管用户的论文内容仍然属于作者的创作成果，然而，由于现行模式下，杂志通过论文创造的财富往往主要归属于杂志自身，而非作者。
+
+In our hypothetical scenario, we contemplate a shift in this paradigm, envisioning a system where a certain proportion of the generated wealth is allocated back to the authors. Taking paid downloads as a simple example, this mechanism aims to provide authors with a more direct economic incentive. Such a transformation not only has the potential to enhance authors' motivation and creativity but also holds the promise of establishing a more equitable wealth distribution system. This envisioned change could contribute to fostering a sustainable and mutually beneficial development model in the realm of electronic journals, addressing the balance of interests between authors and journals more effectively.
+% 在当前设想下，我们可以假设一种改进模式，即按照一定比例将创造的财富回馈给作者。以付费下载为例，这一机制可以为作者提供更直接的经济回报。这种变革不仅有助于激发作者的积极性和创作动力，同时也有望促进更公正的财富分配体系的建立。这样的改变有望在电子期刊领域引入更加可持续和互惠的发展模式，从而更好地满足作者和杂志之间的利益平衡。
 
 App that enables users to download papers and make money could be designed:
 
