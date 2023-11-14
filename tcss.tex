@@ -33,47 +33,33 @@
 \maketitle
 
 \begin{abstract}
-Ownership is The most important thing about web 3.0. Using blockchain technology, it is possible to make a paper objectively belong to its author. In the era of centralization, "trust" in an organization is required to complete cooperation, whether it is mutual or intermediary. But decentralized smart contracts allow all collaboration to exist objectively without the need for "trust". Once a paper is published successfully, it is uploaded to the chain using smart contracts. Later, the paper nominally belongs to the author, but actually exists in the database of a website, and once value is created it basically belongs to that website as well. In the framework of decentralized science, the paper no longer exists in the database of a website, but the website goes to map this paper. Each paper creates a decentralized organization that gives a token to the author, the journal, and other interested parties, and once the paper has created value, it is distributed to all holders according to the token. Through the implementation of blockchain technology to host academic papers, the concept of ownership is revolutionized, granting authors absolute control over their intellectual property while simultaneously fostering diverse financial opportunities. The autonomous nature of DAOs empowers users to actively participate in decision-making processes, establishing an ecosystem characterized by openness, fairness, and positive feedback loops.
-% 所有权是 Web 3.0 最重要的事情。利用区块链技术，可以使一篇论文客观上属于其作者。在中心化时代，无论是相互的还是中介的，都需要对组织的“信任”才能完成合作。但去中心化的智能合约让所有协作客观存在，而不需要“信任”。一旦论文成功发表，就会使用智能合约上传到链上。后来，这篇论文名义上属于作者，但实际上存在于某个网站的数据库中，一旦创造了价值，基本上也属于该网站。在去中心化科学的框架下，论文不再存在于网站的数据库中，而是网站去映射这篇论文。每篇论文都会创建一个去中心化的组织，该组织向作者、期刊和其他利益相关方提供代币，一旦论文创造了价值，就会根据代币分配给所有持有者。通过实施区块链技术来托管学术论文，所有权的概念发生了革命性的变化，赋予作者对其知识产权的绝对控制权，同时培育多样化的金融机会。 DAO 的自主性使用户能够积极参与决策过程，建立一个开放、公平、正反馈循环的生态系统。
+The advent of Web3.0 signifies a notable evolution in the Internet landscape, emphasizing decentralization, openness, and user control over data. This paper begins by delineating the key characteristics of Web3.0, including a decentralized network architecture, the application of smart contracts, and the protection of data privacy.Against the backdrop of blockchain technology, leveraging the immutability and transparency of blockchain, the paper discusses how it can facilitate the authenticity, security, and traceability of paper data, providing a new perspective on ownership and governance.Lastly, the paper proposes the structure of a decentralized autonomous organization (DAO) and discusses its potential applications in resolving ownership and governance issues. Through the DAO framework, a more just, transparent, and open organizational structure can be realized, bringing new governance models to the academic research domain. This structure underscores more equitable stakeholder participation, fostering the collaborative development of the academic community.By comprehensively examining Web3.0, blockchain applications, ownership issues, and the structure of DAO, this paper aims to provide insights for future research directions and innovative applications in the academic and technological communities.
+
+
+%Web3.0的兴起标志着互联网的进一步演进，强调了去中心化、开放性和用户数据的掌控权。本文首先介绍了Web3.0的主要特点，包括去中心化的网络架构、智能合约的应用、数据隐私的保护等方面。在区块链技术的背景下，通过区块链的不可篡改性和透明性，可以实现论文数据的真实、安全和可追溯，为所有权和治理提供了新的观点。最后，本文提出了去中心化组织（DAO）的结构，探讨了其在解决所有权和治理方面的潜在应用。通过DAO的框架，可以实现更加公正、透明和开放的组织结构，为学术研究领域带来新的治理模式。这一结构强调了利益相关者之间更平等的参与，促进了学术社区的共同发展。通过对Web3.0、区块链应用、所有权问题以及去中心化组织结构的综合探讨，本文旨在为学术界和科技社区提供对于未来研究方向和创新应用的启示。
 \end{abstract}
+
 
 \begin{IEEEkeywords}
 DAO, smart contract, decentralized autonomous organizations, decentralized funding, decentralized science, DeSci, parallel DeSci, Web3
 \end{IEEEkeywords}
 
 \section{Introduction}
-\IEEEPARstart{A}{cademic} publication methods have undergone significant historical transformations, reflecting the evolution of technology, society, and culture.Key trends in the historical evolution of author research publication methods are examined in the flowing.
-%学术论文的发表方式在历史上发生了显著的变迁，反映了技术、社会和文化的演进。以下是有关作者发表论文方式的历史变迁的一些主要趋势：
-\begin{enumerate}
-  \item \textbf{Manuscript Handwriting:} In ancient times, scholars meticulously handwrote academic papers, often by themselves or with the assistance of scribes. These handwritten manuscripts were highly prized and scarce.
-  %传统手写和手抄本： 在古代，学术论文通常是手写的，研究者会亲自制作抄本，或者雇佣抄写员来制作。这些手抄本通常是极为珍贵和稀缺的。
-  
-  \item \textbf{Printing Press Introduction:} The 15th-century Renaissance saw a revolutionary shift with the introduction of the printing press, enabling the mass production and distribution of research, greatly enhancing knowledge accessibility \cite{febvre1997coming}.
-  %印刷术的出现： 文艺复兴时期（15世纪）的印刷术革命彻底改变了学术发表的方式。现在，研究者可以使用印刷机来大规模复制和传播他们的研究成果，使知识更容易传播。
+%把列表合并一下
 
-  \item \textbf{Academic Journals Emergence:} The late 17th and early 18th centuries marked the rise of academic journals as structured platforms for research dissemination, facilitating the organization and categorization of research findings \cite{willinsky2006access}.
-  %学术期刊的兴起： 17世纪末至18世纪初，学术期刊开始兴起，成为学术研究的主要发布渠道。期刊提供了一种有组织的方式，将研究成果分类和发布。
+\IEEEPARstart{A}{cademic} publication methods have undergone significant historical transformations, reflecting the evolution of technology, society, and culture.Traditional scholarly journals, rooted in print formats and centralized editorial processes, have long been the primary medium for disseminating research findings \cite{febvre1997coming}. However, the digital age has brought about profound changes, challenging the conventional models and paving the way for innovative solutions \cite{meadows1997communicating}. This paper delves into the historical trajectory of academic journals, highlighting key milestones and contextualizing the current paradigm shift towards blockchain technology.
+%学术论文的发表方式在历史上发生了显著的变迁，反映了技术、社会和文化的演进。传统的学术期刊，根植于印刷格式和中心化编辑流程，长期以来一直是传播研究成果的主要媒介。然而，数字时代带来了深刻的变革，挑战传统模式，为创新性解决方案铺平了道路。本文深入探讨学术期刊的历史轨迹，突显关键里程碑，并详细阐述当前朝着区块链技术过渡的背景。
 
-  \item \textbf{Peer Review Inclusion:} The early 20th century brought the prominence of peer review, necessitating expert evaluation of research papers to ensure quality and credibility.
-  %同行评审的引入： 20世纪初，同行评审机制开始普及，研究论文需要经过专家同行评审才能被接受发表。这一机制旨在确保研究的质量和可信度。
+The early days of academic publishing were marked by the establishment of prestigious print journals, serving as repositories of scholarly knowledge. These publications played a crucial role in shaping academic discourse, but their centralized nature often led to challenges such as delayed dissemination and limited accessibility. With the advent of the internet, electronic journals emerged, offering faster dissemination and broader reach, yet grappling with issues of copyright, authenticity, and peer review integrity.
+%学术出版的早期以建立声望卓著的印刷期刊为特征，这些期刊作为学术知识的存储库发挥着至关重要的作用。这些出版物在塑造学术话语方面发挥了关键作用，但由于其中心化的特性，往往面临着信息传播延迟和获取受限等挑战。随着互联网的出现，电子期刊应运而生，提供了更快的传播速度和更广泛的覆盖面，但同时也面临着版权、真实性和同行评审完整性等问题。
 
-  \item \textbf{Electronic Journals and Digital Publishing:} The late 20th and early 21st centuries witnessed the transition to electronic journals, providing researchers with online access to publish their papers, significantly increasing research output accessibility and searchability \cite{meadows1997communicating}.
-  %电子期刊和数字化发表： 20世纪末至21世纪初，随着互联网的普及，学术期刊逐渐提供了电子版本，研究者可以在线访问和发表论文。数字化发表大大提高了研究成果的可访问性和可搜索性。
+In recent years, the emergence of blockchain technology has presented a transformative opportunity for the academic publishing landscape. Blockchain, with its decentralized and immutable ledger, addresses several longstanding challenges \cite{swan2015blockchain}. The transition to blockchain-based academic journals holds the promise of enhancing transparency, traceability, and security in scholarly communication.
+%近年来，区块链技术的出现为学术出版领域带来了深刻的变革机遇。区块链凭借其去中心化和不可篡改的账本，解决了多项长期存在的问题。向基于区块链的学术期刊过渡有望提升学术交流的透明性、可追溯性和安全性。
 
-  \item \textbf{Open Access Proliferation:} In the 21st century, the open access movement gained momentum, advocating for free public access to research. Open-access journals \cite{swan2012policy} and repositories became more prevalent, promoting knowledge sharing.
-  %开放获取运动： 21世纪，开放获取（Open Access）运动兴起，鼓励将研究成果免费对公众开放。开放获取期刊和存档逐渐增多，以提高知识的共享和传播。
 
-  \item \textbf{Preprints Introduction:} Various fields began adopting preprint platforms in which researchers could share their findings before undergoing formal peer review, accelerating research results dissemination.
-  % 预印本（Preprints）： 一些领域开始采用预印本平台，研究者可以在正式同行评审之前分享他们的研究成果。这缩短了发表过程的时间。
 
-  \item \textbf{Academic Social Media and Blog Utilization:} Scholars increasingly turned to academic social media platforms and blogs to share their research findings, insights, and discussions, expanding their reach and impact.
-  %学术社交媒体和博客： 研究者越来越倾向于使用学术社交媒体平台和博客来分享他们的研究成果、见解和讨论，从而扩大了影响力。
 
-  \item \textbf{Blockchain Technology Integration:} Blockchain technology has recently entered academic publishing, offering a decentralized, transparent, and trustworthy publication method, addressing certain traditional publishing challenges \cite{swan2015blockchain} \cite{mougayar2016business}.
-  %区块链技术的应用： 区块链技术开始在学术出版领域崭露头角，提供了一种去中心化、透明和可信的发表方式，以解决一些传统出版领域的问题。
-\end{enumerate}
-
-This timeline sheds light on the dynamic evolution of research publication methods, continually adapting to new technologies and societal trends. The future of academic publishing is expected to witness further transformations, including expanded open access, increased peer review transparency, enhanced international collaboration, and interdisciplinary research integration. These trends are poised to shape the future of research dissemination.
+This paper sheds light on the dynamic evolution of research publication methods, continually adapting to new technologies and societal trends. The future of academic publishing is expected to witness further transformations, including expanded open access, increased peer review transparency, enhanced international collaboration, and interdisciplinary research integration. These trends are poised to shape the future of research dissemination.
 %这些趋势反映了学术论文发表方式的不断演化，以适应新的技术和社会趋势。未来，学术出版领域可能会继续面临新的变革，例如更广泛的开放获取、更透明的同行评审、更多的国际合作和跨学科研究等。这些趋势有望继续塑造学术发表的未来。
 
 Blockchain is a distributed ledger technology that originally emerged as the foundational technology behind Bitcoin. It employs cryptographic techniques to record data in a series of immutable blocks, forming a chain. The key features of blockchain include decentralization, transparency, security, and immutability, making it a powerful tool applicable to various fields beyond just cryptocurrencies.
@@ -106,22 +92,26 @@ DAO(Decentralized Autonomous Organization) is an organizational structure that o
   
   \item \textbf{Data Sharing and Collaboration:} 
   
-  Blockchain and smart contracts can facilitate data sharing and collaboration among scholars, ensuring data integrity and traceability.
+  Blockchain and smart contracts can facilitate data sharing and collaboration among scholars, ensuring data integrity and traceability \cite{praitheeshan2019security}.
   %数据共享和合作： 区块链和智能合约可用于促进学者之间的数据共享和合作，确保数据的完整性和来源可追溯。
   
-  \item \textbf{Automated Review and Journal Management:} 
+  \item \textbf{Finance and Incentive Mechanisms:} 
   
-  Smart contracts and DAOs can be used to automate review processes and journal management, from reviewer assignments to manuscript evaluations and publication \cite{praitheeshan2019security}.
-  %自动化审稿和杂志管理： 智能合约和DAO可以用于自动化审稿流程和杂志管理，从审稿员的分配到稿件的评审和出版。
+  DAO and cryptocurrencies can be used to support research finance and incentive mechanisms.Funds can be allocated according to token weightsn.
+  %金融和激励机制： 区块链和加密货币可以用于支持学术研究的融资和激励机制。资金可以按照token为权重分配。
 \end{itemize}
 
 These application examples highlight the potential value of blockchain, smart contracts, and DAO technology in academic publishing and journal management. They enhance transparency, protect intellectual property, verify identity, automate processes, and encourage collaboration. As these technologies continue to evolve, they hold promise for further innovation and efficiency in academia.
 %这些应用示例突显了区块链、智能合约和DAO技术在学术出版和杂志管理方面的潜在应用，提高了透明度、知识产权保护、身份验证和自动化审稿流程。随着这些技术的不断发展，它们将有望为学术界提供更多的创新和效率。
 
-This paper emphasizes the transformative impact of DAOs in establishing an explicit ownership of academic research papers by their authors. DAOs empower authors to retain complete control over their works, ensuring that any value generated from these papers is intrinsically linked to the original creators. Through the implementation of DAO, this paper explores the means by which academic papers can be securely attributed to their authors, facilitating a transparent and impartial relationship between the authors and the intellectual assets they produce.Furthermore, the financial incentive mechanism of DAO allows authors to gain economic returns by driving the platform's development, realizing a shared interest between authors and the platform. These mechanisms collectively build an ecosystem that encourages authors to actively engage, create, and share.
-%本文强调了 DAO 在建立作者对其学术研究论文的明确所有权方面的变革性影响。 DAO 使作者能够保留对其作品的完全控制，确保这些论文产生的任何价值都与原始创作者有着内在的联系。通过实施DAO，本文探讨了学术论文可以安全地归属于作者的方法，促进作者与其产生的知识资产之间建立透明和公平的关系。此外，DAO的财务激励机制使得作者通过推动平台的发展而获得经济回报，实现了作者与平台利益的共享。这些机制共同构建了一个促进作者积极参与、创造和分享的生态系统。
+In the traditional landscape of Web 2.0, the ownership of articles remains with the creators, yet the entirety of the associated data is ensconced within the databases of publishers, shrouded in a lack of transparency. This opaqueness extends to financial allocations, where, even if publishers express willingness to distribute funds, the absence of intermediary oversight poses challenges to ensuring fairness and accountability in the process. This paper delves into the transformative potential of Web 3.0 and blockchain technology within the DAO framework to rectify these issues, ushering in a new era of decentralized, transparent, and equitable financial distribution for content creators.
+%在传统的Web 2.0领域，文章的所有权虽然归属于创作者，但所有相关数据都存储在由出版商的数据库中，缺乏透明度。即使出版商愿意分配资金，由于缺乏中介监管，这一过程也存在公正性和责任问题。本文深入探讨了Web 3.0和区块链技术在DAO框架内的转变潜力，以解决这些问题，引领创作者进入一个新时代，其中财务分配更为去中心化、透明和公平。
+
+This paper underscores the transformative impact of blockchain technology on authorial ownership within the DAO framework. By securing and amplifying authorship rights, the paper explores how this paradigm shift facilitates a fair and transparent allocation of finance. Through the inherent decentralization and smart contract capabilities of DAOs, the financial ecosystem becomes a dynamic and equitable space, fostering an environment where creators are duly recognized and rewarded for their contributions.
+%本文强调了区块链技术在DAO框架下对作者所有权的重大影响。通过确保并增强作者的权利，本文探讨了这种范式转变如何促进对财务资源的公正和透明分配。通过DAO的固有去中心化和智能合约能力，财务生态系统变得动态而公正，营造了一个环境，让创作者得到应有的认可，并因其贡献而得到公正的回报。
 
 \section{Ownership of Research Data}
+% 相关工作，2到3个点，现在已经存在的
 
 This chapter delves into the intricate matter of research data ownership. In the realm of academic research, the question of who possesses, controls, and manages research data is of paramount importance, involving researchers, academic institutions, publishers, and various stakeholders within society. We also investigate existing data-sharing models and open-access policies and their potential effects on the academic community and knowledge innovation. By delving into the issue of research data ownership, we gain a deeper understanding of the challenges and opportunities in today's academic environment, offering new perspectives for future research and collaboration.
 %本章将深入探讨论文数据的所有权问题。在学术研究领域，谁拥有、控制和管理研究数据是一个关键议题，涉及到研究人员、学术机构、出版商和社会的各个利益相关方。我们还将研究现有的数据共享模式和开放获取政策，以及它们对学术社区和知识创新的潜在影响。通过深入研究论文数据的所有权问题，我们将更好地理解当前学术环境中的挑战和机遇，为未来的研究和合作提供新的思考。
@@ -194,7 +184,7 @@ In summary, blockchain offers a more transparent, immutable, and decentralized o
 %综合而言，区块链提供了更为透明、不可篡改、去中心化的拥有权机制，更好地保护了作者的知识产权和数据权益。这对于需要强调数据的安全性、可追溯性和透明性的应用场景非常有利。使用区块链进行文章存储相对于传统数据库系统，为作者提供了更客观和透明的方式来主张他们的作品所有权
 
 \section{Author Finance from Journal}
-
+%3 架构 我的内容 journal DAO，笼统一些的架构
 
 In the evolution of electronic journals, websites have become the primary medium for disseminating research papers. Although the content of users' papers remains the intellectual property of the authors, the wealth generated by journals through these papers often belongs predominantly to the journals rather than the authors.
 %在电子期刊的发展历程中，论文的载体逐渐从传统的印刷版本过渡到了数字化的网站形式。尽管用户的论文内容仍然属于作者的创作成果，然而，由于现行模式下，杂志通过论文创造的财富往往主要归属于杂志自身，而非作者。
@@ -290,6 +280,7 @@ In the current era of digitization, the act of anchoring a paper on the blockcha
   
 
 \section{DAO to DeSci}
+% 4 详细的架构， key study
 
 The DAO was essentially a smart contract on the Ethereum blockchain that contained a set of rules for how the organization would operate. Members could receive tokens that would give them voting rights to make decisions about which projects to invest in. Once a project was successful, the funds were automatically sent to the project's creators, and the project would be added to the DAO's portfolio.
 %DAO 本质上是以太坊区块链上的智能合约，其中包含一组关于该组织如何运作的规则。成员可以获得代币，这将赋予他们投票权，以决定投资哪些项目。一旦项目成功，资金就会自动发送给项目的创建者，并且该项目将被添加到 DAO 的投资组合中。
