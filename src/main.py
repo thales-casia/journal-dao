@@ -21,6 +21,7 @@ class IDistribution():
     return self.id
 
 
+
 class ArticleDAO:
   _distribution:set[IDistribution] = set()
   _articleID = 0
@@ -47,9 +48,23 @@ class ArticleDAO:
       weight_len += n
     for i, author in enumerate(self._authors):
       self._distribution.add(IDistribution(author, floor(token * (weight[i] / weight_len))))
-
+  def download(self, id:int):
+    user = next((obj for obj in self._distribution if obj.id == id), None)
+    if user:
+      user.token = user.token + 1
+    else:
+      self._distribution.add(IDistribution(id, 1))
+  def cite(self, id:int):
+    user = next((obj for obj in self._distribution if obj.id == id), None)
+    if user:
+      user.token = user.token + 2
+    else:
+      self._distribution.add(IDistribution(id, 2))
 
 article = ArticleDAO(1, {1,2,3})
 article.review({IReview(reviewerID=11, rating=5), IReview(reviewerID=12, rating=4)})
+article.download(21)
+article.download(22)
+article.cite(21)
 
 print(article)
