@@ -4,6 +4,7 @@
 \usepackage{algorithm}
 \usepackage{array}
 \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+\usepackage{subcaption}
 \usepackage{textcomp}
 \usepackage{stfloats}
 \usepackage{url}
@@ -15,13 +16,17 @@
 
 \begin{document}
 
-\title{Journal DAO: A New Framework for DeSCI in Web 3.0}
+\title{DeSci based web3 Journal Framework: \\ Ownership, Governance, and Incentive}
 
-\author{Tai Jiang,~\IEEEmembership{Follow,~IEEE,}
+\author{Tai Jiang, Rui Qin,~\IEEEmembership{Member, IEEE}, Yuhang Liu, \\
+ Fei-YueWang,~\IEEEmembership{Fellow,~IEEE}.
         % <-this % stops a space
 \thanks{Identify applicable funding agency here. If none, delete this.}% <-this % stops a space
 \thanks{Manuscript received February 15, 2023; revised February 15, 2023.}
-\thanks{Tai Jiang is with the Macao Institute of Systems Engineering, Macau University of Science and Technology, Macao 999078, China (e-mail: jiangtai20@mails.ucas.ac.cn).}
+\thanks{Tai Jiang is with the Department of Engineering Science, Faculty of Innovation Engineering, Macau University of Science and Technology, Macao, 999078, China (e-mail: jiangtai20@mails.ucas.ac.cn).}
+\thanks{Rui Qin is with the State Key Laboratory for Management and Control of Complex Systems and the State Key Laboratory of Multimodal Artificial Intelligence Systems, Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China (e-mail: rui.qin@ia.ac.cn).}
+\thanks{Yuhang Liu is with the State Key Laboratory for Management and Control of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China, and also with the School of Artificial Intelligence, University of Chinese Academy of Sciences, Beijing 100049, China (e-mail: liuyuhang21@mails.ucas.ac.cn).}
+\thanks{Fei-Yue Wang is with the State Key Laboratory for Management and Control of Complex Systems, Chinese Academy of Sciences, Beijing 100190, China, and also with the Macao Institute of Systems Engineering, Macau University of Science and Technology, Macao 999078, China (e-mail: feiyue.wang@ia.ac.cn).}
 
 }
 
@@ -46,24 +51,58 @@ DAO, smart contract, decentralized autonomous organizations, decentralized fundi
 \end{IEEEkeywords}
 
 \section{Introduction}
-%分段写清楚期刊的变化，引出现在需要做的主要内容
-
-\IEEEPARstart{A}{cademic} publication methods have undergone significant historical transformations, reflecting the evolution of technology, society, and culture.Traditional scholarly journals, rooted in print formats and centralized editorial processes, have long been the primary medium for disseminating research findings \cite{febvre1997coming}. However, the digital age has brought about profound changes, challenging the conventional models and paving the way for innovative solutions \cite{meadows1997communicating}. This paper delves into the historical trajectory of academic journals, highlighting key milestones and contextualizing the current paradigm shift towards blockchain technology.
-%学术论文的发表方式在历史上发生了显著的变迁，反映了技术、社会和文化的演进。传统的学术期刊，根植于印刷格式和中心化编辑流程，长期以来一直是传播研究成果的主要媒介。然而，数字时代带来了深刻的变革，挑战传统模式，为创新性解决方案铺平了道路。本文深入探讨学术期刊的历史轨迹，突显关键里程碑，并详细阐述当前朝着区块链技术过渡的背景。
-
-The early days of academic publishing were marked by the establishment of prestigious print journals, serving as repositories of scholarly knowledge. These publications played a crucial role in shaping academic discourse, but their centralized nature often led to challenges such as delayed dissemination and limited accessibility. With the advent of the internet, electronic journals emerged, offering faster dissemination and broader reach, yet grappling with issues of copyright, authenticity, and peer review integrity.In recent years, the emergence of blockchain technology has presented a transformative opportunity for the academic publishing landscape. Blockchain, with its decentralized and immutable ledger, addresses several longstanding challenges \cite{swan2015blockchain}. The transition to blockchain-based academic journals holds the promise of enhancing transparency, traceability, and security in scholarly communication.
-%学术出版的早期以建立声望卓著的印刷期刊为特征，这些期刊作为学术知识的存储库发挥着至关重要的作用。这些出版物在塑造学术话语方面发挥了关键作用，但由于其中心化的特性，往往面临着信息传播延迟和获取受限等挑战。随着互联网的出现，电子期刊应运而生，提供了更快的传播速度和更广泛的覆盖面，但同时也面临着版权、真实性和同行评审完整性等问题。
-%近年来，区块链技术的出现为学术出版领域带来了深刻的变革机遇。区块链凭借其去中心化和不可篡改的账本，解决了多项长期存在的问题。向基于区块链的学术期刊过渡有望提升学术交流的透明性、可追溯性和安全性。
+% 第一段：目前期刊运行存在的问题与挑战
+% 第二段：新技术的发展为期刊运行提供了哪些发展机遇
+% 第三段：简述已有的期刊变革方面的研究
+% 第四段：已有研究中尚存在的问题，本文的主要工作
+% 第五段：本文的结构安排
 
 
+\IEEEPARstart{A}{cademic} publication methods have undergone significant historical transformations, reflecting the evolution of technology, society, and culture.Traditional scholarly journals, rooted in print formats and centralized editorial processes, have long been the primary medium for disseminating research findings \cite{febvre1997coming}. However, the digital age has brought about profound changes, challenging the conventional models and paving the way for innovative solutions \cite{meadows1997communicating}. With the advent of the internet, electronic journals emerged, offering faster dissemination and broader reach, yet grappling with issues of copyright, authenticity, and peer review integrity.In recent years, the emergence of blockchain technology has presented a transformative opportunity for the academic publishing landscape. Blockchain, with its decentralized and immutable ledger, addresses several longstanding challenges \cite{swan2015blockchain}. The transition to blockchain-based academic journals holds the promise of enhancing transparency, traceability, and security in scholarly communication.
+%学术论文的发表方式在历史上发生了显著的变迁，反映了技术、社会和文化的演进。传统的学术期刊，根植于印刷格式和中心化编辑流程，长期以来一直是传播研究成果的主要媒介。然而，数字时代带来了深刻的变革，挑战传统模式，为创新性解决方案铺平了道路。随着互联网的出现，电子期刊应运而生，提供了更快的传播速度和更广泛的覆盖面，但同时也面临着版权、真实性和同行评审完整性等问题。近年来，区块链技术的出现为学术出版领域带来了深刻的变革机遇。区块链凭借其去中心化和不可篡改的账本，解决了多项长期存在的问题。向基于区块链的学术期刊过渡有望提升学术交流的透明性、可追溯性和安全性。
 
 
-This paper sheds light on the dynamic evolution of research publication methods, continually adapting to new technologies and societal trends. The future of academic publishing is expected to witness further transformations, including expanded open access, increased peer review transparency, enhanced international collaboration, and interdisciplinary research integration. These trends are poised to shape the future of research dissemination.
-%这些趋势反映了学术论文发表方式的不断演化，以适应新的技术和社会趋势。未来，学术出版领域可能会继续面临新的变革，例如更广泛的开放获取、更透明的同行评审、更多的国际合作和跨学科研究等。这些趋势有望继续塑造学术发表的未来。
+Decentralized Autonomous Organization (DAO) have emerged as a disruptive and transformative innovation in the realm of organizational governance. Built on the foundation of blockchain technology and smart contracts, DAOs present a novel approach to decision-making, fund management, and community governance. Unlike traditional hierarchical structures, DAOs operate without the need for central authorities, relying on transparent and automated processes governed by code and consensus \cite{buterin2014next}.
+The concept of DAOs originated from the desire to create decentralized and trustless organizations that are not bound by geographical limitations or intermediaries. DAOs leverage the decentralized nature of blockchain technology to establish a peer-to-peer network where  every participant(authors, reviewers and readers...) can share research artilces resources. By utilizing smart contracts, DAOs can execute predefined rules, eliminating the need for intermediaries or third-party oversight and significantly reducing human intervention, thereby ensuring objectivity and efficiency in every step of the process.
+One of the key distinguishing features of DAOs is their ability to provide a transparent and auditable decision-making process \cite{kaal2021decentralized}. By recording all transactions and actions on a blockchain, DAOs ensure that every participant has access to the same set of information, promoting transparency and accountability. This transparency also extends to the allocation and management of funds, as DAOs enable token holders to collectively govern and distribute resources based on predefined rules and consensus mechanisms.
+% 去中心化自治組織（DAO）已成為組織治理領域的顛覆性和變革性創新。 DAO 建立在區塊鏈技術和智能合約的基礎上，為決策、資金管理和社群治理提供了一種新穎的方法。與傳統的層級結構不同，DAO 的運作不需要中央機構，而是依賴由程式碼和共識管理的透明和自動化流程。
+%DAO 的概念源于创建不受地理限制或中介机构约束的去中心化和去信任组织的愿望。 DAO 利用区块链技术的去中心化特性建立一个点对点网络，作者、审稿人、读者共享论文资源。通过使用智能合约，DAO 可以执行预定义的规则，消除中介或第三方监管，极大减少人为因素，让每一步操作客观有效。
+%DAO 的主要显着特征之一是它们能够提供透明且可审计的决策流程。通过在区块链上记录所有交易和操作，DAO 可确保每个参与者都能访问同一组信息，从而提高透明度和问责制。这种透明度还延伸到了资金的分配和管理，因为 DAO 使代币持有者能够根据预定义的规则和共识机制集体管理和分配资源。
 
-In the realm of academic journals, the integration of blockchain technology, smart contracts, and Decentralized Autonomous Organizations (DAO) represents a transformative frontier. Blockchain ensures the immutability and transparency of data, addressing issues of data integrity and reliability. Smart contracts, operating on the blockchain, automate and enforce the rules governing various processes, such as article submissions, peer reviews, and fund distribution. DAOs, as a governance structure, provide a decentralized decision-making framework, fostering inclusivity and community engagement.The synergistic application of blockchain, smart contracts, and DAOs can enhance the efficiency and integrity of academic journals. It introduces a trustless and transparent environment, reducing the need for intermediaries and ensuring that the entire process, from article submission to fund distribution, is executed with a high level of security and accountability. This paradigm shift has the potential to redefine the landscape of academic publishing, fostering a more collaborative, secure, and accessible platform for scholarly communication.
-%在学术期刊领域，区块链技术、智能合约和去中心化自治组织（DAO）的整合代表了一种变革性的前沿。区块链确保了数据的不可篡改性和透明性，解决了数据完整性和可靠性的问题。智能合约在区块链上运行，自动执行并执行规范各种流程的规则，如文章提交、同行评审和资金分配。DAO作为一种治理结构，提供了一个去中心化的决策框架，促进包容性和社区参与。
-%区块链、智能合约和DAO的协同应用可以增强学术期刊的效率和完整性。它引入了一个无需信任且透明的环境，减少了中介的需求，确保从文章提交到资金分配的整个过程都具有高水平的安全性和问责制。这种范式转变有望重新定义学术出版的格局，促进更具合作性、安全性和可访问性的学术交流平台的发展。
+
+blockchain-based smart contracts have received increasing attention in academic circles,Mainly distributed in security, privacy, software engineering, applications, performance, scalability, and other smart contract-related topics \cite{8756390}. 
+The current distribution and management processes in open journal systems are plagued by inadequate security, leading to issues such as unauthorized replication and dissemination of research papers. However, the implementation of blockchain technology has addressed these concerns by enhancing the security of electronic journal distribution and management. This approach brings significant benefits: Firstly, more precise and error-free distribution of e-journals within open journal systems. Secondly, improved reputation and increased trust in the open journal system. Lastly, safeguarding the management process of papers, protecting both soft and hard copies of journals from potential hacker threats. By utilizing blockchain technology, the security and efficiency of electronic journal distribution and management are significantly improved \cite{agustin2020blockchain}.
+InterPlanetary File System (IPFS) and blockchain technology ensure the authenticity of online publications by storing them on a decentralized IPFS network and verifying their information through the blockchain, ensuring trust and reliability. This approach effectively addresses the challenges related to security and privacy in online publications \cite{nizamuddin2018ipfs}.
+The traditional scientific publishing system faces numerous challenges, including high publication costs, slow and biased peer review processes, copyright held by publishers, lack of rewards for contributors, and limited connectivity among researchers. By leveraging decentralized blockchain-based technology, creating a scientific publishing platform can address these issues. This platform utilizes Ethereum smart contracts to expedite the publication process, reduce biases in peer review, and lower publication costs. The model also enhances the quality of scientific research by incorporating new functionalities during the publishing process. The system increases the number of publishers, ensuring complete traceability throughout the publication process, and making scientific papers accessible to anyone for a nominal fee. Additionally, the system adopts a decentralized model for journals and integrates scientific papers with relevant data or datasets. Editors, reviewers, and cited authors are also rewarded \cite{becstacs2023novel}. The system is implemented using the Ethereum Virtual Machine (EVM), which includes frontend, middleware, and backend components. When an author submits a manuscript for evaluation, the system automatically identifies the most suitable editors and reviewers. After the publication process concludes, editors, reviewers, cited authors, and other contributors receive cryptocurrency rewards based on system tokens.
+%基于区块链的智能合约在学术界引起了越来越多的关注，主要分布在安全、隐私、软件工程、应用、性能与可扩展性以及其他与智能合约相关的主题。
+%目前开放期刊系统中的分发和管理过程存在安全性不足的问题，容易出现论文被复制和传播给不负责任的人的情况。使用区块链技术来维护电子期刊分发和管理过程的安全性，实现了以下3个方面的好处：（1）在开放期刊系统中，电子期刊的分发更加精确，没有错误；（2）开放期刊系统的声誉得到提升，增加了信任感；（3）管理论文的过程按照规定进行，保护了期刊的软拷贝和硬拷贝免受黑客威胁。
+%IPFS和区块链技术可以确保在线出版物的真实性，将出版物存储在去中心化的IPFS网络上，并通过区块链验证其信息，以确保信任和可靠性。这种方法解决了在线出版物安全和隐私方面的挑战。
+%传统的科学出版系统存在许多问题，如高昂的出版成本、缓慢和有偏见的评审过程、由出版商持有的版权、缺乏对贡献者的奖励以及研究人员之间缺乏联系等。应用去中心化的基于区块链的技术，创建科学出版平台可以解决这些问题。该平台使用以太坊智能合约加速出版过程，减少评审过程中的偏见，并降低出版成本。该模型还通过在出版过程中添加新的功能来提高科学研究的质量。该系统增加了出版商的数量，使出版过程完全可追溯，并使科学论文对任何人都可用，只需支付少量费用。此外，该系统为期刊提供了去中心化模型，并将科学论文与相关数据或数据集集成在一起。编辑、评审人员和引用作者也会得到奖励。该系统使用以太坊虚拟机（EVM）实现，包括前端、中间件和后端。当作者提交一篇稿件进行评估时，系统会自动找到最合适的编辑和评审人员。出版过程结束后，编辑、评审人员、引用作者和其他贡献者将获得基于系统代币的加密货币作为奖励。
+
+The application of blockchain technology in intelligent journal has the potential to revolutionize data transparency and ensure its authenticity. By leveraging smart contracts, the reliability of data can be guaranteed, eliminating the need for third-party oversight. The framework of a DAO offers a higher level of scalability and addresses not only individual functionalities but the system as a whole.
+Recent research has demonstrated the feasibility of DAO applications in automating the peer review process and providing incentives to authors, reviewers, and cited authors, thereby fostering a self-sustaining publication ecosystem. While the adoption of DAO and other blockchain applications has become widespread, many implementations have remained largely theoretical, focusing on the concept of self-governance.
+However, to truly realize the potential of DAOs, an appropriate and robust incentive mechanism is crucial. Without it, the token issuance within the organization would lack practical significance. This paper aims to explore the incentive mechanisms of DAOs, specifically from the perspective of journal readers, in order to achieve a fully autonomous and economically sustainable DAO ecosystem \cite{ding2022desci}.
+By examining the reader's role in the DAO ecosystem, we can delve deeper into the design and implementation of effective incentive mechanisms. This research strives to contribute to the understanding of DAOs and their potential to transform the publication industry, enabling a seamless integration of blockchain technology and fostering a self-governing and economically viable ecosystem.
+% 将区块链技术应用于智能杂志，可以彻底改变数据的透明性，并确保其真实性。通过利用智能合约，数据的可靠性得以保证，不再需要第三方监管。去中心化自治组织（DAO）的框架提供了更高层次的可扩展性，不仅解决了单个功能点的问题，而是整个系统的运作。最近的研究表明，DAO应用可以自动化审稿流程，并为作者、审稿人和引用者提供激励，从而实现论文发布的自我管理。尽管DAO和其他区块链应用已经广泛应用，但大多数实现仍然停留在理论层面的自治概念。
+%然而，要真正实现DAO的潜力，一个适当且健全的激励机制至关重要。否则，组织内部代币的发行将缺乏实际意义。本文旨在从读者的角度探索DAO的激励机制，以实现完全自治和经济可持续的DAO生态系统。
+%通过研究读者在DAO生态系统中的角色，我们可以深入探讨有效激励机制的设计和实施。本研究旨在为我们对DAO的理解和其改变出版行业潜力的贡献，实现区块链技术的无缝集成，推动自我管理和经济可行的生态系统的发展。
+
+
+% 本文首先会先介绍一下journal dao的框架，包含概念以及运行流程，以及跟现在传统的对比。然后会介绍激励机制的设计和实施。最后会用实验结果验证其效果。
+This paper begins by providing an in-depth introduction to the framework of Journal DAO, including its concepts, operational processes, and a comparative analysis with traditional approaches. 
+Following the framework overview, it delves into the design and implementation of the incentive mechanism within Journal DAO. This section explores the various factors considered in designing the incentive structure, such as rewarding authors, reviewers, and cited authors based on their contributions to the publication process. Additionally, it discusses the integration of token-based incentives to foster motivation and participation among stakeholders.
+Subsequently, it presents experimental results to validate the effectiveness of the implemented incentive mechanism in Journal DAO. Through a rigorous evaluation and analysis, the outcomes highlight the impact of the incentive structure on the overall performance, efficiency, and engagement of participants within the system.
+Overall, it aims to provide a comprehensive understanding of Journal DAO, its framework, incentive mechanism design, and practical implementation. The experimental results serve to demonstrate the efficacy of the proposed approach, ultimately contributing to the advancement of decentralized and autonomous publishing systems.
+%本论文首先详细介绍了Journal DAO的框架，包括其概念、运行流程以及与传统方法的对比。
+%在框架概述之后，论文深入探讨了Journal DAO内部激励机制的设计和实施。这一部分探讨了设计激励结构时考虑的各种因素，例如基于作者、审稿人和被引作者在出版过程中的贡献进行奖励。此外，还讨论了通过基于代币的激励促进参与者的积极性和参与度。
+%随后，论文呈现了实验结果，验证了Journal DAO实施的激励机制的有效性。通过进行严格的评估和分析，结果突出了激励结构对系统整体性能、效率和参与度的影响。
+%总体而言，本论文旨在全面了解Journal DAO的框架、激励机制设计和实际实施。实验结果旨在证明所提出方法的有效性，最终推动去中心化和自治出版系统的发展。
+
+
+
+\section{Framework of Journal DAO}
+% 相关工作，2到3个点，现在已经存在的
+
 
 \begin{figure}[h]
   \centering
@@ -73,7 +112,8 @@ In the realm of academic journals, the integration of blockchain technology, sma
 \end{figure}
 
 
-Application of DAO in Article and Journal as figure \ref{fig:applicationofdao} shows:
+According to the development of district DAO, related blockchain technology, the following DAO framework can be summarized as shown in the figure \ref{fig:applicationofdao} .
+%按照区DAO，以及相关区块链技术的发展，可以如图总结出以下的DAO框架。
 
 \begin{itemize}
   \item \textbf{Transparent Peer Review and Publishing Process:} 
@@ -105,37 +145,26 @@ Application of DAO in Article and Journal as figure \ref{fig:applicationofdao} s
 These application examples highlight the potential value of blockchain, smart contracts, and DAO technology in academic publishing and journal management. They enhance transparency, protect intellectual property, verify identity, automate processes, and encourage collaboration. As these technologies continue to evolve, they hold promise for further innovation and efficiency in academia.
 %这些应用示例突显了区块链、智能合约和DAO技术在学术出版和杂志管理方面的潜在应用，提高了透明度、知识产权保护、身份验证和自动化审稿流程。随着这些技术的不断发展，它们将有望为学术界提供更多的创新和效率。
 
+\subsection{Article in Journal DAO}
+
+\begin{figure*}[!t]
+  \centering
+  \subfloat[Database]{\includegraphics[width=2in]{assets/journalsite.png}}
+  \hfil
+  \subfloat[Blockchain]{\includegraphics[width=3in]{assets/journalchain.png}}
+  \caption{Article in Database or Blockchain}
+  \label{articleonchain}
+\end{figure*}
+
+
 In the traditional landscape of Web 2.0, the ownership of articles remains with the creators, yet the entirety of the associated data is ensconced within the databases of publishers, shrouded in a lack of transparency. This opaqueness extends to financial allocations, where, even if publishers express willingness to distribute funds, the absence of intermediary oversight poses challenges to ensuring fairness and accountability in the process. This paper delves into the transformative potential of Web 3.0 and blockchain technology within the DAO framework to rectify these issues, ushering in a new era of decentralized, transparent, and equitable financial distribution for content creators.
 %在传统的Web 2.0领域，文章的所有权虽然归属于创作者，但所有相关数据都存储在由出版商的数据库中，缺乏透明度。即使出版商愿意分配资金，由于缺乏中介监管，这一过程也存在公正性和责任问题。本文深入探讨了Web 3.0和区块链技术在DAO框架内的转变潜力，以解决这些问题，引领创作者进入一个新时代，其中财务分配更为去中心化、透明和公平。
+  
 
-This paper underscores the transformative impact of blockchain technology on authorial ownership within the DAO framework. By securing and amplifying authorship rights, the paper explores how this paradigm shift facilitates a fair and transparent allocation of finance. Through the inherent decentralization and smart contract capabilities of DAOs, the financial ecosystem becomes a dynamic and equitable space, fostering an environment where creators are duly recognized and rewarded for their contributions.
-%本文强调了区块链技术在DAO框架下对作者所有权的重大影响。通过确保并增强作者的权利，本文探讨了这种范式转变如何促进对财务资源的公正和透明分配。通过DAO的固有去中心化和智能合约能力，财务生态系统变得动态而公正，营造了一个环境，让创作者得到应有的认可，并因其贡献而得到公正的回报。
 
-\section{Journal Data Ownership in the System of Web3.0}
-% 相关工作，2到3个点，现在已经存在的
-
-This chapter delves into the intricate matter of research data ownership. In the realm of academic research, the question of who possesses, controls, and manages research data is of paramount importance, involving researchers, academic institutions, publishers, and various stakeholders within society. We also investigate existing data-sharing models and open-access policies and their potential effects on the academic community and knowledge innovation. By delving into the issue of research data ownership, we gain a deeper understanding of the challenges and opportunities in today's academic environment, offering new perspectives for future research and collaboration.
-%本章将深入探讨论文数据的所有权问题。在学术研究领域，谁拥有、控制和管理研究数据是一个关键议题，涉及到研究人员、学术机构、出版商和社会的各个利益相关方。我们还将研究现有的数据共享模式和开放获取政策，以及它们对学术社区和知识创新的潜在影响。通过深入研究论文数据的所有权问题，我们将更好地理解当前学术环境中的挑战和机遇，为未来的研究和合作提供新的思考。
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=2in]{assets/journalsite.png}
-  \caption{Article in Database}
-  \label{fig:journalsite}
-\end{figure}
-
-From a physical perspective like Figure \ref{fig:journalsite}, the data of articles is stored in the database of the journal website. When regular users access the journal website, they can browse and download articles of interest. The interaction between users and the journal website typically involves the following steps.
+From a physical perspective, the data of articles is stored in the database of the journal website. When regular users access the journal website, they can browse and download articles of interest. The interaction between users and the journal website typically involves the following steps.
+When an article is uploaded to a blockchain like Figure \ref{fig:articleonchain}, its content, timestamp, and relevant metadata are all recorded on the blockchain. This means that anyone can verify the existence, content, and timestamp of the article. This provides a high level of assurance for the immutability and transparency of documents, particularly with potential significance in research, intellectual property protection, and copyright. Uploading articles to the blockchain also enables decentralized data storage, reducing reliance on centralized institutions. This offers a more open and trustworthy means of data sharing for the academic community and other domains.Uploading an article to a blockchain, as compared to storing it in a traditional database, provides the author with a clear and objective ownership of the article. In a traditional database, the ownership of the data and the integrity of the database are controlled by the entity or organization managing the database. Authors and other stakeholders may not have direct control or visibility into the ownership and usage of the data.
 %从物理层出发，期刊网站的数据库是文章数据的关键存储点。这些数据库通常位于服务器上，这些服务器可以分布在数据中心或云服务提供商的设施中。当普通用户访问期刊网站时，他们可以通过网络连接访问这些数据库以浏览和下载感兴趣的论文。
-
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=3in]{assets/journalchain.png}
-  \caption{Article in Blockchain}
-  \label{fig:journalchain}
-\end{figure}
-
-When an article is uploaded to a blockchain like Figure \ref{fig:journalchain}, its content, timestamp, and relevant metadata are all recorded on the blockchain. This means that anyone can verify the existence, content, and timestamp of the article. This provides a high level of assurance for the immutability and transparency of documents, particularly with potential significance in research, intellectual property protection, and copyright. Uploading articles to the blockchain also enables decentralized data storage, reducing reliance on centralized institutions. This offers a more open and trustworthy means of data sharing for the academic community and other domains.Uploading an article to a blockchain, as compared to storing it in a traditional database, provides the author with a clear and objective ownership of the article. In a traditional database, the ownership of the data and the integrity of the database are controlled by the entity or organization managing the database. Authors and other stakeholders may not have direct control or visibility into the ownership and usage of the data.
 %%当一篇文章被上链到区块链中，它的内容、时间戳以及相关的元数据都会被记录在区块链上。这意味着任何人都可以验证这篇文章的存在、内容和时间。这为文献的不可篡改性和透明性提供了极高的保障，尤其在科研、知识产权保护和版权方面具有潜在的重要应用。上链文章还可以实现去中心化的数据存储，减少对中央化机构的依赖。这为学术界和其他领域提供了更开放和可信的数据共享方式。将文章上传至区块链，与将其存储在传统数据库中相比，可以让作者更明确且客观地拥有文章。在传统数据库中，数据的所有权和数据库的完整性由管理数据库的实体或组织控制。作者和其他利益相关方可能无法直接控制或了解数据的所有权和使用情况。
 
 On the other hand, when an article is uploaded to a blockchain, the author can have greater confidence in their ownership and control over the article. The blockchain's decentralized and immutable nature ensures that the ownership records are transparent, tamper-resistant, and not under the sole control of a centralized authority. This empowers authors to have a direct and verifiable claim to their work, which can be particularly important for intellectual property protection, copyright, and ensuring that the author's rights are respected.
@@ -143,62 +172,26 @@ On the other hand, when an article is uploaded to a blockchain, the author can h
 
 
 
-\textbf{Compared with traditional journals, articles on the chain belong entirely to the author.}
-%相比于传统期刊，链上的文章完全属于作者。
+\subsection{Finance in Journal DAO}
 
 
-\paragraph{Traditional Databases}
-%传统数据库:
-\begin{itemize}
-  \item Traditional databases are typically controlled by a central entity or organization, with database administrators responsible for management and access control. This centralization may result in less transparent ownership.
-%传统数据库通常由中央机构或组织控制，数据库管理员负责管理和授予访问权限。这可能导致数据的所有权不够透明。
+\begin{figure*}[!t]
+  \centering
+  \subfloat[web2.0]{\includegraphics[width=3in]{assets/web2.png}}
+  \hfil
+  \subfloat[web3.0]{\includegraphics[width=3in]{assets/web3.png}}
+  \caption{Reader Pay for Download}
+  \label{artcledownload}
+\end{figure*}
 
-  \item Access to and modification of data in traditional databases often depend on access controls set by database administrators. This can lead to disputes or lack of transparency regarding data access.
-%数据的访问和修改通常依赖于数据库管理员设置的访问控制。这可能导致对数据访问权限的争议或不透明性。
-
-  \item Data in traditional databases can be relatively easily modified or deleted. This may raise concerns about data security and integrity, especially in cases where intellectual property protection is crucial.
-%传统数据库中的数据可以相对容易地被修改或删除。这可能引发数据安全性和完整性的问题，尤其是在需要保护知识产权时。
-
-  \item Ownership and control of data are typically centralized with the database administrator. This centralization introduces a single point of control over data usage, increasing the risk of misuse or improper handling.
-%数据的所有权和控制通常集中在数据库的管理者手中。这可能导致对数据使用的单一控制点，增加了数据被滥用或不当处理的风险。
-\end{itemize}
-
-\paragraph{Blockchain}
-%区块链:
-
-\begin{itemize}
-  \item Every transaction on the blockchain has a clear timestamp, documenting the transfer of ownership. This provides authors with a transparent, immutable record of ownership. Authors can trace ownership back to each stage of the data's lifecycle.
-%区块链上的每个交易都有明确的时间戳，记录了数据的所有权转移。这为作者提供了清晰、透明且不可篡改的所有权记录。作者可以追溯到每个阶段数据的所有者。
-
-  \item Blockchain utilizes smart contracts to define and enforce data access permissions. This allows dynamic adjustments of data access rights based on different conditions, such as paid access or specific usage licenses.
-%区块链可以使用智能合约来定义和执行数据的使用权限。这使得在不同的条件下，如付费访问或特定使用许可下，可以动态地调整数据的访问权限。
-
-  \item Blockchain is decentralized, with data stored across multiple nodes in the network. This ensures that no single central entity can unilaterally control ownership, enhancing data security and tamper resistance.
-%区块链是去中心化的，数据存储在网络的多个节点上。这意味着没有单一的中央机构能够单方面控制数据的所有权，增加了数据的安全性和防篡改性。
-
-  \item Once data is written to the blockchain, it is nearly impossible to modify or delete. This ensures the immutability of data, providing robust protection for the author's rights.
-% 一旦数据被写入区块链，几乎不可能对其进行修改或删除。这确保了数据的不可篡改性，作者的权利得到了更强有力的保护。
-\end{itemize}
-In summary, blockchain offers a more transparent, immutable, and decentralized ownership mechanism, providing stronger protection for authors' intellectual property and data rights. This is particularly advantageous in scenarios where emphasis is placed on data security, traceability, and transparency.using a blockchain for article storage offers authors a more objective and transparent means of claiming ownership of their work compared to traditional database systems.
-%综合而言，区块链提供了更为透明、不可篡改、去中心化的拥有权机制，更好地保护了作者的知识产权和数据权益。这对于需要强调数据的安全性、可追溯性和透明性的应用场景非常有利。使用区块链进行文章存储相对于传统数据库系统，为作者提供了更客观和透明的方式来主张他们的作品所有权
-
-\section{Author Finance from Journal}
-%3 架构 我的内容 journal DAO，笼统一些的架构
 
 In the evolution of electronic journals, websites have become the primary medium for disseminating research papers. Although the content of users' papers remains the intellectual property of the authors, the wealth generated by journals through these papers often belongs predominantly to the journals rather than the authors.In our hypothetical scenario, we contemplate a shift in this paradigm, envisioning a system where a certain proportion of the generated wealth is allocated back to the authors. Taking paid downloads as a simple example, this mechanism aims to provide authors with a more direct economic incentive. Such a transformation not only has the potential to enhance authors' motivation and creativity but also holds the promise of establishing a more equitable wealth distribution system. This envisioned change could contribute to fostering a sustainable and mutually beneficial development model in the realm of electronic journals, addressing the balance of interests between authors and journals more effectively.
-% %在电子期刊的发展历程中，论文的载体逐渐从传统的印刷版本过渡到了数字化的网站形式。尽管用户的论文内容仍然属于作者的创作成果，然而，由于现行模式下，杂志通过论文创造的财富往往主要归属于杂志自身，而非作者。在当前设想下，我们可以假设一种改进模式，即按照一定比例将创造的财富回馈给作者。以付费下载为例，这一机制可以为作者提供更直接的经济回报。这种变革不仅有助于激发作者的积极性和创作动力，同时也有望促进更公正的财富分配体系的建立。这样的改变有望在电子期刊领域引入更加可持续和互惠的发展模式，从而更好地满足作者和杂志之间的利益平衡。
-
-
 Web2, also known as the social web, refers to the current state of the internet that we use today, which is primarily focused on social media, e-commerce, and other web-based applications that allow users to interact with each other and with content in various ways. In Web2, payment systems are typically centralized, meaning that they are controlled by a single entity or organization. 
+% %在电子期刊的发展历程中，论文的载体逐渐从传统的印刷版本过渡到了数字化的网站形式。尽管用户的论文内容仍然属于作者的创作成果，然而，由于现行模式下，杂志通过论文创造的财富往往主要归属于杂志自身，而非作者。在当前设想下，我们可以假设一种改进模式，即按照一定比例将创造的财富回馈给作者。以付费下载为例，这一机制可以为作者提供更直接的经济回报。这种变革不仅有助于激发作者的积极性和创作动力，同时也有望促进更公正的财富分配体系的建立。这样的改变有望在电子期刊领域引入更加可持续和互惠的发展模式，从而更好地满足作者和杂志之间的利益平衡。
 %Web2，也称为社交网络，指的是我们今天使用的互联网的现状，主要集中在社交媒体、电子商务和其他基于网络的应用程序，这些应用程序允许用户相互交互以及与其他人进行交互。内容以多种方式呈现。在 Web2 中，支付系统通常是集中式的，这意味着它们由单个实体或组织控制。
 
-\begin{figure}[h]
-  \includegraphics[width=3in]{assets/web2.png}
-  \caption{Reader Pay for Download in Web2.0}
-  \label{fig:web2}
-\end{figure}
 
-As the figure \ref{fig:web2} shows. In the context of Web 2.0, the establishment of a platform for downloading articles entails several steps. Firstly, the creation of a functional website serves as the primary interface for users. This website acts as a centralized hub, hosting a database that stores a diverse range of articles across various disciplines.When a user decides to download a specific article, a payment system is in place to facilitate the transaction. The user pays a designated fee for the download, and the platform, acting as an intermediary, manages the distribution of funds. The allocation of funds may involve a proportional distribution to the authors, and this process is typically administered by the central entity running the website.This centralized model means that all user interactions, content storage, and payment transactions occur within the controlled environment of the website. Users depend on the centralized platform to oversee and coordinate all aspects of the transactional process, creating a reliance on a single authority for the entire operation.
+As the figure \ref{artcledownload} shows. In the context of Web 2.0, the establishment of a platform for downloading articles entails several steps. Firstly, the creation of a functional website serves as the primary interface for users. This website acts as a centralized hub, hosting a database that stores a diverse range of articles across various disciplines.When a user decides to download a specific article, a payment system is in place to facilitate the transaction. The user pays a designated fee for the download, and the platform, acting as an intermediary, manages the distribution of funds. The allocation of funds may involve a proportional distribution to the authors, and this process is typically administered by the central entity running the website.This centralized model means that all user interactions, content storage, and payment transactions occur within the controlled environment of the website. Users depend on the centralized platform to oversee and coordinate all aspects of the transactional process, creating a reliance on a single authority for the entire operation.
 %在Web 2.0的背景下，建立一个文章下载平台涉及到几个步骤。首先，创建一个功能齐全的网站作为用户的主要接口。这个网站充当了一个中心枢纽，托管一个数据库，存储了各个学科领域的多样化文章。当用户决定下载特定文章时，将会有一个支付系统来促成交易。用户支付一定费用进行下载，而平台则作为中介管理资金的分配。资金的分配可能涉及按比例分配给作者，这个过程通常由运营该网站的中央实体管理。这种中心化模式意味着所有用户交互、内容存储和支付交易都发生在网站的受控环境中。用户依赖于中心化平台监督和协调整个交易过程，因此对于整个操作都存在对单一权威的依赖。
 
 
@@ -206,29 +199,29 @@ As the figure \ref{fig:web2} shows. In the context of Web 2.0, the establishment
 Web3, also known as the decentralized web, represents a shift toward a more open, decentralized, and secure internet that is built on blockchain technology \cite{alabdulwahhab2018web}. In Web3, payment systems are decentralized, meaning that they are not controlled by a single entity or organization \cite{cao2022decentralized}. Instead, payments are made using cryptocurrency, which is a digital asset that is secured by cryptographic techniques and operates independently of central banks and other financial institutions. Cryptocurrency payments are processed directly between users without the need for intermediaries, which can result in lower transaction fees and faster processing times.
 %Web3，也称为去中心化网络，代表着向基于区块链技术构建的更加开放、去中心化和安全的互联网的转变。在 Web3 中，支付系统是去中心化的，这意味着它们不受单个实体或组织的控制。相反，支付是使用加密货币进行的，加密货币是一种由加密技术保护并独立于中央银行和其他金融机构运作的数字资产。加密货币支付直接在用户之间进行处理，无需中介机构，这可以降低交易费用并缩短处理时间。
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=3in]{assets/web3.png}
-  \caption{Reader Pay for Download in Web3.0}
-  \label{fig:web3}
-\end{figure}
 
 
 
-As the figure \ref{fig:web3} shows. In the realm of Web 3.0, we witness a fundamental transformation in the dissemination of academic articles. Unlike the traditional Web 2.0 model, it introduces a paradigm shift. In this innovative framework, the data entity of articles resides directly on the blockchain, with the website serving as a mere interface reflecting the blockchain data. When users make payments for downloads, the entire fund allocation process is automated through smart contracts, eliminating the need for manual intervention. This groundbreaking framework ensures complete transparency and traceability throughout the process. As users pay to download articles, funds are automatically distributed according to the rules set within the DAO framework, without any centralized oversight.In the Web 3.0 paradigm, this novel model signifies a departure from reliance on traditional intermediaries. Instead, it empowers users with the direct participation in DAO frameworks, utilizing smart contracts for automated and secure fund distribution. This shift not only achieves decentralization in the transaction process but also enhances the efficiency of academic article transactions.In the Web 3.0 environment, articles are directly uploaded to the blockchain. All operations, including payment processing and fund distribution, are seamlessly executed through smart contracts. This innovative framework ensures complete transparency and traceability throughout the entire process. When users pay to download articles, the funds are automatically allocated according to the rules established within the DAO framework, eliminating the need for any centralized oversight.
+
+\subsection{Advanced of Journal DAO}
+
+
+In the realm of Web 3.0, we witness a fundamental transformation in the dissemination of academic articles. Unlike the traditional Web 2.0 model, it introduces a paradigm shift. In this innovative framework, the data entity of articles resides directly on the blockchain, with the website serving as a mere interface reflecting the blockchain data. When users make payments for downloads, the entire fund allocation process is automated through smart contracts, eliminating the need for manual intervention. This groundbreaking framework ensures complete transparency and traceability throughout the process. As users pay to download articles, funds are automatically distributed according to the rules set within the DAO framework, without any centralized oversight.In the Web 3.0 paradigm, this novel model signifies a departure from reliance on traditional intermediaries. Instead, it empowers users with the direct participation in DAO frameworks, utilizing smart contracts for automated and secure fund distribution. This shift not only achieves decentralization in the transaction process but also enhances the efficiency of academic article transactions.In the Web 3.0 environment, articles are directly uploaded to the blockchain. All operations, including payment processing and fund distribution, are seamlessly executed through smart contracts. This innovative framework ensures complete transparency and traceability throughout the entire process. When users pay to download articles, the funds are automatically allocated according to the rules established within the DAO framework, eliminating the need for any centralized oversight.
 %在Web 3.0的领域中，我们对待学术文章传播方式发生了根本性的变革。与传统的Web 2.0模式不同，它引入了一种新的框架。文章数据主体直接存在于区块链上，而网站仅仅是对区块链数据的映射。在这一新的框架下，用户支付下载后，整个资金分配的过程都通过智能合约进行自动化执行，无需手动干预。这一创新性框架确保了整个过程的完全透明性和可追溯性。当用户支付下载文章时，资金会根据去中心化自治组织（DAO）框架内设立的规则自动分配，无需任何集中监管。
 %在Web 3.0的范式中，这一新兴模式标志着我们不再依赖传统中介机构。相反，它赋予用户直接参与DAO框架的权力，利用智能合约实现资金的自动化和安全分配。这一转变不仅实现了交易过程的去中心化，还提高了学术文章交易的效率。
 %在Web 3.0的环境中，文章直接上链。所有操作，包括支付处理和资金分配，都通过智能合约无缝执行。这一创新性框架确保了整个过程的完全透明性和可追溯性。当用户支付下载文章时，资金会根据去中心化自治组织（DAO）框架内设立的规则自动分配，无需任何集中监管。
-
-
 
 Overall, the main difference in payment systems between Web2 and Web3 is the degree of centralization. Web2 payment systems are centralized, while Web3 payment systems are decentralized. While Web3 is still in its early stages, it has the potential to revolutionize the way we think about payments, transactions, and financial systems.In the current era of digitization, the act of anchoring a paper on the blockchain signifies the author's complete ownership of the work, opening up boundless possibilities. The introduction of blockchain technology empowers authors with more rights and limitless potential. Once a paper is inscribed on the immutable blockchain, authors not only possess intellectual property rights but also gain absolute control over their creations. This shift in ownership implies that authors can explore innovation more freely, facilitate transparent data sharing, and attain fairer returns from the wealth generated by their works. The immutability and transparency afforded by blockchain provide robust protection for the rights of paper owners, ushering in new possibilities for academic research and knowledge sharing. This profound ownership transformation elevates a paper beyond being merely a conduit for academic dissemination; it becomes a symbol of the unique wealth created by the author, sparking a profound revolution in the relationship between academia and authors.
 %总体而言，Web2和Web3支付系统的主要区别在于中心化程度。 Web2支付系统是中心化的，而Web3支付系统是去中心化的。虽然 Web3 仍处于早期阶段，但它有潜力彻底改变我们对支付、交易和金融系统的看法。
 %在这个时代，随着论文数字化的趋势，将论文上链意味着作者对其作品的彻底拥有。区块链技术的引入赋予了作者更多的权利和无限的可能性。一旦论文被写入不可篡改的区块链，作者不仅仅拥有了知识产权，更获得了对其作品的完全掌控。这样的所有权转变意味着作者可以更自由地探索创新、实现数据的透明共享，并在作品创造的财富中获得更为公平的回报。通过区块链的不可篡改性和透明性，论文的所有者权益得到了更强有力的保障，为学术研究和知识共享带来了新的可能性。这种彻底的拥有使得论文不再仅仅是学术传播的载体，更是作者创造的独特财富的象征，为学术界和作者之间的关系带来了深刻的变革。
 
-  
 
-\section{DAO to DeSci}
+
+
+  
+\section{Mechanism Design of Journal DAO}
+%3 架构 我的内容 journal DAO，笼统一些的架构
+
 % 4 详细的架构， key study
 % 用nft解释token
 
@@ -237,8 +230,12 @@ Overall, the main difference in payment systems between Web2 and Web3 is the deg
 In the practical implementation of the Journal DAO, we leveraged the Aragon framework to establish a decentralized and transparent infrastructure for academic publishing. The execution of the DAO involved several key steps to ensure a seamless and fair distribution of tokens among participants.
 %在期刊 DAO 的实际实施中，我们利用 Aragon 框架建立了一个去中心化和透明的学术出版基础设施。 DAO 的执行涉及几个关键步骤，以确保代币在参与者之间的无缝和公正分配。
 
-\paragraph{Token Distribution Mechanism}
-%代币分配机制：
+
+
+
+
+\subsection{Token Distribution Mechanism}
+
 
 \begin{enumerate}
   \item Author Rewards:
@@ -267,30 +264,6 @@ In the practical implementation of the Journal DAO, we leveraged the Aragon fram
 
 \end{enumerate}
 
-
-\paragraph{NFT-Based Finance Distribution}
-%基于 NFT 的财务分配：
-
-The finance generated within the Journal DAO is distributed based on the NFT model, where each token holder is entitled to a proportional share. This innovative approach ensures that the financial rewards align with the level of contribution and engagement at various stages of the academic process.
-%期刊 DAO 内生成的财务基于 NFT 模型进行分配，其中每个代币持有者有权获得相应份额。这种创新方法确保了财务奖励与在学术流程的各个阶段的贡献和参与程度相一致。
-
-\paragraph{Decentralized Governance}
-%去中心化治理：
-
-The DAO operates on a decentralized governance model, allowing token holders to participate in decision-making processes. This ensures that the community has a say in the evolution of the platform, creating a democratic and inclusive environment.
-%DAO 采用去中心化治理模型，允许代币持有者参与决策过程。这确保了社区能够参与平台发展，创造了一个民主和包容的环境。
-
-\paragraph{Results and Implications}
-%结果和影响：
-
-The implementation of the Journal DAO has yielded positive results in terms of increased engagement, quality submissions, and a more inclusive academic ecosystem. The transparent and automated token distribution mechanisms have effectively addressed issues of ownership and reward distribution, fostering a collaborative and fair scholarly environment.
-%期刊 DAO 的实施在提高参与度、质量投稿以及创建更具包容性的学术生态方面取得了积极成果。透明和自动化的代币分配机制有效解决了所有权和奖励分配的问题，促进了合作和公正的学术环境。
-
-% In conclusion, The detailed execution of the Journal DAO demonstrates the viability of blockchain and DAO principles in reshaping academic publishing. The emphasis on decentralized governance, token incentives, and transparent finance distribution has the potential to revolutionize the scholarly landscape, making it more accessible, collaborative, and equitable for all participants.
-%总的来说，期刊 DAO 的详细执行展示了区块链和 DAO 原则在重塑学术出版方面的可行性。对去中心化治理、代币激励和透明财务分配的强调有望彻底改变学术领域，使其对所有参与者更具可访问性、合作性和公平性。
-
-
-
 \begin{figure}[h]
   \centering
   \includegraphics[width=3.2in]{assets/daopaper.png}
@@ -314,6 +287,11 @@ As Figure \ref{fig:addtoken} shows, upon the download or citation of a paper, th
 
 %在论文被下载或引用时，DAO会根据一定的规则给予下载者和引用者的token分配。这确保了在DAO框架内，除了作者和审稿过程之外的贡献者也能够得到认可和奖励。对于下载者，token的分配取决于他们与论文的互动程度和影响力。高下载次数会导致更多的token奖励，形成了一个动态且基于贡献的激励体系。同样，当论文被引用时，引用者将根据其引用的重要性和影响力获得token分配。这鼓励用户参与学术讨论，为学术界做出贡献，并积极参与知识的传播。这些token分配机制不仅承认了那些通过下载或引用论文做出贡献的人的努力，还促进了一个协作的环境，激励用户与内容互动，并有意义地为学术生态系统做出贡献。DAO对于认可各种形式贡献的承诺确保了一个全面而包容性的奖励体系，将激励机制与学术界更广泛的目标保持一致。
 
+\subsection{NFT-Based Finance Distribution}
+
+The finance generated within the Journal DAO is distributed based on the NFT model, where each token holder is entitled to a proportional share. This innovative approach ensures that the financial rewards align with the level of contribution and engagement at various stages of the academic process.
+%期刊 DAO 内生成的财务基于 NFT 模型进行分配，其中每个代币持有者有权获得相应份额。这种创新方法确保了财务奖励与在学术流程的各个阶段的贡献和参与程度相一致。
+
 
 \begin{figure}[h]
   \centering
@@ -325,6 +303,26 @@ As Figure \ref{fig:addtoken} shows, upon the download or citation of a paper, th
 As Figure \ref{fig:financenft} shows, in this system, authors, reviewers, download users, and reference users all possess a specific quantity of tokens. These tokens are considered as NFTs (Non-Fungible Tokens) due to their unique nature. Once finance is generated, such as when a user pays to download a paper, the system allocates this finance based on the number of tokens held by the respective parties.This design ensures objectivity, fairness, and transparency within the system. Each participant's contribution is reflected in a specific number of tokens, and the allocation mechanism operates according to the quantity of these tokens. Such a design not only enhances the fairness of the incentive mechanism but also makes the entire system more transparent, allowing participants to clearly understand the relationship between their contributions and rewards.This NFT-based token system provides tangible and verifiable returns for contributors while establishing an effective and operable incentive mechanism for the entire ecosystem. This fair and transparent allocation method is expected to drive collaboration and development in the academic community, creating a mutually beneficial environment for all stakeholders.
 
 %在这个系统中，作者、审稿人、下载用户和引用用户都拥有一定数量的token。这些token具有唯一性，可以被视为NFT（非同质化代币）。一旦产生了finance，比如用户通过付费下载论文，系统会按照持有者的token数量来分配这部分finance。这个设计确保了系统的客观性、公正性和透明性。每个参与者的贡献都以特定数量的token体现，而分配机制则按照这些token的数量来进行。这样的设计不仅提高了激励机制的公正性，也使得整个系统更加透明，参与者可以清晰地了解他们的贡献与奖励之间的关系。这种以NFT为基础的token系统为贡献者提供了具体的、可证明的回报，同时也为整个生态系统提供了一种有效的、可操作的激励机制。这种公正而透明的分配方式有望推动学术界的合作与发展，为各方创造一个共赢的环境。
+
+
+
+\subsection{Decentralized Governance}
+%去中心化治理：
+
+The DAO operates on a decentralized governance model, allowing token holders to participate in decision-making processes. This ensures that the community has a say in the evolution of the platform, creating a democratic and inclusive environment.
+%DAO 采用去中心化治理模型，允许代币持有者参与决策过程。这确保了社区能够参与平台发展，创造了一个民主和包容的环境。
+
+\subsection{Results and Implications}
+%结果和影响：
+
+The implementation of the Journal DAO has yielded positive results in terms of increased engagement, quality submissions, and a more inclusive academic ecosystem. The transparent and automated token distribution mechanisms have effectively addressed issues of ownership and reward distribution, fostering a collaborative and fair scholarly environment.
+%期刊 DAO 的实施在提高参与度、质量投稿以及创建更具包容性的学术生态方面取得了积极成果。透明和自动化的代币分配机制有效解决了所有权和奖励分配的问题，促进了合作和公正的学术环境。
+
+% In conclusion, The detailed execution of the Journal DAO demonstrates the viability of blockchain and DAO principles in reshaping academic publishing. The emphasis on decentralized governance, token incentives, and transparent finance distribution has the potential to revolutionize the scholarly landscape, making it more accessible, collaborative, and equitable for all participants.
+%总的来说，期刊 DAO 的详细执行展示了区块链和 DAO 原则在重塑学术出版方面的可行性。对去中心化治理、代币激励和透明财务分配的强调有望彻底改变学术领域，使其对所有参与者更具可访问性、合作性和公平性。
+
+\section{An Illustrative Example}
+
 
 \begin{table*}[h!]
   \begin{center}
@@ -420,27 +418,6 @@ Under this framework, users can not only pay for paper downloads but also receiv
 In summary, Decentralized Autonomous Organizations inject new vitality into academic publishing, creating a more equitable environment for both authors and readers. This innovative model holds promise for paving new paths in the development of academia, fostering the free dissemination and sharing of knowledge.
 %综上所述，去中心化自治组织为学术出版注入了新的活力，为作者和用户创造了更加公平和有利的环境。这一创新模式有望为学术界的发展开辟新的道路，促进知识的自由传播和共享。
 
-% \section*{Acknowledgments}
-% This should be a simple paragraph before the References to thank those individuals and institutions who have supported your work on this article.
-
-
-
-% {\appendix[Proof of the Zonklar Equations]
-% Use $\backslash${\tt{appendix}} if you have a single appendix:
-% Do not use $\backslash${\tt{section}} anymore after $\backslash${\tt{appendix}}, only $\backslash${\tt{section*}}.
-% If you have multiple appendixes use $\backslash${\tt{appendices}} then use $\backslash${\tt{section}} to start each appendix.
-% You must declare a $\backslash${\tt{section}} before using any $\backslash${\tt{subsection}} or using $\backslash${\tt{label}} ($\backslash${\tt{appendices}} by itself
-%  starts a section numbered zero.)}
-
-
-
-%{\appendices
-%\section*{Proof of the First Zonklar Equation}
-%Appendix one text goes here.
-% You can choose not to have a title for an appendix if you want by leaving the argument blank
-%\section*{Proof of the Second Zonklar Equation}
-%Appendix two text goes here.}
-
 
 
 
@@ -450,29 +427,37 @@ In summary, Decentralized Autonomous Organizations inject new vitality into acad
 
 \newpage
 
-\section{Biography Section}
-If you have an EPS/PDF photo (graphicx package needed), extra braces are
- needed around the contents of the optional argument to biography to prevent
- the LaTeX parser from getting confused when it sees the complicated
- $\backslash${\tt{includegraphics}} command within an optional argument. (You can create
- your own custom macro containing the $\backslash${\tt{includegraphics}} command to make things
- simpler here.)
  
-\vspace{11pt}
 
-\bf{If you include a photo:}\vspace{-33pt}
-\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{fig1}}]{Michael Shell}
-Use $\backslash${\tt{begin\{IEEEbiography\}}} and then for the 1st argument use $\backslash${\tt{includegraphics}} to declare and link the author photo.
-Use the author name as the 3rd argument followed by the biography text.
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{assets/thales.jpg}}]{Tai Jiang}
+  received the master’s degree in Master of Business Administration from the University of Chinese Academy of Sciences, Beijing, in 2022, where he is currently pursuing the Ph.D. degree with the Institute of System Engineering, Macau University of Science and Technology, Macao, China.
+  
+  he is with the Department of Engineering Science, Faculty of Innovation Engineering, Macau University of Science and Technology, Macao, 999078, China. His research interests include parallel intelligence, blockchain, DAOs, NFTs, Meta, and Decentralized Science.
 \end{IEEEbiography}
 
-\vspace{11pt}
+\vspace{-33pt}
 
-\bf{If you will not include a photo:}\vspace{-33pt}
-\begin{IEEEbiographynophoto}{John Doe}
-Use $\backslash${\tt{begin\{IEEEbiographynophoto\}}} and the author name as the argument followed by the biography text.
-\end{IEEEbiographynophoto}
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{assets/rqin.jpg}}]{Rui Qin}
+  (Member, IEEE) received the Ph.D. degree in computer application technology from the University of Chinese Academy of Sciences, Beijing, China, in 2016.
 
+  She is currently an Associate Professor with the State Key Laboratory for Management and Control of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing. Her research interests include blockchain, DAO, and parallel management.
+\end{IEEEbiography}
+
+\vspace{-33pt}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{assets/yhliu.jpg}}]{Yuhang Liu}
+  received the B.S. degree from the Department of Precision Instruments, Tsinghua University, Beijing, China, in 2021. He is currently working toward the Ph.D. degree with the Institute of Automation, Chinese Academy of Sciences, Beijing. His research interests include parallel radars, 3D object detection, and point cloud data generation.
+\end{IEEEbiography}
+
+\vspace{-33pt}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{assets/WFY.jpg}}]{Fei-Yue Wang} (S’87–M’89–SM’94–F’03)
+received his Ph.D. degree in computer and systems engineering from the Rensselaer Polytechnic Institute, Troy, NY, USA, in 1990. He joined The University of Arizona in 1990 and became a Professor and the Director of the Robotics and Automation Laboratory and the Program in Advanced Research for Complex Systems. In 1999, he founded the Intelligent Control and Systems Engineering Center at the Institute of Automation, Chinese Academy of Sciences (CAS), Beijing, China, under the support of the Outstanding Chinese Talents Program from the State Planning Council, and in 2002, was appointed as the Director of the Key Laboratory of Complex Systems and Intelligence Science, CAS, and Vice President of Institute of Automation, CAS in 2006. He found CAS Center for Social Computing and Parallel Management in 2008, and became the State Specially Appointed Expert and the Founding Director of the State Key Laboratory for Management and Control of Complex Systems in 2011. He is a distinguished professor at the Macau University of Science and Technology.
+
+His current research focuses on methods and applications for parallel intelligence, social computing, and knowledge automation. He is a Fellow of International Council on Systems Engineering (INCOSE), International Federation of Automatic Control (IFAC), American Society of Mechanical Engineers (ASME), and American Association for the Advancement of Science (AAAS). In 2007, he received the National Prize in Natural Sciences of China, numerous best papers awards from IEEE Transactions, and became an Outstanding Scientist of Association for Computing Machinery(ACM) for his work in intelligent control and social computing. He received the IEEE Intelligent Transportation Systems (ITS) Outstanding Application and Research Awards in 2009, 2011, and 2015, respectively, the IEEE Systems, Man, and Cybernetics Society (SMC) Norbert Wiener Award in 2014, and became the IFAC Pavel J. Nowacki Distinguished Lecturer in 2021.
+
+Since 1997, he has been serving as the General or Program Chair of over 30 IEEE, Institute for Operations Research and the Management Sciences (INFORMS), IFAC, ACM, and ASME conferences. He was the President of the IEEE ITS Society from 2005 to 2007, the IEEE Council of Radio Frequency Identification (RFID) from 2019 to 2021, the Chinese Association for Science and Technology, USA, in 2005, the American Zhu Kezhen Education Foundation from 2007 to 2008, the Vice President of the ACM China Council from 2010 to 2011, the Vice President and the Secretary General of the Chinese Association of Automation (CAA) from 2008 to 2018, the Vice President of IEEE SMC from 2019 to 2021. He was the Founding Editor-in-Chief (EiC) of the International Journal of Intelligent Control and Systems from 1995 to 2000, IEEE ITS Magazine from 2006 to 2007, JOURNAL OF AUTOMATICA SINICA (IEEE/CAA) from 2014-2017, China's Journal of Command and Control from 2015-2021, and China's Journal of Intelligent Science and Technology from 2019 to 2021. He was the EiC of the IEEE Intelligent Systems from 2009 to 2012, IEEE TRANSACTIONS on ITS from 2009 to 2016, IEEE TRANSACTIONS ON COMPUTATIONAL SOCIAL SYSTEMS from 2017 to 2020. Currently, he is the President of CAA's Supervision Council, and the EiC of IEEE Trans. on Intelligent Vehicles.
+\end{IEEEbiography}
 
 
 
