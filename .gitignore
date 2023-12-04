@@ -10,5 +10,6 @@
 *.bbl
 *.blg
 /opt
+/assets/*.pdf
 
 .vscode
