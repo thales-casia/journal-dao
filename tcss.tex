@@ -16,12 +16,12 @@
 
 \begin{document}
 
-\title{DeSci based web3 Journal Framework: \\ Ownership, Governance, and Incentive}
+\title{Journal DAO: \\ User-Incentivized Autonomous Decentralized Scientific Publishing in Web3}
 
 \author{Tai Jiang, Rui Qin,~\IEEEmembership{Member, IEEE}, Yuhang Liu, \\
  Fei-YueWang,~\IEEEmembership{Fellow,~IEEE}.
         % <-this % stops a space
-\thanks{Identify applicable funding agency here. If none, delete this.}% <-this % stops a space
+\thanks{This work was supported by the Science and Technology Development Fund of Macau SAR under Grant 0093/2023/RIA2 and  Grant 0050/2020/A1.}% <-this % stops a space
 \thanks{Manuscript received February 15, 2023; revised February 15, 2023.}
 \thanks{Tai Jiang is with the Department of Engineering Science, Faculty of Innovation Engineering, Macau University of Science and Technology, Macao, 999078, China (e-mail: jiangtai20@mails.ucas.ac.cn).}
 \thanks{Rui Qin is with the State Key Laboratory for Management and Control of Complex Systems and the State Key Laboratory of Multimodal Artificial Intelligence Systems, Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China (e-mail: rui.qin@ia.ac.cn).}
@@ -50,16 +50,40 @@ The emergence of Web3.0 signifies a significant evolution in the Internet landsc
 DAO, smart contract, decentralized autonomous organizations, decentralized funding, decentralized science, DeSci, parallel DeSci, Web3
 \end{IEEEkeywords}
 
-\section{Introduction}
+\section{Introduction \label{sec:introduction}}
 % 第一段：目前期刊运行存在的问题与挑战
 % 第二段：新技术的发展为期刊运行提供了哪些发展机遇
 % 第三段：简述已有的期刊变革方面的研究
 % 第四段：已有研究中尚存在的问题，本文的主要工作
 % 第五段：本文的结构安排
 
+%不需要介绍学术出版行业发展的历程。
+%第一段只需要介绍学术出版行业目前面临哪些严峻问题（一定要列本文中要解决的那些问题）；First, .... Second,.... Third,....
 
-\IEEEPARstart{A}{cademic} publication methods have undergone significant historical transformations, reflecting the evolution of technology, society, and culture.Traditional scholarly journals, rooted in print formats and centralized editorial processes, have long been the primary medium for disseminating research findings \cite{febvre1997coming}. However, the digital age has brought about profound changes, challenging the conventional models and paving the way for innovative solutions \cite{meadows1997communicating}. With the advent of the internet, electronic journals emerged, offering faster dissemination and broader reach, yet grappling with issues of copyright, authenticity, and peer review integrity.In recent years, the emergence of blockchain technology has presented a transformative opportunity for the academic publishing landscape \cite{mougayar2016business}. Blockchain, with its decentralized and immutable ledger, addresses several longstanding challenges \cite{swan2015blockchain}. The transition to blockchain-based academic journals holds the promise of enhancing transparency, traceability, and security in scholarly communication.
-%学术论文的发表方式在历史上发生了显著的变迁，反映了技术、社会和文化的演进。传统的学术期刊，根植于印刷格式和中心化编辑流程，长期以来一直是传播研究成果的主要媒介。然而，数字时代带来了深刻的变革，挑战传统模式，为创新性解决方案铺平了道路。随着互联网的出现，电子期刊应运而生，提供了更快的传播速度和更广泛的覆盖面，但同时也面临着版权、真实性和同行评审完整性等问题。近年来，区块链技术的出现为学术出版领域带来了深刻的变革机遇。区块链凭借其去中心化和不可篡改的账本，解决了多项长期存在的问题。向基于区块链的学术期刊过渡有望提升学术交流的透明性、可追溯性和安全性。
+%第二段综述学术出版领域已有哪些文献采用这些新技术去解决第一段所列出的问题。讲完这些文献之后，要对以上文献进行述评，要表述出这些文献只是从XX方面对这些问题进行了初步探讨，并没有真正解决以上问题，目前也没有针对以上问题的一套完整有效解决方案。
+
+%第三段简要介绍区块链、DAO等新技术的出现给学术出版业带来哪些发展机遇。详细介绍这些新技术的哪些特性可以解决学术出版行业的哪些问题。
+
+%第四段介绍本文的工作和贡献。采用总分总的形式，先总体介绍本文的主要贡献：将区块链、DAO等新技术应用于学术出版领域，提出Journal DAO，利用区块链和DAO的哪些特性，为学术出版行业面临的哪些问题提供有效解决方案。再分别介绍本文的具体贡献，分三点列出，第一点提出Journal DAO的研究思路与框架，第二点提出Journal DAO的模型，第三点给出一个案例。最后总结一句本文工作的重要性。
+
+%第五段简要介绍本文的结构安排。第二节。。。，第三节。。。。，第四节。。。。，第五节。。。。，很简短地介绍即可，本段内容大概四五行。
+
+
+\IEEEPARstart{A}{cademic} paper face several challenges recently, including peer review, authenticity, and copyright. 
+Firstly, lack of complete transparency in the review process. The traditional peer review system, often conducted anonymously, may not always ensure fairness and impartiality. The identities of the reviewers and their feedback are typically kept confidential, making it difficult for authors to understand the rationale behind decisions and address any potential biases. This lack of transparency can undermine the credibility and integrity of the review proces. 
+Secondly, While authors are credited with the authorship of a paper, they often lack control over the various data associated with it. In many cases, the ownership and control of data reside with the publishers or electronic journal databases. This poses a challenge to authors in terms of retaining their rights and having the ability to decide on data sharing, data transformation, or deriving benefits from their own research. This lack of control over their own data not only hampers their ability to fully utilize and leverage their research but also limits their potential for collaborations and further advancements in their field. 
+Thirdly, Academic papers rely on data to support their findings and conclusions. However, the current system often restricts the ability of authors to share or collaborate on their data. The data associated with a paper is typically stored within electronic journal databases or controlled by publishers, limiting the author's autonomy to decide on sharing, collaboration, or commercialization opportunities. This restriction hampers the progress of research as it impedes the free flow of knowledge and inhibits potential collaborations among researchers. Additionally, it prevents authors from fully benefiting from their own research, restricting the potential for further discoveries and advancements that could benefit the scientific community as a whole. 
+These challenges highlight the need for reforms in the academic publishing system to address issues related to transparency, author rights protection, and data sharing. Implementing new technologies, such as blockchain\cite{swan2015blockchain}, could potentially provide solutions to these problems by ensuring transparency in the review process, protecting author rights, and facilitating data sharing and collaboration in a secure and decentralized manner \cite{mougayar2016business}.
+%1. 透明度：当前学术论文面临的一个主要问题是审稿过程缺乏完全的透明度。传统的同行评审系统往往是匿名进行的，不能始终保证公正和客观性。审稿人的身份和评审意见通常是保密的，这使得作者难以了解决策背后的理由并解决潜在的偏见。透明度的缺乏可能损害审稿过程的可信度和完整性。
+%2. 作者权益保护：虽然作者被认可为论文的作者，但他们往往无法控制与论文相关的各种数据。在许多情况下，数据的所有权和控制权掌握在出版商或电子期刊数据库手中。这对作者来说是一个挑战，因为他们缺乏保护自己权益和决定数据共享、数据转化或从自己的研究中获益的能力。对自己数据缺乏控制不仅限制了他们充分利用和发挥研究的能力，也限制了他们在领域内进行合作和进一步发展的潜力。
+%3. 数据共享与合作：学术论文依赖数据来支持其发现和结论。然而，目前的系统往往限制了作者分享或合作使用数据的能力。与论文相关的数据通常存储在电子期刊数据库内或由出版商控制，限制了作者决定共享、合作或商业化机会的自主权。这种限制阻碍了研究的进展，因为它阻碍了知识的自由流动，并抑制了研究人员之间的潜在合作。此外，它还阻碍了作者充分从自己的研究中获益的能力，限制了进一步发现和进展对整个科学界的潜在益处。
+%这些问题突显了学术出版系统需要改革，以解决透明度、作者权益保护和数据共享等问题。采用新技术，如区块链，可能能够提供解决方案，通过确保审稿过程的透明度、保护作者权益以及促进安全和去中心化的数据共享和合作。
+
+
+
+
+
+
 
 
 Decentralized Autonomous Organization (DAO) have emerged as a disruptive and transformative innovation in the realm of organizational governance. Built on the foundation of blockchain technology and smart contracts, DAOs present a novel approach to decision-making, fund management, and community governance. Unlike traditional hierarchical structures, DAOs operate without the need for central authorities, relying on transparent and automated processes governed by code and consensus \cite{buterin2014next}.
@@ -89,18 +113,31 @@ By examining the reader's role in the DAO ecosystem, we can delve deeper into th
 
 
 % 本文首先会先介绍一下journal dao的框架，包含概念以及运行流程，以及跟现在传统的对比。然后会介绍激励机制的设计和实施。最后会用实验结果验证其效果。
-This paper begins by providing an in-depth introduction to the framework of Journal DAO, including its concepts, operational processes, and a comparative analysis with traditional approaches. 
-Following the framework overview, it delves into the design and implementation of the incentive mechanism within Journal DAO. This section explores the various factors considered in designing the incentive structure, such as rewarding authors, reviewers, and cited authors based on their contributions to the publication process. Additionally, it discusses the integration of token-based incentives to foster motivation and participation among stakeholders.
-Subsequently, it presents experimental results to validate the effectiveness of the implemented incentive mechanism in Journal DAO. Through a rigorous evaluation and analysis, the outcomes highlight the impact of the incentive structure on the overall performance, efficiency, and engagement of participants within the system.
-Overall, it aims to provide a comprehensive understanding of Journal DAO, its framework, incentive mechanism design, and practical implementation. The experimental results serve to demonstrate the efficacy of the proposed approach, ultimately contributing to the advancement of decentralized and autonomous publishing systems.
+Section \ref{sec:framework}, this paper begins by providing an in-depth introduction to the framework of Journal DAO, including its concepts, operational processes, and a comparative analysis with traditional approaches. 
+Section \ref{sec:mechanism}, it delves into the design and implementation of the incentive mechanism within Journal DAO. This section explores the various factors considered in designing the incentive structure, such as rewarding authors, reviewers, and cited authors based on their contributions to the publication process. Additionally, it discusses the integration of token-based incentives to foster motivation and participation among stakeholders.
+Section \ref{sec:performance}, subsequently, it presents experimental results to validate the effectiveness of the implemented incentive mechanism in Journal DAO. Through a rigorous evaluation and analysis, the outcomes highlight the impact of the incentive structure on the overall performance, efficiency, and engagement of participants within the system.
+Section \ref{sec:conclusion}, the paper concludes with a conclusion and outlook.
 %本论文首先详细介绍了Journal DAO的框架，包括其概念、运行流程以及与传统方法的对比。
 %在框架概述之后，论文深入探讨了Journal DAO内部激励机制的设计和实施。这一部分探讨了设计激励结构时考虑的各种因素，例如基于作者、审稿人和被引作者在出版过程中的贡献进行奖励。此外，还讨论了通过基于代币的激励促进参与者的积极性和参与度。
 %随后，论文呈现了实验结果，验证了Journal DAO实施的激励机制的有效性。通过进行严格的评估和分析，结果突出了激励结构对系统整体性能、效率和参与度的影响。
-%总体而言，本论文旨在全面了解Journal DAO的框架、激励机制设计和实际实施。实验结果旨在证明所提出方法的有效性，最终推动去中心化和自治出版系统的发展。
 
 
 
-\section{Framework of Journal DAO}
+\section{Framework of Journal DAO \label{sec:framework}}
+%第II节和第III节内容的逻辑建议重新组织下，把与框架相关的内容放在第II节，把模型和机制设计相关的内容放在第III节。第II节可以分为三小节【小标题的名称仅供参考】。
+%A The Framework
+
+%本小节给出Journal DAO的framework，建议画一张框架图，要包含所有参与者，还要包含完整的运行流程，以及token和finance的流转。
+
+%在框架图的基础上，简要介绍框架图，并说明区块链和DAO在其中如何发挥作用。
+
+%B. The Operation Process
+
+%介绍Journal DAO框架中参与者的各类角色，Journal DAO运行流程和实现的功能，以及token和finance如何流转。
+
+%C. The Advantages
+
+%介绍与传统期刊相比，Journal DAO有哪些优势.
 
 
 \begin{figure}[h]
@@ -144,7 +181,7 @@ According to the development of district DAO, related blockchain technology, the
 These application examples highlight the potential value of blockchain, smart contracts, and DAO technology in academic publishing and journal management. They enhance transparency, protect intellectual property, verify identity, automate processes, and encourage collaboration. As these technologies continue to evolve, they hold promise for further innovation and efficiency in academia \cite{vacca2021systematic}.
 %这些应用示例突显了区块链、智能合约和DAO技术在学术出版和杂志管理方面的潜在应用，提高了透明度、知识产权保护、身份验证和自动化审稿流程。随着这些技术的不断发展，它们将有望为学术界提供更多的创新和效率。
 
-\subsection{Web3-Based Journal DAO}
+\subsection{Web3-Based Journal DAO Framework}
 
 \begin{figure*}[!ht]
   \centering
@@ -232,7 +269,7 @@ In the current era of digitization, the act of anchoring a paper on the blockcha
 
 
   
-\section{Mechanism Design of Journal DAO}
+\section{Mechanism Design of Journal DAO \label{sec:mechanism}}
 %3 架构 我的内容 journal DAO，笼统一些的架构
 
 % 4 详细的架构， key study
@@ -318,6 +355,14 @@ As Figure \ref{fig:financenft} shows, in this system, authors, reviewers, downlo
 %在这个系统中，作者、审稿人、下载用户和引用用户都拥有一定数量的token。这些token具有唯一性，可以被视为NFT（非同质化代币）。一旦产生了finance，比如用户通过付费下载论文，系统会按照持有者的token数量来分配这部分finance。这个设计确保了系统的客观性、公正性和透明性。每个参与者的贡献都以特定数量的token体现，而分配机制则按照这些token的数量来进行。这样的设计不仅提高了激励机制的公正性，也使得整个系统更加透明，参与者可以清晰地了解他们的贡献与奖励之间的关系。这种以NFT为基础的token系统为贡献者提供了具体的、可证明的回报，同时也为整个生态系统提供了一种有效的、可操作的激励机制。这种公正而透明的分配方式有望推动学术界的合作与发展，为各方创造一个共赢的环境。
 
 
+\begin{equation}
+  \sum_{i = 1}^{m}x_i = n
+\end{equation}
+
+\begin{equation}
+  F = \sum_{i = 1}^{m}v_i \cdot w_i
+\end{equation}
+
 
 \subsection{Decentralized Governance}
 %去中心化治理：
@@ -333,7 +378,7 @@ In conclusion, The detailed execution of the Journal DAO demonstrates the viabil
 %期刊 DAO 的实施在提高参与度、质量投稿以及创建更具包容性的学术生态方面取得了积极成果。透明和自动化的代币分配机制有效解决了所有权和奖励分配的问题，促进了合作和公正的学术环境。
 %总的来说，期刊 DAO 的详细执行展示了区块链和 DAO 原则在重塑学术出版方面的可行性。对去中心化治理、代币激励和透明财务分配的强调有望彻底改变学术领域，使其对所有参与者更具可访问性、合作性和公平性。
 
-\section{Model performance}
+\section{Model performance \label{sec:performance}}
 
 
 \begin{table*}[ht!]
@@ -422,7 +467,7 @@ Once the paper is on the blockchain, it unequivocally belongs to the author, aut
 
 
 
-\section{Conclusion}
+\section{Conclusion \label{sec:conclusion}}
 This paper extensively explores the framework of DAO and provides a thorough analysis of its potential applications in the academic publishing domain. By placing papers on the blockchain, we have achieved transparency in ownership, allowing authors to have complete control over their works while also creating diverse financial opportunities. The autonomous nature of DAO enables users to directly participate in decision-making and contributions, constructing an ecosystem that is open, fair, and characterized by positive feedback loops.
 %本文深入探讨了去中心化自治组织（DAO）的框架，并就其在学术出版领域的潜在应用进行了详尽分析。通过将论文上链，我们实现了论文所有权的透明化，使作者能够完全拥有其作品，同时也为其创造了丰富的财务机会。DAO的自治性质使得用户能够直接参与决策和贡献，构建了一个开放、公正、具有良性循环的生态系统。
 
