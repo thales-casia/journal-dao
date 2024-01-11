@@ -353,7 +353,193 @@ In the current era of digitization, the act of anchoring a paper on the blockcha
 %把dao应用在journal。作者，审稿人，读者都能受益。作者作为文章的拥有者，占有最多的最多的收益，并且随着时间的推移，收益会越来越高。审稿人作为文章的负责人，前期占有较高的收益，后期逐渐降低。读者作为文章的参与者，收益相对较低，但是越早参与，收益就越高。
 
 
-Integrating DAO technology into the realm of academic journals holds immense potential for benefiting authors, reviewers, and readers alike. 
+% 本文结合DAO的基本概念，创建DAO的框架。首先是铸币，其中为所有与论文相关的参与者，包括审稿人，作者，读者，按照一定的机制分配token。token可以用来决定proposal的权重，本框架根据token分配finance。
+This paper combines the fundamental concepts of DAO to establish a framework for implementing DAO in academic journals. The framework begins with the issuance of tokens, which are allocated to all participants involved in the publication process, including reviewers, authors, and readers, through a specified mechanism. These tokens serve as a means to determine the weightage of proposals, and the framework utilizes the token distribution to allocate financial resources accordingly. By integrating token-based incentives and governance mechanisms, this framework ensures a fair and transparent distribution of resources within the DAO-operated journal ecosystem. Participants holding tokens can actively participate in the processes of all aspects of the article publication, such as send articles, review articles, and download articles, thereby influencing the allocation of financial resources based on their token holdings. Through this framework, the DAO-operated journal can foster an inclusive and democratic environment, empowering participants to shape the direction and priorities of the journal based on their token weightage.
+%本文结合DAO的基本概念，创建了一个适用于学术期刊的DAO框架。该框架首先进行铸币操作，将与论文相关的所有参与者（包括审稿人、作者和读者）按照一定的机制分配代币。这些代币可以用来决定提案的权重，本框架则根据代币分配财务资源。通过整合代币激励和治理机制，该框架确保在DAO运营的学术期刊生态系统中资源的公平和透明分配。持有代币的参与者可以积极参与文章发布过程，例如发布文章、审阅文章和下载文章，从而根据其代币持有量影响财务资源的分配。通过该框架，DAO运营的学术期刊能够营造一个包容和民主的环境，赋予参与者根据其代币权重来塑造期刊的方向和优先事项的权力。
+
+\begin{equation}
+  \begin{aligned}
+    D_0 &= \sum_{i = 1}^{m}x_i \\
+    1 &= \alpha_1 + \alpha_2 + \alpha_3 \\
+    A_0 &= \alpha_1 D_0 \quad (A=\{a_0, a_1, a_2, a_3, \cdots a_n\}) \\
+    E_0 &= \alpha_2 D_0 \quad (E=\{e_1, e_2, e_3, \cdots e_n\}) \\
+    P_0 &= \alpha_3 D_0 \quad (P=\{p\})
+  \end{aligned}
+  \label{eq:dao0}
+\end{equation}
+
+Upon publication of an article, a DAO specific to that particular article is established, and tokens are minted and distributed among the authors, reviewers, and the publisher. The total number of tokens minted after this process, denoted as $D_0$, is determined based on Equation \ref{eq:dao0}, taking into account the distribution proportions among the three parties: $\alpha_1$, $\alpha_2$, and $\alpha_3$. Consequently, the allocation of tokens is as follows: the authors receive $A_0 = \alpha_1 D_0$, the reviewers receive $E_0 = \alpha_2 D_0$, and the publisher receives $P_0 = \alpha_3 D_0$.
+%文章发表时候，创建一个当前article的DAO，铸币分给作者，审稿人和出版商。根据公式\ref{eq:dao0}$D_0$为本次铸币之后的总token数量,三方占比为$\alpha_1$，$\alpha_2$和$\alpha_3$。则作者分到$A_0 = \alpha_1 D_0 $，审稿人分到$E_0 = \alpha_2 D_0 $，出版商分到$P_0 = \alpha_3 D_0 $
+
+
+\begin{equation}
+  \begin{aligned}
+    1 = \beta_0 + \beta_1 + \beta_2 + \beta_3 + \cdots + \beta_n (\beta_1 \geq  \beta_2 \geq \beta_3 \cdots \geq \beta_n)\\
+    a \in A, a_0 \in A_0 \\
+    a_{i} = \beta_i A \\
+    a_{i0} = \beta_i A_0
+  \end{aligned}
+  \label{eq:authorrate}
+\end{equation}
+
+In the case of having a total of $n$ authors, the allocation of tokens for each author is determined by the proportions specified in Equation \ref{eq:authorrate}. In this equation, $\beta_0$ represents the token allocation for the corresponding author, $\beta_1$ represents the token allocation for the first author, $\beta_2$ represents the token allocation for the second author, and so on. The total number of tokens allocated to all authors is denoted as $A$, and each author $a_i$ receives a portion of tokens distributed according to the respective $\beta$ ratio.When the article is published, tokens are minted and distributed to all authors. The total number of tokens allocated to the authors is denoted as $A_0$, and each author $a_{i0}$ receives tokens distributed in the same proportions as determined by the $\beta$ ratios.
+%作者数量为n，每个作者分到的的token数量占比见公式\ref{eq:authorrate}，其中$\beta_0$特指为通讯作者，$\beta_1$为一作，$\beta_2$为二作，以此类推。所有作者的token为$A$，每个作者$a_i$的token按照$\beta$比例分配。文章法布时，铸币给所有作者的token数量为$A_0$，每个作者$a_i0$按照同样的比例分配。
+
+\begin{equation}
+  \begin{aligned}
+    1 = \gamma_0 + \gamma_1 + \gamma_2 + \gamma_3 + \cdots + \gamma_m \\
+    e \in E, e_0 \in E_0 \\
+    e_{i} = \gamma_i E \\
+    e_{i0} = \gamma_i E_0
+  \end{aligned}
+  \label{eq:reviewerrate}
+\end{equation}
+
+The number of reviewers is denoted as $m$, the allocation of tokens for each reviewer follows the proportions specified in Equation \ref{eq:reviewerrate}. In this equation, the token allocation for each reviewer $e_i$ is determined by the respective $\gamma$ ratio. The proportions for the reviewers may be determined based on other factors, such as the role the reviewers. The total number of tokens allocated to all reviewers is denoted as $E$.When the article is published, tokens are minted and distributed to all reviewers. The total number of tokens allocated to the reviewers is denoted as $E_0$, and each reviewer $e_{i0}$ receives tokens distributed in the same proportions as determined by the $\gamma$ ratios. The distribution mechanism remains consistent with that of the authors.
+%审稿人数量为m，每个审稿审稿人分到的token数量占比见公式\ref{eq:reviewerrate}，审稿人分得的比例按照其他方式决定，如角色定位。与作者相同，所有审稿人的token为$E$，每个审稿人$e_i$的token按照$\gamma$比例分配。文章法布时的铸币分配方式与之前相同，所有审稿人的token数量为$E_0$，每个审稿人$e_i0$按照$\gamma$比例分配。
+
+
+\begin{equation}
+  \begin{aligned}
+    D_1 &= D_{1a} + D_{1r} \\
+    A_1 &= D_{1a} \\
+    \Sigma_A &= A_0 + A_1 \\
+    E_1 &= 0 \\
+    P_1 &= 0 \\
+    R_1 &= D_{1r} \\
+  \end{aligned}
+  \label{eq:downloadtoken}
+\end{equation}
+
+After the publication of the article, when users read and download the article, additional token minting occurs according to the formula specified in Equation \ref{eq:downloadtoken}. The purpose of this additional token minting is to incentivize authors and provide benefits to readers. In this process, new tokens are allocated to both authors and readers, while the token allocations for reviewers and the publisher remain unchanged.
+% 文章法布之后，有用户阅读并下载了文章，此时会继续铸币，见公式\ref{eq:downloadtoken}。为了鼓励作者，以及让利给读者，新的token分给作者以及读者，审稿人以及出版商的token保持不变。
+
+\begin{equation}
+  \begin{aligned}
+    1 &= \beta_{1, 0} + \beta_{1, 1} + \beta_{1, 2} \\
+    a_{1,0} &= A_1 \beta_{1, 0}  \\
+    a_{1,1} &= A_1 \beta_{1, 1}  \\
+    a_{1,2} &= A_1 \beta_{1, 2}  \\
+  \end{aligned}
+  \label{eq:downloadrate}
+\end{equation}
+
+According to Equation \ref{eq:downloadrate}, the tokens generated through the user's download behavior will be allocated to the corresponding author, first author, and second author in certain proportions. However, the token allocations for other authors remain unchanged.
+% 根据公式\ref{eq:downloadrate}，用户下载行为时铸币生成的token，会按照一定的比例分给通讯作者，一作以及二作，其他作者的token保持不变。
+
+
+\begin{equation}
+  \begin{aligned}
+    D_2 &= D_{2a} + D_{2r} \\
+    A_2 &= D_{2a} \\
+    A &= A_0 + A_1 \\
+    E_1 &= 0 \\
+    P_1 &= 0 \\
+    R_2 &= D_{2r} \\
+    r1 \in R \\
+    \Sigma_{r1} & = D_{1r} + D_{2r} \quad if R_1 = R_2
+  \end{aligned}
+  \label{eq:citetoken}
+\end{equation}
+
+According to Equation \ref{eq:citetoken}, if a user cites a previously downloaded article in their own article, it triggers token minting. The tokens generated in this case are allocated to both the authors of the cited article and the user who made the citation.
+% 根据公式\ref{eq:citetoken}，用户自己发了论文引用了之前下载的论文，也会出发铸币，token同样分给作者以及引用的用户。
+
+
+\begin{equation}
+  \begin{aligned}
+    A^{Author}
+    &= 
+    \begin{bmatrix}
+      A_{1} \\
+      A_{2} \\
+      A_{3} \\
+      \vdots \\
+      A_{corresponding} \\
+    \end{bmatrix}\\
+    E^{Reviewer}
+    &= 
+    \begin{bmatrix}
+      E_{1} \\
+      E_{2} \\
+      E_{3} \\
+      \vdots \\
+    \end{bmatrix}\\
+    R^{Download \& Cite}
+    &= 
+    \begin{bmatrix}
+      D_{1} \\
+      D_{2} \\
+      D_{3} \\
+      \vdots \\
+    \end{bmatrix}
+    +
+    \begin{bmatrix}
+      C_{1} \\
+      C_{2} \\
+      C_{3} \\
+      \vdots \\
+    \end{bmatrix}
+  \end{aligned}
+  \label{eq:reader}
+\end{equation}
+
+
+
+\begin{equation}
+  \begin{bmatrix}
+    A_t \\
+    E_t \\
+    R_t 
+  \end{bmatrix}
+  = 
+  \omega_{t-1}
+  \begin{bmatrix}
+    A_{t-1} \\
+    E_{t-1} \\
+    R_{t-1}
+  \end{bmatrix}
+  +
+  \omega_{t-2}
+  \begin{bmatrix}
+    A_{t-2} \\
+    E_{t-2} \\
+    R_{t-2}
+  \end{bmatrix}
+  +
+  \cdot
+  + 
+  \omega_n
+  \begin{bmatrix}
+    A_n \\
+    E_n \\
+    R_n
+  \end{bmatrix}
+  \label{eq:dao}
+\end{equation}
+
+\begin{equation}
+  \alpha (A + E + R)  + n\beta (A + E + R) = \Sigma
+\end{equation}
+
+\begin{equation}
+  1 = \alpha_1 + \alpha_2 + \alpha_3
+\end{equation}
+
+By applying the DAO framework to academic journals in accordance with the proposed Equation \ref{eq:dao}, each action taken within the system has the potential to alter future benefits. Through a well-structured incentive mechanism, the entire DAO ecosystem can achieve a state of perfect autonomy. This means that the actions and decisions made by participants, including authors, reviewers, and readers, have a direct impact on the overall functioning and success of the journal. With the right incentives in place, the DAO-operated journal can foster a self-sustaining and self-regulating environment, where participants are motivated to actively engage, contribute their expertise, and collectively drive the advancement of scholarly knowledge.
+% 通过根据提议的方程 \ref{eq:dao} 将 DAO 框架应用于学术期刊，系统内采取的每项行动都有可能改变未来的效益。通过结构良好的激励机制，整个DAO生态系统可以达到完美自治的状态。这意味着包括作者、审稿人和读者在内的参与者的行动和决定对期刊的整体运作和成功有直接影响。通过适当的激励措施，DAO 运营的期刊可以营造一个自我维持和自我调节的环境，激励参与者积极参与、贡献他们的专业知识，并共同推动学术知识的进步。
+
+
+\subsection{Token Distributement}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=3.2in]{assets/proportion-all.png}
+  \caption{Proportion of All.}
+  \label{fig:proportion-all}
+\end{figure}
+
+Integrating DAO technology into the realm of academic journals holds immense potential for benefiting authors, reviewers, and readers alike. Look at Figure \ref{fig:proportion-all}.
 Authors, being the rightful owners of their published works, would reap the most substantial rewards from such a system. By leveraging the decentralized nature of DAOs, authors can secure a greater share of the financial gains associated with their articles. As time progresses, their earnings could potentially increase, providing a long-term incentive for continued contributions.
 Reviewers, as the gatekeepers and custodians of scholarly integrity, would also stand to gain from the implementation of DAOs in journals. Initially, they would hold a higher proportion of benefits, reflecting their crucial role in the early stages of article evaluation. However, as time progresses and articles are published, their share of benefits may gradually diminish, ensuring a fair distribution of rewards among all stakeholders.
 Readers, as active participants in the scholarly discourse, would also have the opportunity to benefit from DAO-operated journals. While their gains may be comparatively lower than authors and reviewers, early engagement with the DAO ecosystem could yield higher returns. By accessing articles and participating in the DAO's governance processes, readers can contribute to the growth and success of the journal, potentially increasing their benefits over time.
