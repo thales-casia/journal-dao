@@ -357,12 +357,62 @@ In the current era of digitization, the act of anchoring a paper on the blockcha
 This paper combines the fundamental concepts of DAO to establish a framework for implementing DAO in academic journals. The framework begins with the issuance of tokens, which are allocated to all participants involved in the publication process, including reviewers, authors, and readers, through a specified mechanism. These tokens serve as a means to determine the weightage of proposals, and the framework utilizes the token distribution to allocate financial resources accordingly. By integrating token-based incentives and governance mechanisms, this framework ensures a fair and transparent distribution of resources within the DAO-operated journal ecosystem. Participants holding tokens can actively participate in the processes of all aspects of the article publication, such as send articles, review articles, and download articles, thereby influencing the allocation of financial resources based on their token holdings. Through this framework, the DAO-operated journal can foster an inclusive and democratic environment, empowering participants to shape the direction and priorities of the journal based on their token weightage.
 %本文结合DAO的基本概念，创建了一个适用于学术期刊的DAO框架。该框架首先进行铸币操作，将与论文相关的所有参与者（包括审稿人、作者和读者）按照一定的机制分配代币。这些代币可以用来决定提案的权重，本框架则根据代币分配财务资源。通过整合代币激励和治理机制，该框架确保在DAO运营的学术期刊生态系统中资源的公平和透明分配。持有代币的参与者可以积极参与文章发布过程，例如发布文章、审阅文章和下载文章，从而根据其代币持有量影响财务资源的分配。通过该框架，DAO运营的学术期刊能够营造一个包容和民主的环境，赋予参与者根据其代币权重来塑造期刊的方向和优先事项的权力。
 
+
+\begin{equation}
+  \begin{bmatrix}
+    A_t \\
+    E_t \\
+    P_t \\
+    R_t 
+  \end{bmatrix}
+  = 
+  \omega_{t-1}
+  \begin{bmatrix}
+    A_{t-1} \\
+    E_{t-1} \\
+    P_{t-1} \\
+    R_{t-1}
+  \end{bmatrix}
+  +
+  \omega_{t-2}
+  \begin{bmatrix}
+    A_{t-2} \\
+    E_{t-2} \\
+    p_{t-2} \\
+    R_{t-2}
+  \end{bmatrix}
+  +
+  \cdot
+  + 
+  \omega_n
+  \begin{bmatrix}
+    A_n \\
+    E_n \\
+    P_n \\
+    R_n
+  \end{bmatrix}
+  \label{eq:dao}
+\end{equation}
+
+
+
+By applying the DAO framework to academic journals in accordance with the proposed Equation \ref{eq:dao}, each action taken within the system has the potential to alter future benefits. Through a well-structured incentive mechanism, the entire DAO ecosystem can achieve a state of perfect autonomy. This means that the actions and decisions made by participants, including authors, reviewers, and readers, have a direct impact on the overall functioning and success of the journal. With the right incentives in place, the DAO-operated journal can foster a self-sustaining and self-regulating environment, where participants are motivated to actively engage, contribute their expertise, and collectively drive the advancement of scholarly knowledge.
+% 通过根据提议的方程 \ref{eq:dao} 将 DAO 框架应用于学术期刊，系统内采取的每项行动都有可能改变未来的效益。通过结构良好的激励机制，整个DAO生态系统可以达到完美自治的状态。这意味着包括作者、审稿人和读者在内的参与者的行动和决定对期刊的整体运作和成功有直接影响。通过适当的激励措施，DAO 运营的期刊可以营造一个自我维持和自我调节的环境，激励参与者积极参与、贡献他们的专业知识，并共同推动学术知识的进步。
+
+
+\subsection{First Mint Token}
+
+In the DAO framework, tokens are minted during key events such as article publication, downloads, and citations, and then distributed to participants according to predetermined proportions. All these processes are executed through smart contracts, ensuring transparency and traceability. Having a well-designed token allocation mechanism forms the foundation of the entire framework, enabling a self-sustaining and self-regulating environment.
+With a fair token distribution mechanism, the DAO framework can create a system where participants are incentivized to contribute and engage actively. The allocation of tokens based on specific events fosters a sense of fairness and encourages collaboration among authors, readers, reviewers, and publishers. The transparent and traceable nature of the smart contract-based processes ensures that the token distribution is open to scrutiny and can be verified by all participants.
+In this self-regulating environment, the DAO framework can adapt and adjust dynamically based on the actions and contributions of its participants. The token allocation mechanism serves as a means to reward and recognize the efforts of contributors, fostering a sustainable ecosystem where knowledge sharing and collaboration thrive.
+% DAO框架在关键的事件进行铸币，如文章的发布，被下载，被引用，然后按照一定比例将其分发给各个参与者。所有过程经过智能合约完成，保证透明以及可追溯。有了合理的token分配机制，是整个框架的基础，可以实现自我维护和自我调节的环境。
+
 \begin{equation}
   \begin{aligned}
     D_0 &= \sum_{i = 1}^{m}x_i \\
     1 &= \alpha_1 + \alpha_2 + \alpha_3 \\
     A_0 &= \alpha_1 D_0 \quad (A=\{a_0, a_1, a_2, a_3, \cdots a_n\}) \\
-    E_0 &= \alpha_2 D_0 \quad (E=\{e_1, e_2, e_3, \cdots e_n\}) \\
+    E_0 &= \alpha_2 D_0 \quad (E=\{e_1, e_2, e_3, \cdots e_m\}) \\
     P_0 &= \alpha_3 D_0 \quad (P=\{p\})
   \end{aligned}
   \label{eq:dao0}
@@ -374,10 +424,9 @@ Upon publication of an article, a DAO specific to that particular article is est
 
 \begin{equation}
   \begin{aligned}
-    1 = \beta_0 + \beta_1 + \beta_2 + \beta_3 + \cdots + \beta_n (\beta_1 \geq  \beta_2 \geq \beta_3 \cdots \geq \beta_n)\\
-    a \in A, a_0 \in A_0 \\
-    a_{i} = \beta_i A \\
-    a_{i0} = \beta_i A_0
+    1 &= \beta_0 + \beta_1 + \beta_2 + \beta_3 + \cdots + \beta_n (\beta_1 \geq  \beta_2 \geq \beta_3 \cdots \geq \beta_n)\\
+    a_{i} &= \beta_i A \quad (a \in A) \\
+    a_{i0} &= \beta_i A_0 \quad (a_0 \in A_0 )
   \end{aligned}
   \label{eq:authorrate}
 \end{equation}
@@ -387,10 +436,9 @@ In the case of having a total of $n$ authors, the allocation of tokens for each 
 
 \begin{equation}
   \begin{aligned}
-    1 = \gamma_0 + \gamma_1 + \gamma_2 + \gamma_3 + \cdots + \gamma_m \\
-    e \in E, e_0 \in E_0 \\
-    e_{i} = \gamma_i E \\
-    e_{i0} = \gamma_i E_0
+    1 &= \gamma_1 + \gamma_2 + \gamma_3 + \cdots + \gamma_m \\
+    e_{i} &= \gamma_i E \quad (e \in E) \\
+    e_{i0} &= \gamma_i E_0 \quad (e_0 \in E_0 )
   \end{aligned}
   \label{eq:reviewerrate}
 \end{equation}
@@ -398,12 +446,14 @@ In the case of having a total of $n$ authors, the allocation of tokens for each 
 The number of reviewers is denoted as $m$, the allocation of tokens for each reviewer follows the proportions specified in Equation \ref{eq:reviewerrate}. In this equation, the token allocation for each reviewer $e_i$ is determined by the respective $\gamma$ ratio. The proportions for the reviewers may be determined based on other factors, such as the role the reviewers. The total number of tokens allocated to all reviewers is denoted as $E$.When the article is published, tokens are minted and distributed to all reviewers. The total number of tokens allocated to the reviewers is denoted as $E_0$, and each reviewer $e_{i0}$ receives tokens distributed in the same proportions as determined by the $\gamma$ ratios. The distribution mechanism remains consistent with that of the authors.
 %审稿人数量为m，每个审稿审稿人分到的token数量占比见公式\ref{eq:reviewerrate}，审稿人分得的比例按照其他方式决定，如角色定位。与作者相同，所有审稿人的token为$E$，每个审稿人$e_i$的token按照$\gamma$比例分配。文章法布时的铸币分配方式与之前相同，所有审稿人的token数量为$E_0$，每个审稿人$e_i0$按照$\gamma$比例分配。
 
+\subsection{Token Distributement while User Download or Cite Article}
+
 
 \begin{equation}
   \begin{aligned}
     D_1 &= D_{1a} + D_{1r} \\
     A_1 &= D_{1a} \\
-    \Sigma_A &= A_0 + A_1 \\
+    \Sigma^A_1 &= A_0 + A_1 \\
     E_1 &= 0 \\
     P_1 &= 0 \\
     R_1 &= D_{1r} \\
@@ -432,12 +482,11 @@ According to Equation \ref{eq:downloadrate}, the tokens generated through the us
   \begin{aligned}
     D_2 &= D_{2a} + D_{2r} \\
     A_2 &= D_{2a} \\
-    A &= A_0 + A_1 \\
-    E_1 &= 0 \\
-    P_1 &= 0 \\
+    \Sigma^A_2 &= A_0 + A_1 + A_2 \\
+    E_2 &= 0 \\
+    P_2 &= 0 \\
     R_2 &= D_{2r} \\
-    r1 \in R \\
-    \Sigma_{r1} & = D_{1r} + D_{2r} \quad if R_1 = R_2
+    \Sigma_{r1} & = R_1 + R_2 \quad if \quad R_1 = R_2 \quad (r_1 \in R ) 
   \end{aligned}
   \label{eq:citetoken}
 \end{equation}
@@ -446,91 +495,43 @@ According to Equation \ref{eq:citetoken}, if a user cites a previously downloade
 % 根据公式\ref{eq:citetoken}，用户自己发了论文引用了之前下载的论文，也会出发铸币，token同样分给作者以及引用的用户。
 
 
+
+\subsection{Finance by Token}
+
+By employing token allocation based on NFT principles, the framework ensures a fair distribution of rewards among token holders. Through transparent smart contracts, the DAO framework establishes a self-regulating environment that incentivizes active participation and contribution. The implementation of this token-based distribution mechanism requires tracking token ownership and automated distribution of finance.
+% 按照nft的方式，把token作为分配的比例，一旦产生了finance，就按照所有holder都可以按照比分到finance。
+
 \begin{equation}
   \begin{aligned}
-    A^{Author}
-    &= 
-    \begin{bmatrix}
-      A_{1} \\
-      A_{2} \\
-      A_{3} \\
-      \vdots \\
-      A_{corresponding} \\
-    \end{bmatrix}\\
-    E^{Reviewer}
-    &= 
-    \begin{bmatrix}
-      E_{1} \\
-      E_{2} \\
-      E_{3} \\
-      \vdots \\
-    \end{bmatrix}\\
-    R^{Download \& Cite}
-    &= 
-    \begin{bmatrix}
-      D_{1} \\
-      D_{2} \\
-      D_{3} \\
-      \vdots \\
-    \end{bmatrix}
-    +
-    \begin{bmatrix}
-      C_{1} \\
-      C_{2} \\
-      C_{3} \\
-      \vdots \\
-    \end{bmatrix}
+    1 &= \frac{A}{D} + \frac{E}{D} + \frac{P}{D} + \frac{R}{D} = \alpha_1 + \alpha_2 + \alpha_3 + \alpha_4 \\
+    F &= finance \\
+    F_A &= \alpha_1 F \quad (A=\{a_0, a_1, a_2, a_3, \cdots a_n\}) \\
+    F_E &= \alpha_2 F \quad (E=\{e_1, e_2, e_3, \cdots e_m\}) \\
+    F_P &= \alpha_3 F \quad (P=\{p\}) \\ 
+    F_R &= \alpha_4 F \quad (R=\{r_1, r_2, r_3, \cdots r_i\})
   \end{aligned}
-  \label{eq:reader}
+  \label{eq:finance}
 \end{equation}
 
 
+According to Equation \ref{eq:finance}, the token allocation ratios for authors, reviewers, publisher, and readers are denoted as $\alpha_1$, $\alpha_2$, $\alpha_3$, and $\alpha_4$, respectively. Once finance is generated, it is distributed to all token holders based on these ratios. 
+To respect intellectual property rights, many publishers require users to pay for downloading articles. In such cases, finance enters the DAO and is distributed to all authors, reviewers, publisher, and readers according to their token ratios. Articles typically attract a significant number of downloads, with exceptional ones garnering even more. Importantly, this distribution mechanism enables sustained earnings, thereby incentivizing authors to produce higher quality articles. 
+While users initially act as consumers when downloading articles, they also become partial owners of the downloaded articles. As a result, they are eligible to receive a portion of the generated finance based on their token ratios. Motivating readers is crucial as it encourages them to willingly pay for article downloads, ultimately creating more finance and fostering a real automated organization. 
+By implementing this approach, all participants receive fair allocations for their contributions. The autonomous nature of the framework drives authors to produce outstanding articles and incentivizes readers to pay for downloads, thereby generating more finance and establishing a virtuous cycle within the system.
+% 根据公式\ref{eq:finance}，作者、审稿人、出版商、读者的token分配比例为$\alpha_1$, $\alpha_2$, $\alpha_3$, $\alpha_4$，一旦产生finance，会按照这个比例分给所有holder。比如为了尊重知识产权，很多出版商的论文需要用户付费下载，此时就有了finance进入DAO，并按照token的比例分给了所有作者、审稿人、出版商、读者。文章的下载量一般会很多，优秀的文章下载量更多，最重要的是可以持续收益，这种情况下，激励了作者写出更优秀的article。用户作为读者下载文章本是消费者，但是下载文章之后既变成文章的拥有者之一，之后的finance也会分给这个读者。对读者的激励十分重要，这让读者更愿意付费下载article，也就创造了更多的finance，形成一个完美的自治。
 
-\begin{equation}
-  \begin{bmatrix}
-    A_t \\
-    E_t \\
-    R_t 
-  \end{bmatrix}
-  = 
-  \omega_{t-1}
-  \begin{bmatrix}
-    A_{t-1} \\
-    E_{t-1} \\
-    R_{t-1}
-  \end{bmatrix}
-  +
-  \omega_{t-2}
-  \begin{bmatrix}
-    A_{t-2} \\
-    E_{t-2} \\
-    R_{t-2}
-  \end{bmatrix}
-  +
-  \cdot
-  + 
-  \omega_n
-  \begin{bmatrix}
-    A_n \\
-    E_n \\
-    R_n
-  \end{bmatrix}
-  \label{eq:dao}
-\end{equation}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=3.2in]{assets/revenue-user-download.png}
+  \caption{Revenue of User Download.}
+  \label{fig:revenue-user-download}
+\end{figure}
 
-\begin{equation}
-  \alpha (A + E + R)  + n\beta (A + E + R) = \Sigma
-\end{equation}
+The total revenue for downloading users is depicted in Figure \ref{fig:revenue-user-download}. As readers who own the downloaded articles, their total revenue increases with a growing number of users downloading the articles. However, as more readers download the article and become owners, the individual token proportion naturally decreases. Consequently, the per-download revenue gradually declines.
+To simulate the distribution ratios, let's consider the following scenario: the first reader who downloads the article breaks even when the article is downloaded 559 times; the tenth reader breaks even when the article reaches 651 downloads; and the one hundredth reader breaks even at a staggering 1579 downloads. This incentive mechanism aims to encourage readers to discover exceptional articles earlier rather than following the crowd since owning the article no longer yields significant returns.
+This approach incentivizes readers to identify outstanding articles sooner, as the potential for substantial earnings diminishes once an article has already demonstrated its quality.
+% 下载用户的总收益如图 \ref{fig:revenue-user-download} 所示，随着更多用户下载article，作为读者的article拥有者，总收益会越来越多，但是因为更多其他读者下载article也获取了token，成为了article的拥有者，自己token的占比势必会减少，所以单次收益逐渐降低。设定分配比例进行模拟，第一个下载论文的读者，在文章被下载559次时，总收入与下载时的支出持平；第十个下载论文的读者，收支相抵时候需要文章被下载651次；第一百个下载论文的读者，收支相抵更是要到1579次。此种激励方式在于，如果文章已经证明很优秀了，再拥有已经不能得到多少收益了，鼓励读者更早发现优秀的文章，而不是跟风。
 
-\begin{equation}
-  1 = \alpha_1 + \alpha_2 + \alpha_3
-\end{equation}
-
-By applying the DAO framework to academic journals in accordance with the proposed Equation \ref{eq:dao}, each action taken within the system has the potential to alter future benefits. Through a well-structured incentive mechanism, the entire DAO ecosystem can achieve a state of perfect autonomy. This means that the actions and decisions made by participants, including authors, reviewers, and readers, have a direct impact on the overall functioning and success of the journal. With the right incentives in place, the DAO-operated journal can foster a self-sustaining and self-regulating environment, where participants are motivated to actively engage, contribute their expertise, and collectively drive the advancement of scholarly knowledge.
-% 通过根据提议的方程 \ref{eq:dao} 将 DAO 框架应用于学术期刊，系统内采取的每项行动都有可能改变未来的效益。通过结构良好的激励机制，整个DAO生态系统可以达到完美自治的状态。这意味着包括作者、审稿人和读者在内的参与者的行动和决定对期刊的整体运作和成功有直接影响。通过适当的激励措施，DAO 运营的期刊可以营造一个自我维持和自我调节的环境，激励参与者积极参与、贡献他们的专业知识，并共同推动学术知识的进步。
-
-
-\subsection{Token Distributement}
 
 \begin{figure}[h]
   \centering
@@ -550,67 +551,12 @@ The implementation of DAO mechanisms, such as token-based incentives, transparen
 %读者作为学术讨论的积极参与者，也将有机会从 DAO 运营的期刊中受益。虽然他们的收益可能相对低于作者和审稿人，但早期参与 DAO 生态系统可能会产生更高的回报。通过访问文章并参与 DAO 的治理流程，读者可以为期刊的发展和成功做出贡献，并有可能随着时间的推移增加其收益。
 %DAO 机制的实施，例如基于代币的激励、透明的治理结构和去中心化的决策流程，将为学术期刊提供公平公正的模式。这种模式培养主人翁意识，奖励积极参与，并确保期刊生态系统的可持续性和长期生存能力。
 
-\subsection{Readers Pay and Earnings}
-%读者支付和收益
-
-\subsection{Author Earnings}
-%作者收益
-
-
-\begin{equation}
-  \sum_{i = 1}^{m}x_i = n
-\end{equation}
-
-\begin{equation}
-  F = \sum_{i = 1}^{m}v_i \cdot w_i
-\end{equation}
-
-\begin{equation}
-  \begin{bmatrix}
-    A_t \\
-    E_t \\
-    R_t 
-  \end{bmatrix}
-  = 
-  \begin{bmatrix}
-    level \\
-    score \\
-    0
-  \end{bmatrix}_0
-  + 
-  \omega_{t-1}
-  \begin{bmatrix}
-    A_{t-1} \\
-    0 \\
-    R_{t-1}
-  \end{bmatrix}
-  +
-  \omega
-  \begin{bmatrix}
-    A_2 \\
-    0 \\
-    R_2
-  \end{bmatrix}
-  + 
-  \cdot
-  + 
-  \omega
-  \begin{bmatrix}
-    A_n \\
-    0 \\
-    R_n
-  \end{bmatrix}
-\end{equation}
-
 
 \subsection{Decentralized Governance}
 %去中心化治理：
 
 DAO, adopting a decentralized governance model, allows token holders to participate in the decision-making process. This ensures community involvement in platform development, creating a democratic and inclusive environment. With robust incentives in place, token holders have made outstanding contributions while also receiving greater rewards. This positive feedback loop forms a self-sustaining ecosystem of active governance. DAOs leverage blockchain technology to provide transparency and trust, recording all proposals, votes, and transactions on the blockchain for public verification. Incentives motivate token holders to actively engage in the governance process, while DAOs offer a meritocratic approach that values expertise. The flexibility and adaptability of DAOs allow them to evolve and respond to the needs of the community. However, challenges such as active participation, governance gridlocks, and power concentration need to be addressed through clear rules and mechanisms. Overall, DAOs empower token holders, foster community involvement, and create a democratic and inclusive environment.
 %DAO采用去中心化治理模型，允许代币持有者参与决策过程。这确保了社区能够参与平台发展，创造了一个民主和包容的环境。在比较优秀的激励下，代币持有者做了出色的贡献，同时也获得更多的奖励。一个积极的自治体系完美闭环。DAO借助区块链技术提供透明度和信任度，将所有提案、投票和交易记录在区块链上，供公众验证。激励机制激励代币持有者积极参与治理过程，而DAO则提供了重视专业知识的优秀人才的机会。DAO的灵活性和适应性使其能够随着社区的需求而发展和应对变化。然而，需要通过明确的规则和机制来解决积极参与、治理僵局和权力集中等挑战。总体而言，DAO赋予代币持有者权力，促进社区参与，并创造民主和包容的环境。
-
-\subsection{Results and Implications}
-%结果和影响：
 
 The implementation of the Journal DAO has yielded positive results in terms of increased engagement, quality submissions, and a more inclusive academic ecosystem. The transparent and automated token distribution mechanisms have effectively addressed issues of ownership and reward distribution, fostering a collaborative and fair scholarly environment.
 In conclusion, The detailed execution of the Journal DAO demonstrates the viability of blockchain and DAO principles in reshaping academic publishing. The emphasis on decentralized governance, token incentives, and transparent finance distribution has the potential to revolutionize the scholarly landscape, making it more accessible, collaborative, and equitable for all participants.
