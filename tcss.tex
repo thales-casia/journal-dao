@@ -448,6 +448,9 @@ The number of reviewers is denoted as $m$, the allocation of tokens for each rev
 
 \subsection{Token Distributement while User Download or Cite Article}
 
+Unlike the singular issuance of tokens associated with article publication, the act of downloading articles by users as readers is a recurring event that perpetually exists within the DAO framework. The act of downloading an article not only represents recognition of the article itself but also serves as recognition of the article's author. Therefore, tokens need to be allocated to the authors, with the primary author and corresponding author, who contribute the most, receiving a larger share.
+Furthermore, readers who download articles both recognize the value of the article and also receive tokens as a result. This dual recognition mechanism ensures that both authors and readers are rewarded within the DAO framework. By allocating tokens to authors and readers, the system fosters a sense of acknowledgment and incentivizes active participation from all stakeholders involved in the publication and consumption of articles.
+% 区别于文章法布的唯一铸币，用户作为读者阅读文章之后的下载，是一个多次事件，永远存在于DAO框架中。文章被下载，代表了对文章的认可，更是对文章作者的认可，所以token需要分给作者，贡献最大的一作和通讯作者获得更多。读者作为下载文章的用户，认可了文章同样也获得了token。
 
 \begin{equation}
   \begin{aligned}
@@ -462,7 +465,7 @@ The number of reviewers is denoted as $m$, the allocation of tokens for each rev
 \end{equation}
 
 After the publication of the article, when users read and download the article, additional token minting occurs according to the formula specified in Equation \ref{eq:downloadtoken}. The purpose of this additional token minting is to incentivize authors and provide benefits to readers. In this process, new tokens are allocated to both authors and readers, while the token allocations for reviewers and the publisher remain unchanged.
-% 文章法布之后，有用户阅读并下载了文章，此时会继续铸币，见公式\ref{eq:downloadtoken}。为了鼓励作者，以及让利给读者，新的token分给作者以及读者，审稿人以及出版商的token保持不变。
+% 文章发布之后，有用户阅读并下载了文章，此时会继续铸币，见公式\ref{eq:downloadtoken}。为了鼓励作者，以及让利给读者，新的token分给作者以及读者，审稿人以及出版商的token保持不变。
 
 \begin{equation}
   \begin{aligned}
@@ -520,36 +523,8 @@ While users initially act as consumers when downloading articles, they also beco
 By implementing this approach, all participants receive fair allocations for their contributions. The autonomous nature of the framework drives authors to produce outstanding articles and incentivizes readers to pay for downloads, thereby generating more finance and establishing a virtuous cycle within the system.
 % 根据公式\ref{eq:finance}，作者、审稿人、出版商、读者的token分配比例为$\alpha_1$, $\alpha_2$, $\alpha_3$, $\alpha_4$，一旦产生finance，会按照这个比例分给所有holder。比如为了尊重知识产权，很多出版商的论文需要用户付费下载，此时就有了finance进入DAO，并按照token的比例分给了所有作者、审稿人、出版商、读者。文章的下载量一般会很多，优秀的文章下载量更多，最重要的是可以持续收益，这种情况下，激励了作者写出更优秀的article。用户作为读者下载文章本是消费者，但是下载文章之后既变成文章的拥有者之一，之后的finance也会分给这个读者。对读者的激励十分重要，这让读者更愿意付费下载article，也就创造了更多的finance，形成一个完美的自治。
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=3.2in]{assets/revenue-user-download.png}
-  \caption{Revenue of User Download.}
-  \label{fig:revenue-user-download}
-\end{figure}
-
-The total revenue for downloading users is depicted in Figure \ref{fig:revenue-user-download}. As readers who own the downloaded articles, their total revenue increases with a growing number of users downloading the articles. However, as more readers download the article and become owners, the individual token proportion naturally decreases. Consequently, the per-download revenue gradually declines.
-To simulate the distribution ratios, let's consider the following scenario: the first reader who downloads the article breaks even when the article is downloaded 559 times; the tenth reader breaks even when the article reaches 651 downloads; and the one hundredth reader breaks even at a staggering 1579 downloads. This incentive mechanism aims to encourage readers to discover exceptional articles earlier rather than following the crowd since owning the article no longer yields significant returns.
-This approach incentivizes readers to identify outstanding articles sooner, as the potential for substantial earnings diminishes once an article has already demonstrated its quality.
-% 下载用户的总收益如图 \ref{fig:revenue-user-download} 所示，随着更多用户下载article，作为读者的article拥有者，总收益会越来越多，但是因为更多其他读者下载article也获取了token，成为了article的拥有者，自己token的占比势必会减少，所以单次收益逐渐降低。设定分配比例进行模拟，第一个下载论文的读者，在文章被下载559次时，总收入与下载时的支出持平；第十个下载论文的读者，收支相抵时候需要文章被下载651次；第一百个下载论文的读者，收支相抵更是要到1579次。此种激励方式在于，如果文章已经证明很优秀了，再拥有已经不能得到多少收益了，鼓励读者更早发现优秀的文章，而不是跟风。
 
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=3.2in]{assets/proportion-all.png}
-  \caption{Proportion of All.}
-  \label{fig:proportion-all}
-\end{figure}
-
-Integrating DAO technology into the realm of academic journals holds immense potential for benefiting authors, reviewers, and readers alike. Look at Figure \ref{fig:proportion-all}.
-Authors, being the rightful owners of their published works, would reap the most substantial rewards from such a system. By leveraging the decentralized nature of DAOs, authors can secure a greater share of the financial gains associated with their articles. As time progresses, their earnings could potentially increase, providing a long-term incentive for continued contributions.
-Reviewers, as the gatekeepers and custodians of scholarly integrity, would also stand to gain from the implementation of DAOs in journals. Initially, they would hold a higher proportion of benefits, reflecting their crucial role in the early stages of article evaluation. However, as time progresses and articles are published, their share of benefits may gradually diminish, ensuring a fair distribution of rewards among all stakeholders.
-Readers, as active participants in the scholarly discourse, would also have the opportunity to benefit from DAO-operated journals. While their gains may be comparatively lower than authors and reviewers, early engagement with the DAO ecosystem could yield higher returns. By accessing articles and participating in the DAO's governance processes, readers can contribute to the growth and success of the journal, potentially increasing their benefits over time.
-The implementation of DAO mechanisms, such as token-based incentives, transparent governance structures, and decentralized decision-making processes, would enable a fair and equitable model for academic journals. This model fosters a sense of ownership, rewards active participation, and ensures the sustainability and long-term viability of the journal ecosystem.
-%将 DAO 技术整合到学术期刊领域具有巨大的潜力，可以使作者、审稿人和读者受益
-%作者作为其已发表作品的合法所有者，将从这样的系统中获得最丰厚的回报。通过利用 DAO 的去中心化性质，作者可以获得与其文章相关的更大份额的经济收益。随着时间的推移，他们的收入可能会增加，从而为持续贡献提供长期激励。
-%审稿人作为学术诚信的看门人和守护者，也将从期刊中 DAO 的实施中获益。最初，他们将获得较高比例的收益，这反映了他们在文章评估的早期阶段的关键作用。然而，随着文章的发布，他们的利益份额可能会逐渐减少，从而确保所有利益相关者之间公平分配奖励。
-%读者作为学术讨论的积极参与者，也将有机会从 DAO 运营的期刊中受益。虽然他们的收益可能相对低于作者和审稿人，但早期参与 DAO 生态系统可能会产生更高的回报。通过访问文章并参与 DAO 的治理流程，读者可以为期刊的发展和成功做出贡献，并有可能随着时间的推移增加其收益。
-%DAO 机制的实施，例如基于代币的激励、透明的治理结构和去中心化的决策流程，将为学术期刊提供公平公正的模式。这种模式培养主人翁意识，奖励积极参与，并确保期刊生态系统的可持续性和长期生存能力。
 
 
 \subsection{Decentralized Governance}
@@ -634,6 +609,46 @@ Furthermore, we applied our DAO framework to a real-world case by analyzing a pu
 
 %此外，我们将DAO框架应用于一个真实案例，分析了一篇被下载2154次、引用42次的论文。通过模拟当前DAO结构下的收入分配情况，我们观察到下载用户不仅抵消了初始支付，还获得了额外的收益。这个激励系统鼓励用户尊重版权，更重要的是实现了一定程度的自治。提供的表格和案例研究展示了我们提出的DAO框架的实际应用和积极成果。通过将激励与用户行为保持一致，该系统不仅为下载者抵消了成本，还极大地激励了用户参与。这不仅尊重版权，还建立了一个自我可持续和自治的生态系统，为分散的学术出版的未来发展提供了有价值的见解。
 
+\subsection{Proportion of Trend}
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=3.2in]{assets/proportion-all.png}
+  \caption{Proportion of All.}
+  \label{fig:proportion-all}
+\end{figure}
+
+Integrating DAO technology into the realm of academic journals holds immense potential for benefiting authors, reviewers, and readers alike. Look at Figure \ref{fig:proportion-all}.
+Authors, being the rightful owners of their published works, would reap the most substantial rewards from such a system. By leveraging the decentralized nature of DAOs, authors can secure a greater share of the financial gains associated with their articles. As time progresses, their earnings could potentially increase, providing a long-term incentive for continued contributions.
+Reviewers, as the gatekeepers and custodians of scholarly integrity, would also stand to gain from the implementation of DAOs in journals. Initially, they would hold a higher proportion of benefits, reflecting their crucial role in the early stages of article evaluation. However, as time progresses and articles are published, their share of benefits may gradually diminish, ensuring a fair distribution of rewards among all stakeholders.
+Readers, as active participants in the scholarly discourse, would also have the opportunity to benefit from DAO-operated journals. While their gains may be comparatively lower than authors and reviewers, early engagement with the DAO ecosystem could yield higher returns. By accessing articles and participating in the DAO's governance processes, readers can contribute to the growth and success of the journal, potentially increasing their benefits over time.
+The implementation of DAO mechanisms, such as token-based incentives, transparent governance structures, and decentralized decision-making processes, would enable a fair and equitable model for academic journals. This model fosters a sense of ownership, rewards active participation, and ensures the sustainability and long-term viability of the journal ecosystem.
+%将 DAO 技术整合到学术期刊领域具有巨大的潜力，可以使作者、审稿人和读者受益
+%作者作为其已发表作品的合法所有者，将从这样的系统中获得最丰厚的回报。通过利用 DAO 的去中心化性质，作者可以获得与其文章相关的更大份额的经济收益。随着时间的推移，他们的收入可能会增加，从而为持续贡献提供长期激励。
+%审稿人作为学术诚信的看门人和守护者，也将从期刊中 DAO 的实施中获益。最初，他们将获得较高比例的收益，这反映了他们在文章评估的早期阶段的关键作用。然而，随着文章的发布，他们的利益份额可能会逐渐减少，从而确保所有利益相关者之间公平分配奖励。
+%读者作为学术讨论的积极参与者，也将有机会从 DAO 运营的期刊中受益。虽然他们的收益可能相对低于作者和审稿人，但早期参与 DAO 生态系统可能会产生更高的回报。通过访问文章并参与 DAO 的治理流程，读者可以为期刊的发展和成功做出贡献，并有可能随着时间的推移增加其收益。
+%DAO 机制的实施，例如基于代币的激励、透明的治理结构和去中心化的决策流程，将为学术期刊提供公平公正的模式。这种模式培养主人翁意识，奖励积极参与，并确保期刊生态系统的可持续性和长期生存能力。
+
+
+
+\subsection{Break Even of User Download}
+
+Indeed, allowing users to offset their expenses or even earn profits through downloading articles can effectively stimulate user participation. While individual reader earnings may be modest, readers constitute the largest group within the DAO framework, making them a critical factor for the system's autonomy.
+By providing readers with the opportunity to offset their expenses or earn profits, the DAO framework can incentivize their active engagement. Despite individual earnings being relatively small, the cumulative impact of a large number of readers participating in the ecosystem contributes significantly to the overall success and sustainability of the DAO. As a result, readers play a crucial role in driving the self-governing nature of the DAO framework.
+% 用户作为读者下载文章，虽然需要付费，但是如果后面会收支相抵，甚至赚钱，会有效的刺激用户参与。虽然单个reader收益很少，但是在整个DAO框架中，数量最大，是DAO可以可以自治的核心因素。
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=3.2in]{assets/revenue-user-download.png}
+  \caption{Revenue of User Download.}
+  \label{fig:revenue-user-download}
+\end{figure}
+
+The total revenue for downloading users is depicted in Figure \ref{fig:revenue-user-download}. As readers who own the downloaded articles, their total revenue increases with a growing number of users downloading the articles. However, as more readers download the article and become owners, the individual token proportion naturally decreases. Consequently, the per-download revenue gradually declines.
+To simulate the distribution ratios, let's consider the following scenario: the first reader who downloads the article breaks even when the article is downloaded 559 times; the tenth reader breaks even when the article reaches 651 downloads; and the one hundredth reader breaks even at a staggering 1579 downloads. This incentive mechanism aims to encourage readers to discover exceptional articles earlier rather than following the crowd since owning the article no longer yields significant returns.
+This approach incentivizes readers to identify outstanding articles sooner, as the potential for substantial earnings diminishes once an article has already demonstrated its quality.
+% 下载用户的总收益如图 \ref{fig:revenue-user-download} 所示，随着更多用户下载article，作为读者的article拥有者，总收益会越来越多，但是因为更多其他读者下载article也获取了token，成为了article的拥有者，自己token的占比势必会减少，所以单次收益逐渐降低。设定分配比例进行模拟，第一个下载论文的读者，在文章被下载559次时，总收入与下载时的支出持平；第十个下载论文的读者，收支相抵时候需要文章被下载651次；第一百个下载论文的读者，收支相抵更是要到1579次。此种激励方式在于，如果文章已经证明很优秀了，再拥有已经不能得到多少收益了，鼓励读者更早发现优秀的文章，而不是跟风。
 
 
 After voluntarily making a payment, users' ability to participate contributes to a robust incentive mechanism, fostering a sense of autonomy within the entire framework. Through this design, users become direct contributors to financial activities, injecting new value into the framework and creating potential opportunities for self-reward. This decentralized autonomous model empowers users to engage directly in decision-making and contributions, shaping a more open, fair, and virtuous ecosystem. Overall, this autonomous framework cultivates a more positive and sustainable participation experience for users and the entire community.
