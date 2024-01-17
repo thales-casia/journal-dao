@@ -10,6 +10,8 @@
 \usepackage{url}
 \usepackage{verbatim}
 \usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{automata, positioning}
 \usepackage{cite}
 \hyphenation{op-tical net-works semi-conduc-tor IEEE-Xplore}
 % updated with editorial comments 12/2/2022
@@ -41,8 +43,18 @@
 \maketitle
 
 \begin{abstract}
-The emergence of Web3.0 signifies a significant evolution in the Internet landscape, emphasizing decentralization, openness, and user control over data. This paper outlines the key characteristics of Web3.0, including a decentralized network architecture, the application of smart contracts, and data privacy protection. Leveraging blockchain technology, the paper discusses how it can facilitate the authenticity, security, and traceability of paper data, offering a novel perspective on ownership and governance. Through the decentralized autonomous organization (DAO) framework, a more just, transparent, and open organizational structure can be realized, bringing new governance models to the academic research domain. This structure emphasizes equitable stakeholder participation, fostering collaborative development within the academic community. Lastly, the paper presents the implementation of a DAO framework called DeSCI, designed to streamline the lifecycle of scholarly articles, including submission, peer review, downloading, and citation processes, all securely recorded on the blockchain. By utilizing Non-Fungible Tokens (NFTs), the framework introduces a sophisticated incentive structure for authors, reviewers, and users. The incorporation of NFTs ensures a novel approach to fostering a decentralized and incentivized ecosystem for academic publishing, marking a substantial advancement in the realm of scholarly communication.
+%第一句应介绍本文的背景：学术出版面临哪些严峻的问题。
+%第二句：区块链、DAO等新技术的出现为以上问题提供了有效的解决方案，从而为学术出版行业的变革带来重要的发展机遇。
+%第三句：本文将区块链、DAO等新技术应用于学术出版，提出Journal DAO的学术出版创新模式。（下面再简要介绍本文的创新性工作）首先，。。。其次，。。。第三，。。。最后从宏观上总结本文工作对整个对学术出版行业的重要意义。
+%The emergence of Web3.0 signifies a significant evolution in the Internet landscape, emphasizing decentralization, openness, and user control over data. This paper outlines the key characteristics of Web3.0, including a decentralized network architecture, the application of smart contracts, and data privacy protection. Leveraging blockchain technology, the paper discusses how it can facilitate the authenticity, security, and traceability of paper data, offering a novel perspective on ownership and governance. Through the decentralized autonomous organization (DAO) framework, a more just, transparent, and open organizational structure can be realized, bringing new governance models to the academic research domain. This structure emphasizes equitable stakeholder participation, fostering collaborative development within the academic community. Lastly, the paper presents the implementation of a DAO framework called DeSCI, designed to streamline the lifecycle of scholarly articles, including submission, peer review, downloading, and citation processes, all securely recorded on the blockchain. By utilizing Non-Fungible Tokens (NFTs), the framework introduces a sophisticated incentive structure for authors, reviewers, and users. The incorporation of NFTs ensures a novel approach to fostering a decentralized and incentivized ecosystem for academic publishing, marking a substantial advancement in the realm of scholarly communication.
 %Web3.0的出现标志着互联网领域的显著演变，强调去中心化、开放性和用户对数据的控制。本文首先勾勒了Web3.0的关键特征，包括分散式网络架构、智能合约的应用以及数据隐私的保护。在区块链技术的背景下，本文讨论了如何利用区块链的不可变性和透明性促进论文数据的真实性、安全性和可追溯性，为所有权和治理提供了新的视角。通过分散自治组织（DAO）框架，可以实现更公正、透明和开放的组织结构，为学术研究领域带来新的治理模式。这种结构强调了利益相关者的更公平参与，促进了学术界的协作发展。最后，本文介绍了一个名为DeSCI的DAO框架的实现，旨在简化学术文章的生命周期，包括提交、同行评审、下载和引用过程，所有这些过程都在区块链上安全记录。通过使用非同质化代币（NFTs），该框架为作者、审稿人和用户引入了一种复杂的激励结构。NFTs的引入确保了促进学术出版的分散化和激励性生态系统的新方法，标志着学术交流领域的重大进展。
+
+The academic publishing industry is currently experiencing significant growth but also faces several challenges. Transparency in the peer review process is lacking, which undermines fairness and objectivity. The anonymity of reviewers and their feedback makes it difficult for authors to understand the reasoning behind decisions and address potential biases. This lack of transparency can undermine the credibility and integrity of the peer review process. Additionally, there is a need to protect the rights of authors. While authors are recognized as the creators of their articles, in many cases, ownership and control of data lie with publishers or electronic journal databases, leaving authors with limited control. Furthermore, the current system often restricts authors' ability to share or collaborate on data.
+The emergence of Web3.0 signifies a significant evolution in the internet landscape, emphasizing decentralization, openness, and user control over data. Key features of Web3.0, such as decentralized network architectures, smart contract applications, and data privacy protection, offer new perspectives for academic publishing. Leveraging the immutability and transparency of blockchain technology can enhance the authenticity, security, and traceability of academic article data, while providing novel approaches to ownership and governance. Through the framework of decentralized autonomous organizations(DAO), a more equitable, transparent, and open organizational structure can be achieved, fostering collaborative development in academia.
+This paper proposes an innovative academic publishing model called Journal DAO, which applies blockchain, DAO, and other emerging technologies to address these challenges. Firstly, by recording articles on the blockchain, all operations are conducted on the chain rather than belonging to a specific database, ensuring data security and traceability. Secondly, through the DAO framework, tokens are distributed based on role contributions, protecting the rights of researchers. Lastly, effective incentive mechanisms are established to reward all participants and ensure the sustainability of the framework, enabling it to function autonomously.
+% 当前学术论文正在蓬勃发展，但是发展中也遇到很多问题。首先，审稿过程缺乏透明度，不能始终保证公正和客观性。审稿人的身份和评审意见通常是保密的，这使得作者难以了解决策背后的理由并解决潜在的偏见。透明度的缺乏可能损害审稿过程的可信度和完整性。其次，缺乏作者权益的保护，虽然作者被认可为论文的作者，但在许多情况下，数据的所有权和控制权掌握在出版商或电子期刊数据库手中，用户缺乏控制。最后是目前的系统往往限制了作者分享或合作使用数据的能力。
+% Web3.0的出现标志着互联网领域的显著演变，强调去中心化、开放性和用户对数据的控制。Web3.0的关键特征，包括分散式网络架构、智能合约的应用以及数据隐私的保护。在区块链技术的背景下，利用区块链的不可变性和透明性促进论文数据的真实性、安全性和可追溯性，为所有权和治理提供了新的视角。通过分散自治组织（DAO）框架，可以实现更公正、透明和开放的组织结构，为学术研究领域带来新的治理模式。这种结构强调了利益相关者的更公平参与，促进了学术界的协作发展。
+% 本文将区块链、DAO等新技术应用于学术出版，提出Journal DAO的学术出版创新模式。首先把文章上链，所有的操作流程都在链上，而不是属于某个特定的数据库，保证了数据的安全性和可追溯性。其次，通过DAO框架，根据框架中的角色贡献，分发相应的token，实现对研究者的权益保护。最后，制定有效的激励机制，让每个参与者都可以得到相应的激励，并且激励具有可持续性，使框架完美自治。
 \end{abstract}
 
 
@@ -97,7 +109,7 @@ One of the key distinguishing features of DAOs is their ability to provide a tra
 blockchain-based smart contracts have received increasing attention in academic circles,Mainly distributed in security, privacy, software engineering, applications, performance, scalability, and other smart contract-related topics \cite{8756390}. 
 The current distribution and management processes in open journal systems are plagued by inadequate security, leading to issues such as unauthorized replication and dissemination of research papers. However, the implementation of blockchain technology has addressed these concerns by enhancing the security of electronic journal distribution and management. This approach brings significant benefits: Firstly, more precise and error-free distribution of e-journals within open journal systems. Secondly, improved reputation and increased trust in the open journal system. Lastly, safeguarding the management process of papers, protecting both soft and hard copies of journals from potential hacker threats. By utilizing blockchain technology, the security and efficiency of electronic journal distribution and management are significantly improved \cite{agustin2020blockchain}.
 InterPlanetary File System (IPFS) and blockchain technology ensure the authenticity of online publications by storing them on a decentralized IPFS network and verifying their information through the blockchain, ensuring trust and reliability. This approach effectively addresses the challenges related to security and privacy in online publications \cite{nizamuddin2018ipfs}.
-The traditional scientific publishing system faces numerous challenges, including high publication costs, slow and biased peer review processes, copyright held by publishers, lack of rewards for contributors, and limited connectivity among researchers. By leveraging decentralized blockchain-based technology, creating a scientific publishing platform can address these issues. This platform utilizes Ethereum smart contracts to expedite the publication process, reduce biases in peer review, and lower publication costs. The model also enhances the quality of scientific research by incorporating new functionalities during the publishing process. The system increases the number of publishers, ensuring complete traceability throughout the publication process, and making scientific papers accessible to anyone for a nominal fee. Additionally, the system adopts a decentralized model for journals and integrates scientific papers with relevant data or datasets. Editors, reviewers, and cited authors are also rewarded \cite{becstacs2023novel}. The system is implemented using the Ethereum Virtual Machine (EVM), which includes frontend, middleware, and backend components. When an author submits a manuscript for evaluation, the system automatically identifies the most suitable editors and reviewers. After the publication process concludes, editors, reviewers, cited authors, and other contributors receive cryptocurrency rewards based on system tokens.
+The traditional scientific publishing system faces numerous challenges, including high publication costs, slow and biased peer review processes, copyright held by publishers, lack of rewards for contributors, and limited connectivity among researchers. By leveraging decentralized blockchain-based technology, creating a scientific publishing platform can address these issues. This platform utilizes Ethereum smart contracts to expedite the publication process, reduce biases in peer review, and lower publication costs. The model also enhances the quality of scientific research by incorporating new functionalities during the publishing process. The system increases the number of publishers, ensuring complete traceability throughout the publication process, and making scientific papers accessible to anyone for a nominal fee. Additionally, the system adopts a decentralized model for journals and integrates scientific papers with relevant data or datasets. Editors, reviewers, and cited authors are also rewarded \cite{becstacs2023novel}. The system is implemented using the Ethereum Virtual Machine (EVM), which includes frontend, middleware, and backend  \cite{9093840}. When an author submits a manuscript for evaluation, the system automatically identifies the most suitable editors and reviewers. After the publication process concludes, editors, reviewers, cited authors, and other contributors receive cryptocurrency rewards based on system tokens.
 %基于区块链的智能合约在学术界引起了越来越多的关注，主要分布在安全、隐私、软件工程、应用、性能与可扩展性以及其他与智能合约相关的主题。
 %目前开放期刊系统中的分发和管理过程存在安全性不足的问题，容易出现论文被复制和传播给不负责任的人的情况。使用区块链技术来维护电子期刊分发和管理过程的安全性，实现了以下3个方面的好处：（1）在开放期刊系统中，电子期刊的分发更加精确，没有错误；（2）开放期刊系统的声誉得到提升，增加了信任感；（3）管理论文的过程按照规定进行，保护了期刊的软拷贝和硬拷贝免受黑客威胁。
 %IPFS和区块链技术可以确保在线出版物的真实性，将出版物存储在去中心化的IPFS网络上，并通过区块链验证其信息，以确保信任和可靠性。这种方法解决了在线出版物安全和隐私方面的挑战。
@@ -533,7 +545,25 @@ By implementing this approach, all participants receive fair allocations for the
 DAO, adopting a decentralized governance model, allows token holders to participate in the decision-making process. This ensures community involvement in platform development, creating a democratic and inclusive environment. With robust incentives in place, token holders have made outstanding contributions while also receiving greater rewards. This positive feedback loop forms a self-sustaining ecosystem of active governance. DAOs leverage blockchain technology to provide transparency and trust, recording all proposals, votes, and transactions on the blockchain for public verification. Incentives motivate token holders to actively engage in the governance process, while DAOs offer a meritocratic approach that values expertise. The flexibility and adaptability of DAOs allow them to evolve and respond to the needs of the community. However, challenges such as active participation, governance gridlocks, and power concentration need to be addressed through clear rules and mechanisms. Overall, DAOs empower token holders, foster community involvement, and create a democratic and inclusive environment.
 %DAO采用去中心化治理模型，允许代币持有者参与决策过程。这确保了社区能够参与平台发展，创造了一个民主和包容的环境。在比较优秀的激励下，代币持有者做了出色的贡献，同时也获得更多的奖励。一个积极的自治体系完美闭环。DAO借助区块链技术提供透明度和信任度，将所有提案、投票和交易记录在区块链上，供公众验证。激励机制激励代币持有者积极参与治理过程，而DAO则提供了重视专业知识的优秀人才的机会。DAO的灵活性和适应性使其能够随着社区的需求而发展和应对变化。然而，需要通过明确的规则和机制来解决积极参与、治理僵局和权力集中等挑战。总体而言，DAO赋予代币持有者权力，促进社区参与，并创造民主和包容的环境。
 
-The implementation of the Journal DAO has yielded positive results in terms of increased engagement, quality submissions, and a more inclusive academic ecosystem. The transparent and automated token distribution mechanisms have effectively addressed issues of ownership and reward distribution, fostering a collaborative and fair scholarly environment.
+\begin{figure}[ht]
+  \begin{tikzpicture}[node distance=2.5cm, on grid]
+    \node[state, initial] (q1) {Draft};
+    \node[state, right=of q1] (q2) {Review};
+    \node[state, accepting, right=of q2] (q3) {DAO};
+  
+    \path[->]
+        (q1) edge[bend left, above] node {send} (q2)
+        (q2) edge[bend left, below] node {reject} (q1)
+        (q2) edge[left, above] node {publish} (q3)
+        (q3) edge[loop above] node {download} (q3)
+        (q3) edge[loop below] node {cite} (q3);
+  \end{tikzpicture}
+  \caption{Events of Article in Framework}
+  \label{fig:decentralized_governance}
+\end{figure}
+
+
+The implementation of the Journal DAO (Figure \ref{fig:decentralized_governance}) has yielded positive results in terms of increased engagement, quality submissions, and a more inclusive academic ecosystem. The transparent and automated token distribution mechanisms have effectively addressed issues of ownership and reward distribution, fostering a collaborative and fair scholarly environment.
 In conclusion, The detailed execution of the Journal DAO demonstrates the viability of blockchain and DAO principles in reshaping academic publishing. The emphasis on decentralized governance, token incentives, and transparent finance distribution has the potential to revolutionize the scholarly landscape, making it more accessible, collaborative, and equitable for all participants.
 %期刊 DAO 的实施在提高参与度、质量投稿以及创建更具包容性的学术生态方面取得了积极成果。透明和自动化的代币分配机制有效解决了所有权和奖励分配的问题，促进了合作和公正的学术环境。
 %总的来说，期刊 DAO 的详细执行展示了区块链和 DAO 原则在重塑学术出版方面的可行性。对去中心化治理、代币激励和透明财务分配的强调有望彻底改变学术领域，使其对所有参与者更具可访问性、合作性和公平性。
@@ -581,33 +611,6 @@ Within the DAO framework, authors, as the owners of the articles, experience an 
 %在论文中，我们不仅提出了理论框架，还进行了模拟实验来评估提出的DAO系统的有效性。表格1展示了20次模拟下载的结果，说明了finance在持有者之间的分配情况。这个模拟提供了一个全面的概述，说明了根据令牌持有情况如何分配finance。
 % 在这个dao框架之下，author作为文章的拥有者，在文章被下载或被引用时，其token会增加，并且占有率也在增加，同时收益就会越来越高。reviewer作为文章的参与者，他们初期会收到相应的token，但是不再增加，虽然占比逐渐降低，但是收益总是是增加的，评分越准，对自己越有利。reader在download以及cite过程中，都会收到相应的token，虽然量少，并且占有率也不高，但是随着文章被下载或被引用，总收益就也会越来越高。并且在这个过程中，收益率是逐渐下降的，也就是在论文早期下载和引用的reader，会活动比较高的收益，这鼓励了早期识别优秀的论文。
 
-\begin{table*}[t!]
-  \begin{center}
-    \caption{Finance of Real Article for DAO.}
-    \label{tab:realpaper}
-    \begin{tabular}{r|l|l|l|l|l|l|l|l|l} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
-       & \multicolumn{4}{c}{\textbf{Authors}} & \multicolumn{3}{|c|}{\textbf{Reviewers}} & \multicolumn{2}{c}{\textbf{Readers}}\\
-       \hline
-      \textbf{index} & \textbf{Corresponding} & \textbf{Author1} & \textbf{Author2} & \textbf{Author3} & \textbf{reviewer1} & \textbf{reviewer2} & \textbf{reviewer3} & \textbf{cite} & \textbf{download}\\
-      \hline
-      0 & 0.128171 & 0.128171 & 0.051068 & 0.025367 & 0.222296 & 0.278037 & 0.166889 & 0.000000 & 0.000000 \\
-      1 & 0.128605 & 0.128605 & 0.051044 & 0.025191 & 0.220749 & 0.276102 & 0.165728 & 0.000000 & 0.003977 \\
-      2 & 0.129032 & 0.129032 & 0.051020 & 0.025016 & 0.219223 & 0.274194 & 0.164582 & 0.000000 & 0.003950 \\
-      3 & 0.129454 & 0.129454 & 0.050997 & 0.024845 & 0.217718 & 0.272311 & 0.163452 & 0.000000 & 0.003923 \\
-      4 & 0.129870 & 0.129870 & 0.050974 & 0.024675 & 0.216234 & 0.270455 & 0.162338 & 0.000000 & 0.003896 \\
-      ... & ... & ... & ... & ... & ... & ... & ... & ... & ... \\
-      2151 & 0.209045 & 0.209045 & 0.043698 & 0.001416 & 0.012405 & 0.015516 & 0.009313 & 0.000447 & 0.000224 \\
-      2152 & 0.209049 & 0.209049 & 0.043698 & 0.001415 & 0.012400 & 0.015509 & 0.009309 & 0.000447 & 0.000223 \\
-      2153 & 0.209052 & 0.209052 & 0.043698 & 0.001414 & 0.012395 & 0.015503 & 0.009305 & 0.000447 & 0.000223 \\
-      2154 & 0.209056 & 0.209056 & 0.043697 & 0.001414 & 0.012389 & 0.015496 & 0.009301 & 0.000446 & 0.000223 \\
-      Total & 423.722713 & 423.722713 & 96.973407 & 9.477511 & 83.052922 & 103.878504 & 62.352043 & 2.672524 & 1.492444 \\
-    \end{tabular}
-  \end{center}
-\end{table*}
-
-Furthermore, we applied our DAO framework to a real-world case by analyzing a published paper with 2154 downloads and 42 citations. As shown in Table \ref{tab:realpaper}. By simulating the income distribution within the current DAO structure, we observed that download users not only offset their initial payment but also gained additional earnings. The incentivized system encourages users to respect copyright and, more importantly, has achieved a level of autonomy.The provided tables and case study demonstrate the practical application and positive outcomes of our proposed DAO framework. By aligning incentives with user behaviors, the system not only offsets costs for downloaders but also significantly incentivizes engagement. This not only respects copyright but also establishes a self-sustainable and autonomous ecosystem, providing valuable insights for the future development of decentralized academic publishing.
-
-%此外，我们将DAO框架应用于一个真实案例，分析了一篇被下载2154次、引用42次的论文。通过模拟当前DAO结构下的收入分配情况，我们观察到下载用户不仅抵消了初始支付，还获得了额外的收益。这个激励系统鼓励用户尊重版权，更重要的是实现了一定程度的自治。提供的表格和案例研究展示了我们提出的DAO框架的实际应用和积极成果。通过将激励与用户行为保持一致，该系统不仅为下载者抵消了成本，还极大地激励了用户参与。这不仅尊重版权，还建立了一个自我可持续和自治的生态系统，为分散的学术出版的未来发展提供了有价值的见解。
 
 \subsection{Proportion of Trend}
 
@@ -651,6 +654,39 @@ This approach incentivizes readers to identify outstanding articles sooner, as t
 % 下载用户的总收益如图 \ref{fig:revenue-user-download} 所示，随着更多用户下载article，作为读者的article拥有者，总收益会越来越多，但是因为更多其他读者下载article也获取了token，成为了article的拥有者，自己token的占比势必会减少，所以单次收益逐渐降低。设定分配比例进行模拟，第一个下载论文的读者，在文章被下载559次时，总收入与下载时的支出持平；第十个下载论文的读者，收支相抵时候需要文章被下载651次；第一百个下载论文的读者，收支相抵更是要到1579次。此种激励方式在于，如果文章已经证明很优秀了，再拥有已经不能得到多少收益了，鼓励读者更早发现优秀的文章，而不是跟风。
 
 
+\subsection{Real Article simulation}
+
+
+\begin{table*}[t!]
+  \begin{center}
+    \caption{Finance of Real Article for DAO.}
+    \label{tab:realpaper}
+    \begin{tabular}{r|l|l|l|l|l|l|l|l|l} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+       & \multicolumn{4}{c}{\textbf{Authors}} & \multicolumn{3}{|c|}{\textbf{Reviewers}} & \multicolumn{2}{c}{\textbf{Readers}}\\
+       \hline
+      \textbf{index} & \textbf{Corresponding} & \textbf{Author1} & \textbf{Author2} & \textbf{Author3} & \textbf{reviewer1} & \textbf{reviewer2} & \textbf{reviewer3} & \textbf{cite} & \textbf{download}\\
+      \hline
+      0 & 0.128171 & 0.128171 & 0.051068 & 0.025367 & 0.222296 & 0.278037 & 0.166889 & 0.000000 & 0.000000 \\
+      1 & 0.128605 & 0.128605 & 0.051044 & 0.025191 & 0.220749 & 0.276102 & 0.165728 & 0.000000 & 0.003977 \\
+      2 & 0.129032 & 0.129032 & 0.051020 & 0.025016 & 0.219223 & 0.274194 & 0.164582 & 0.000000 & 0.003950 \\
+      3 & 0.129454 & 0.129454 & 0.050997 & 0.024845 & 0.217718 & 0.272311 & 0.163452 & 0.000000 & 0.003923 \\
+      4 & 0.129870 & 0.129870 & 0.050974 & 0.024675 & 0.216234 & 0.270455 & 0.162338 & 0.000000 & 0.003896 \\
+      ... & ... & ... & ... & ... & ... & ... & ... & ... & ... \\
+      2151 & 0.209045 & 0.209045 & 0.043698 & 0.001416 & 0.012405 & 0.015516 & 0.009313 & 0.000447 & 0.000224 \\
+      2152 & 0.209049 & 0.209049 & 0.043698 & 0.001415 & 0.012400 & 0.015509 & 0.009309 & 0.000447 & 0.000223 \\
+      2153 & 0.209052 & 0.209052 & 0.043698 & 0.001414 & 0.012395 & 0.015503 & 0.009305 & 0.000447 & 0.000223 \\
+      2154 & 0.209056 & 0.209056 & 0.043697 & 0.001414 & 0.012389 & 0.015496 & 0.009301 & 0.000446 & 0.000223 \\
+      Total & 423.722713 & 423.722713 & 96.973407 & 9.477511 & 83.052922 & 103.878504 & 62.352043 & 2.672524 & 1.492444 \\
+    \end{tabular}
+  \end{center}
+\end{table*}
+
+Furthermore, we applied our DAO framework to a real-world case by analyzing a published paper with 2154 downloads and 42 citations. As shown in Table \ref{tab:realpaper}. By simulating the income distribution within the current DAO structure, we observed that download users not only offset their initial payment but also gained additional earnings. The incentivized system encourages users to respect copyright and, more importantly, has achieved a level of autonomy.The provided tables and case study demonstrate the practical application and positive outcomes of our proposed DAO framework. By aligning incentives with user behaviors, the system not only offsets costs for downloaders but also significantly incentivizes engagement. This not only respects copyright but also establishes a self-sustainable and autonomous ecosystem, providing valuable insights for the future development of decentralized academic publishing.
+
+%此外，我们将DAO框架应用于一个真实案例，分析了一篇被下载2154次、引用42次的论文。通过模拟当前DAO结构下的收入分配情况，我们观察到下载用户不仅抵消了初始支付，还获得了额外的收益。这个激励系统鼓励用户尊重版权，更重要的是实现了一定程度的自治。提供的表格和案例研究展示了我们提出的DAO框架的实际应用和积极成果。通过将激励与用户行为保持一致，该系统不仅为下载者抵消了成本，还极大地激励了用户参与。这不仅尊重版权，还建立了一个自我可持续和自治的生态系统，为分散的学术出版的未来发展提供了有价值的见解。
+
+
+
 After voluntarily making a payment, users' ability to participate contributes to a robust incentive mechanism, fostering a sense of autonomy within the entire framework. Through this design, users become direct contributors to financial activities, injecting new value into the framework and creating potential opportunities for self-reward. This decentralized autonomous model empowers users to engage directly in decision-making and contributions, shaping a more open, fair, and virtuous ecosystem. Overall, this autonomous framework cultivates a more positive and sustainable participation experience for users and the entire community.
 Through the detailed simulations and analyses, the incentive mechanisms within the DAO framework emerge as crucial drivers in shaping the dynamics of authorship and user participation. As downloads and citations increase, the token-driven rewards become a powerful motivator for authors, leading to an accumulation of influence and financial gains. This incentive structure not only acknowledges and rewards the contributions of authors but also establishes a direct correlation between their efforts and the benefits they accrue.
 Furthermore, users who engage with the system by downloading papers witness a direct impact on their influence and, subsequently, on their earnings. This creates a dual incentive structure, where authors and users are mutually motivated to contribute to and participate in the DAO environment. The concept of decentralized autonomy becomes evident as the system operates independently, fostering a self-sustaining loop of contributions, rewards, and governance.
@@ -677,7 +713,9 @@ Under this framework, users can not only pay for paper downloads but also receiv
 In summary, Decentralized Autonomous Organizations inject new vitality into academic publishing, creating a more equitable environment for both authors and readers. This innovative model holds promise for paving new paths in the development of academia, fostering the free dissemination and sharing of knowledge.
 %综上所述，去中心化自治组织为学术出版注入了新的活力，为作者和用户创造了更加公平和有利的环境。这一创新模式有望为学术界的发展开辟新的道路，促进知识的自由传播和共享。
 
-
+Once an article is recorded on the blockchain, it opens up endless possibilities for the future, and the application of DAOs is expected to become increasingly widespread. Starting with the initial use of tokens to govern proposals, the introduction of NFTs, and now the emergence of recursive inscriptions, we are witnessing the continuous development of new applications within the DAO ecosystem. 
+These advancements indicate that the realm of DeSci can also benefit from these innovative applications. The integration of blockchain technology, NFTs, recursive inscriptions, and other emerging technologies within DeSci can revolutionize the way scientific research is conducted, incentivize collaboration, facilitate knowledge sharing, and enhance the overall efficiency and transparency of the scientific process. As the technological landscape continues to evolve, we can expect to see even more novel applications that will further enhance the capabilities and impact of DeSci.
+% 文章一旦上链，未来就有了无限可能，DAO的应用将会越来越广泛。从最初的token决定决策的权限，后面有了NFT的应用，现在又出现了递归铭文，越来越多新的应用都会出现，这些也势必可以应用在DeSci上。
 
 
 \bibliography{refs}
