@@ -1,0 +1,339 @@
+\documentclass[journal]{IEEEtran}
+\usepackage{cite}
+\usepackage[numbers]{natbib}
+\usepackage{setspace}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{multirow}
+\usepackage{amssymb,amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm,bm}
+\usepackage{graphicx}
+\usepackage{array}
+
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newtheorem{example}{Example}
+
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+  % \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  % \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.eps}
+\fi
+% graphicx was written by David Carlisle and Sebastian Rahtz. It is
+% required if you want graphics, photos, etc. graphicx.sty is already
+% installed on most LaTeX systems. The latest version and documentation
+% can be obtained at:
+% http://www.ctan.org/pkg/graphicx
+% Another good source of documentation is "Using Imported Graphics in
+% LaTeX2e" by Keith Reckdahl which can be found at:
+% http://www.ctan.org/pkg/epslatex
+%
+
+
+
+% *** MATH PACKAGES ***
+%
+%\usepackage{amsmath}
+% A popular package from the American Mathematical Society that provides
+% many useful and powerful commands for dealing with mathematics.
+%
+% Note that the amsmath package sets \interdisplaylinepenalty to 10000
+% thus preventing page breaks from occurring within multiline equations. Use:
+%\interdisplaylinepenalty=2500
+% after loading amsmath to restore such page breaks as IEEEtran.cls normally
+% does. amsmath.sty is already installed on most LaTeX systems. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/pkg/amsmath
+
+
+% *** SPECIALIZED LIST PACKAGES ***
+%
+%\usepackage{algorithmic}
+% algorithmic.sty was written by Peter Williams and Rogerio Brito.
+% This package provides an algorithmic environment fo describing algorithms.
+% You can use the algorithmic environment in-text or within a figure
+% environment to provide for a floating algorithm. Do NOT use the algorithm
+% floating environment provided by algorithm.sty (by the same authors) or
+% algorithm2e.sty (by Christophe Fiorio) as the IEEE does not use dedicated
+% algorithm float types and packages that provide these will not provide
+% correct IEEE style captions. The latest version and documentation of
+% algorithmic.sty can be obtained at:
+% http://www.ctan.org/pkg/algorithms
+% Also of interest may be the (relatively newer and more customizable)
+% algorithmicx.sty package by Szasz Janos:
+% http://www.ctan.org/pkg/algorithmicx
+
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+
+\title{Journal DAO: User-Incentivized Autonomous Decentralized Scientific Publishing in Web3}
+
+\author{Tai Jiang, Rui Qin,~\IEEEmembership{Member, IEEE}, Yuhang Liu,
+ Fei-Yue Wang,~\IEEEmembership{Fellow,~IEEE}.
+        % <-this % stops a space
+\thanks{This work was supported by the Science and Technology Development Fund of Macau SAR under Grant 0093/2023/RIA2 and  Grant 0050/2020/A1.}% <-this % stops a space
+\thanks{Manuscript received February 15, 2023; revised February 15, 2023.}
+\thanks{Tai Jiang is with the Department of Engineering Science, Faculty of Innovation Engineering, Macau University of Science and Technology, Macao, 999078, China (e-mail: jiangtai20@mails.ucas.ac.cn).}
+\thanks{Rui Qin is with State Key Laboratory of Multimodal Artificial Intelligence Systems, Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China (e-mail: rui.qin@ia.ac.cn).}
+\thanks{Yuhang Liu is with the State Key Laboratory for Management and Control of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China, and also with the School of Artificial Intelligence, University of Chinese Academy of Sciences, Beijing 100049, China (e-mail: liuyuhang21@mails.ucas.ac.cn).}
+\thanks{Fei-Yue Wang is with the State Key Laboratory for Management and Control of Complex Systems, Chinese Academy of Sciences, Beijing 100190, China, and also with the Macao Institute of Systems Engineering, Macau University of Science and Technology, Macao 999078, China (e-mail: feiyue.wang@ia.ac.cn).}
+%\thanks{Digital Object Identifier: xxx}
+% <-this % stops a space
+}
+
+\markboth{IEEE Transactions on Computational Social Systems ,~Vol.~x, No.~x, xx~xxxx}%
+{Jiang \MakeLowercase{\textit{et al.}}: Journal DAO: User-Incentivized Autonomous Decentralized Scientific Publishing in Web3}
+
+\maketitle
+
+\begin{abstract}
+The academic publishing industry is currently undergoing significant growth but also faces several challenges, mainly including the lack of transparency in the peer review process and the limited rights of authors. The rise of Web3, emphasizing decentralization, openness, and user control over data, opens up new perspectives for academic publishing. This article introduces an innovative academic publishing model, named Journal DAO, leveraging emerging Web3 technologies such as blockchain and decentralized autonomous organization (DAO). First, by recording articles on the blockchain rather than a specific database, Journal DAO can ensure data security and traceability of the articles. Second, through the governance framework of DAO, tokens are distributed among all the participants of Journal DAO based on the their contributions, safeguarding the rights of each role in the publishing process. Third, effective incentive mechanisms are proposed to reward all participants, ensuring the sustainability of the framework and its autonomous functionality. This work proposes a prospective academic publishing model that aims to reshape the industry through the application of blockchain and DAO in Web3, making a significant contribution to future academic publishing.
+\end{abstract}
+
+\begin{IEEEkeywords}
+decentralized autonomous organizations, blockchain, Web3, decentralized funding, decentralized science
+\end{IEEEkeywords}
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+
+\section{Introduction}\label{sec:introduction}
+
+\IEEEPARstart{T}{he} academic publishing industry is currently facing several pressing challenges. First, the traditional system, often conducted anonymously, fails to ensure fairness and impartiality, leading to a compromised review process that undermines both credibility and integrity. This lack of transparency can undermine the credibility and integrity of the review process. Second,
+the authors often lack control over associated data of their articles, since the ownership often rests with publishers or electronic databases. This challenges authors in retaining rights, deciding on data use, and hampers their ability to fully leverage research, limiting collaborative opportunities and further advancements in their field. Third, the restrictions on data sharing hinder the free flow of knowledge and inhibit potential collaborations, which limits authors from fully benefiting and making discoveries that could contribute to the scientific community.
+
+The emergence of technologies such as Decentralized Autonomous Organizations (DAOs) \cite{buterin2014next} and blockchain \cite{swan2015blockchain,9093840} presents significant opportunities for the advancement of the academic publishing industry. DAOs offer a groundbreaking approach to organizational governance, decision-making, and fund management for academic publishing \cite{wang2019decentralized}. Unlike traditional hierarchical structures, DAOs operate without central authorities, relying on transparent and automated processes governed by smart contracts and consensus protocols \cite{kaal2021decentralized}. This decentralization can provide a transparent and auditable decision-making process, enhance accountability, and facilitate efficient funds distribution for the current academic publishing system. The decentralized and tamper-resistant nature of blockchain can provide a secure and transparent environment for intelligent journals. By integrating blockchain technology into intelligent journals, the data transparency and authenticity can be realized. Through blockchain-based smart contracts, the reliability of data can be steadfastly guaranteed, thereby eliminating the necessity for third-party oversight \cite{mougayar2016business}. This innovative approach not only enhances the credibility of information but also streamlines the process, fostering trust and efficiency within the realm of intelligent journals.
+
+In the literature, the applications of blockchain-based decentralized technologies in academic publishing have received researchers' great attention \cite{8756390}. Blockchain technology was used to solve the security and efficiency concerns in the distribution and management of open journal systems, ensuring precise distribution, enhancing reputation and trust, and safeguarding paper management against potential hacker threats \cite{agustin2020blockchain}. Through decentralized InterPlanetary File System (IPFS) and blockchain technologies, the authenticity, trust and reliability of online publications can be ensured, which can effectively address the challenges related to security and privacy in online publications \cite{nizamuddin2018ipfs}. By leveraging blockchain-based decentralized technologies, a decentralized scientific publishing platform is established, which utilizes Ethereum smart contracts to expedite the publication process, reduce biases in peer review, and lower publication costs \cite{becstacs2023novel}. The platform can ensure complete traceability throughout the publication processes, and all the participants including the editors, reviewers, and authors will receive system tokens as rewards for their contributions.
+
+However, these existing studies primarily concentrate on specific aspects, such as the use of blockchain to address security and efficiency concerns or enhance transparency in the academic publishing process. They do not comprehensively address the multifaceted challenges prevalent in the current academic publishing landscape. This article proposes an innovative academic publishing model called Journal DAO, which applies emerging Web3 technologies, such as blockchain and DAO, to address these challenges. First, by recording articles on the blockchain, all operations are conducted on the chain rather than belonging to a specific database, ensuring data security and traceability. Second, through the DAO framework, tokens are distributed based on role contributions, protecting the rights of researchers. Third, by designing effective incentive mechanisms, with the consideration of rewarding each participant according to their contributions to the article, which can realize a fully autonomous and economically sustainable Journal DAO ecosystem \cite{ding2022desci}.
+
+The rest of this paper is arranged as follows. Section \ref{sec:framework} introduces the framework of Journal DAO framework. Section \ref{sec:mechanism} discusses the design and implementation of the incentive mechanism in Journal DAO. Section \ref{sec:performance} presents experimental results validating the effectiveness of the implemented incentive mechanism.
+Section \ref{sec:conclusion} concludes the paper.
+
+第2节之前的内容共1.25页
+\section{Framework of Journal DAO \label{sec:framework}}第2节共2.25页
+开头写一段话，介绍本节主要做什么，2-3行即可。
+
+
+\subsection{The Framework}1页
+
+本小节给出Journal DAO的framework，建议画一张框架图，图中要包含所有参与者，还要包含完整的运行流程，以及token和finance的流转。
+
+在框架图的基础上，简要介绍框架图，并说明区块链和DAO在其中如何发挥作用。
+
+\subsection{The Operation Process}1页
+
+介绍Journal DAO框架中参与者的各类角色，Journal DAO运行流程和实现的功能，以及token和finance如何流转。
+
+\subsection{The Advantages}0.25页
+
+介绍与传统期刊相比，Journal DAO有哪些优势.
+
+\section{Mechanism Design of Journal DAO \label{sec:mechanism}}本节共2页
+简要写一下本节的思路，3-5行即可。
+
+\subsection{Decentralized Governance}
+
+\subsection{Initial Token Distributions}
+
+\subsection{Token Distributions upon Article Download or Citation}
+
+\subsection{Finance Distributions}
+
+\section{A Case Study} \label{sec:performance}本节共2页
+
+\section{Conclusions and Future Work\label{sec:conclusion}}共0.25页
+
+第一段，对本文的工作进行总结。
+
+第二段，对下一步的工作进行展望。
+
+\bibliography{refs}1页
+\bibliographystyle{IEEEtran}
+
+作者简介：0.75页
+
+%\begin{figure}[ht]
+%\centering
+%\includegraphics[width=2.3in]{figure/fig8.eps}
+%\caption{The impact of employees' participation in recruitment-toward KPI management on employees, departments and the enterprises}
+%\label{fig:8}
+%\end{figure}
+
+
+
+
+
+
+
+%
+%%\appendices
+%%
+%%\ifCLASSOPTIONcaptionsoff
+%%  \newpage
+%%\fi
+%%
+%%
+%\begin{thebibliography}{1}\small
+
+%\bibitem{Ebha2021} E. B. Hansen,  S. B$\phi$gh, ``Artificial intelligence and Internet of things in small and medium-sized enterprises: A survey", Journal of Manufacturing Systems, 58:362--372, 2021.
+%
+%\bibitem{Binder2007} M. Binder, B. Clegg, ``Enterprise management: A new frontier for organisations", Int. J. Production Economics, 106, 409-430, 2007.
+%
+%\bibitem{OrganizationalDecision2013} F. A. Csaszar,  J. Eggers, ``Organizational decision making: An information aggregation view", Management Science, 59(10), 2257-2277, 2013.
+%
+%\bibitem{Ramesh1988} R. Ramesh, G. C. Sekar,  ``An integrated framework for decision support in corporate planning", Decision Support Systems, 4, 365-375, 1988.
+%
+%\bibitem{Binder2006} M. Binder, B.T. Clegg,  ``A conceptual framework for enterprise management". International Journal of Production Research, 44 (18-19), 3813-3829, 2006.
+%
+%\bibitem{Heyne2011} D. Heyne, L. M$\ddot{o}$nch, ``An agent-based planning approach within the framework of distributed hierarchical enterprise management", Journal of Management Control, 22, 205-236 2011.
+%
+%\bibitem{Homburg1998} C. Homburg, ``Hierarchical multi-objective decision making", European Journal of Operational Research, 105, 155-161, 1998.
+%
+%\bibitem{ParallelIntelligence2022} F.-Y. Wang, ``Parallel intelligence in metaverses: Welcome to Hanoi!", \emph{IEEE Intell. Syst.}, vol. 37, no. 1, pp.16-20, 2022.
+%
+%\bibitem{Blockchain2021} D. Berdik, S. Otoum, N. Schmidt, D. Porter, Y. Jararweh, ``A Survey on Blockchain for Information Systems Management and Security", Information Processing \& Management, 58(1): 102397, 2021.
+%
+%
+%\bibitem{Qin2019} R. Qin, Y. Yuan, F.-Y. Wang, A novel hybrid share reporting strategy for blockchain miners in PPLNS pools, Decision Support Systems, 118: 91-101, 2019.
+%
+%
+%\bibitem{Qin2020}  R. Qin, Y. Yuan and F.-Y. Wang, ``Optimal block withholding strategies for Blockchain mining pools", \emph{IEEE Trans. Comput. Social Syst.}, vol. 7, no. 3, pp. 709-717, 2020.
+%
+%
+%
+%
+%\bibitem{DAO2019} S. Wang, W. Ding, J. Li, Y. Yuan, L. Ouyang and F.-Y. Wang, ``Decentralized autonomous organizations: Concept, model, and applications", \emph{IEEE Trans. Comput. Social Syst.}, 6(5), 870-878, 2019.
+%
+%
+%
+%\bibitem{Pashkevych2020} M. Pashkevych, L. Bondarenko, A. Makurin, I. Saukh, O. Toporkova, ``Blockchain technology as an organization of accounting and management in a modern enterprise", International Journal of Management, 11(6), 516-528, 2020.
+%
+%
+%\bibitem{Wang2010CPSS} F.-Y. Wang, ``The Emergence of Intelligent Enterprises: From CPS to CPSS", IEEE Intelligent Systems, vol. 25, no. 4, pp. 85-88, July-Aug. 2010.
+%
+%\bibitem{Wang2020parallelEconomic} F.-Y. Wang, ``Parallel economics: A new supply-demand philosophy via parallel organizations and parallel management", \emph{IEEE Trans. Comput. Social Syst.}, vol. 7, no. 4, pp. 840-848, 2020.
+%
+%
+%
+%\bibitem{ParallelManagement2020} R. Qin, Y. Yuan, F.-Y. Wang, ``Blockchain-based knowledge automation for CPSS-oriented parallel management", \emph{IEEE Trans. Comput. Social Syst.}, vol.7, no. 4, pp.1180-1188, October 2020.
+%
+%\bibitem{WangParallelManagement2022}F.-Y. Wang, ``Parallel management: The DAO to smart ecological technology for complexity management intelligence", \emph{Acta Automatica Sinica}, vol. 48, no. 11, pp. 2655-2669, 2022.
+%
+%\bibitem{LiQin2022} J. Li, R. Qin and F.-Y. Wang, ``The future of management: DAO to smart organizations and intelligent operations", \emph{IEEE Trans. Syst. Man Cybern. Syst.}, DOI: 10.1109/TSMC.2022.3226748, 2022.
+%
+%\bibitem{Qin2022DAO} R. Qin, W. Ding, J. Li, S. Guan, G. Wang, Y. Ren and Z. Qu, ``Web3-based decentralized autonomous organizations and operations: Architectures, models and mechanisms", \emph{IEEE Trans. Syst. Man Cybern. Syst.}, DOI: 10.1109/TSMC.2022.3228530, 2022.
+%
+%\bibitem{Wang2022DAOTCSS} F.-Y. Wang, W. Ding, R. Qin and B. Hu, ``Parallel Philosophy for MetaOrganizations With MetaOperations: From Leibniz's Monad to HanoiDAO", \emph{IEEE Trans. Comput. Social Syst.}, vol. 9, no. 3, pp. 658-666, June 2022.
+%
+%\bibitem{cryptoManagement2022} G. Wang, J. Li, X. Wang, J. Li, F.-Y. Wang, ``Blockchain-based crypto management for reliable real-time decision-making", \emph{IEEE Trans. Comput. Social Syst.}, 2022.
+%
+%\bibitem{Wang2021FE} F. Y. Wang, R. Qin, Y. Chen, Y. Tian, X. Wang and B. Hu, ``Federated ecology: Steps toward confederated intelligence," \emph{IEEE Trans. Comput. Social Syst.}, vol. 8, no. 2, pp. 271-278, Apr. 2021.
+%
+%\bibitem{Wang2021FC} F. Y. Wang, J. Zhu, R. Qin, X. Wang and B. Hu, ``Federated control: Toward information security and rights protection," \emph{IEEE Trans. Comput. Social Syst.}, vol. 8, no. 4, pp. 793-798, Aug. 2021.
+%
+%\bibitem{Wang2021FM} F. Y. Wang, R. Qin, J. Li, X. Wang, H. Qi, X. Jia and B. Hu, ``Federated management: Toward federated services and federated security in federated ecology," \emph{IEEE Trans. Comput. Social Syst.}, vol. 8, no. 6, pp. 1283-1290, Dec. 2021.
+%
+%\bibitem{FederatedData2021} F.-Y. Wang, W. Zhang, Y. Tian, R. Qin, X. Wang, B. Hu, ``Federated data: Toward new generation of credible and trustable artificial intelligence", \emph{IEEE Trans. Comput. Social Syst.}, vol. 8, no. 3, pp. 538-545, June 2021.
+%
+%\bibitem{DAO2019Singh} M. Singh, S. Kim, ``Blockchain technology for decentralized autonomous organizations", Advances in Computers, 115: 115-140, 2019.
+%
+%
+%
+%\bibitem{Li2022} J. Li, X. Ni, Y. Yuan, F.-Y. Wang, ``A Novel GSP Auction Mechanism for Dynamic Confirmation Games on Bitcoin Transactions", IEEE Transactions on Services Computing, 15(3), 1436-1447, 2022.
+%
+%\bibitem{Li2019} J. Li, Y. Yuan, F.-Y. Wang, ``A novel GSP auction mechanism for ranking bitcoin transactions in blockchain mining", Decision Support Systems, 124(113094), 2019.
+%
+%\bibitem{Blockchain2018} Z. Zheng, S. Xie, H. N. Dai, et al., ``Blockchain challenges and opportunities", International Journal of Web and Grid Services, 14(4), 352-375, 2018.
+%
+%\bibitem{Borri2022} N. Borri, Y. Liu, A. Tsyvinski, ``The economics of non-fungible tokens", Available at SSRN, 2022.
+%
+%\bibitem{Qin2021NFT} R. Qin, J. Li, X. Wang, J. Zhu, Y. Yuan, and F.-Y. Wang, ``NFT: Blockchain-based non-fungible token and applications," Chin. J. Intell. Sci. Technol., vol. 3, no. 2, pp. 110-118, Jun. 2021.
+%
+%\bibitem{Metasocieties2022} F.-Y. Wang, R. Qin , X. Wang, B. Hu, ``Metasocieties in metaverse: Metaeconomics and metamanagement for metaenterprises and metacities", \emph{IEEE Trans. Comput. Social Syst.}, vol. 9, no. 1, pp. 2-7, 2022.
+%
+%\bibitem{WangSu2022} Y. Wang, Z. Su, N. Zhang, et al., ``A survey on metaverse: Fundamentals, security, and privacy", IEEE Communications Surveys \& Tutorials, 2022.
+%
+%\bibitem{Wangyutong2022} Y. Wang, Y. Tian, J. Wang, Y. Cao, S. Li and B. Tian, ``Integrated Inspection of QoM, QoP, and QoS for AOI Industries in Metaverses," IEEE/CAA Journal of Automatica Sinica, vol. 9, no. 12, pp. 2071-2078, December 2022.
+%
+%\bibitem{Wang2022DAO} F.-Y. Wang, ``The DAO to MetaControl for MetaSystems in Metaverses: The system of parallel control systems for knowledge automation and control intelligence in CPSS", \emph{IEEE/CAA J. Autom. Sinica}, vol. 9, no. 11, pp. 1899-1908, Nov. 2022.
+%
+%\bibitem{Wilson2022} K. B. Wilson, A. Karg, H. Ghaderi, ``Prospecting non-fungible tokens in the digital economy: Stakeholders and ecosystem, risk and opportunity", Business Horizons, 65(5): 657-670, 2022.
+%
+%\bibitem{Wang2021NFT} F.-Y. Wang, R. Qin, Y. Yuan and B. Hu, ``Nonfungible tokens: Constructing value systems in parallel societies", \emph{IEEE Trans. Comput. Social Syst.}, vol. 8, no. 5, pp. 1062-1067, 2021.
+%
+%
+%\bibitem{Lee2021} L.-H. Lee, T. Braud, P. Zhou, L. Wang, D. Xu, Z. Lin, A. Kumar, C. Bermejo, P. Hui, All One Needs to Know about Metaverse: A Complete Survey on Technological Singularity, Virtual Ecosystem, and Research Agenda, arXiv:2110.05352v3.
+%
+%\bibitem{Yang2022} Q. Yang, Y. Zhao, H. Huang, et al., ``Fusing blockchain and AI with metaverse: A survey", IEEE Open Journal of the Computer Society, 3, 122-136, 2022.
+%
+%
+%
+%\bibitem{Wang2022Meta} F.-Y. Wang, R. Qin, X. Wang and B. Hu, ``MetaSocieties in metaverse: MetaEconomics and MetaManagement for MetaEnterprises and MetaCities", \emph{IEEE Trans. Comput. Social Syst.}, vol. 9, no. 1, 2-7, 2022.
+
+
+
+
+
+
+%\end{thebibliography}
+%\vspace{-10mm}
+%\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{figure/GeWang}}]{Ge Wang} is Ph.D. candidate at Macao institute of System Engineering, Macau University of Science and Technology. His research interests include parallel enterprise management.
+%\end{IEEEbiography}
+%\vspace{-5mm}
+%
+%\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{figure/Rui}}]{Rui Qin} (M'17) received the Ph.D. degree in computer application technology from the University of Chinese Academy of Sciences, Beijing, China, in 2016. She is currently an associate professor with The State Key Laboratory for Management and Control of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing, China. Her research interests include blockchain, DAO and parallel management.
+%\end{IEEEbiography}
+%\vspace{-5mm}
+%
+%\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{figure/Juan}}]{Juanjuan Li} (M'17) received the master's degree in economics from the Renmin University of China, Beijing, China, in 2010, and the Ph.D. degree in philosophy from the Beijing Institute of Technology, Beijing, in 2021. She is currently an associate professor with The State Key Laboratory for Management and Control of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing, China. Her research interests include blockchain, DAO and parallel management.
+%\end{IEEEbiography}
+%\vspace{-5mm}
+%
+%\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{figure/Wang}}]{Fei-Yue Wang}
+%(S'87-M'89-SM'94-F'03) received his Ph.D. degree in Computer and Systems Engineering from Rensselaer Polytechnic Institute, Troy, NY, USA, in 1990. He is currently a professor with The State
+%Key Laboratory for Management and Control of Complex Systems, Institute of Automation, Chinese
+%Academy of Sciences, Beijing, China. His research interests include methods and applications for intelligent and parallel intelligence, social computing and knowledge automation.
+%\end{IEEEbiography}
+%\vspace{-5mm}
+%
+%\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{figure/Gan}}]{Yu Gan} received her B.S. degree in Mathematics and Economics from the University of California, Los Angeles.  She is currently the Assistant President of Qingdao Huituo (Waytous) Intelligent Robotics Co., Ltd., Qingdao, China. Her research interests includes parallel enterprise management, DAO, and strategic management of startups.
+%\end{IEEEbiography}
+%
+%\vspace{-5mm}
+%\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{figure/YanLihua}}]{Lihua Yan} is the HR Director of Qingdao Huituo (Waytous) Intelligent Robotics Co., Ltd., Qingdao, China. Her research interests includes parallel enterprise management, DAO, organization reform and talent development strategy.
+%\end{IEEEbiography}
+
+
+
+\end{document}
