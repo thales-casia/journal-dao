@@ -162,80 +162,48 @@ According to the development of district DAO, related blockchain technology, the
 These application examples highlight the potential value of blockchain, smart contracts, and DAO technology in academic publishing and journal management. They enhance transparency, protect intellectual property, verify identity, automate processes, and encourage collaboration. As these technologies continue to evolve, they hold promise for further innovation and efficiency in academia \cite{vacca2021systematic}.
 %这些应用示例突显了区块链、智能合约和DAO技术在学术出版和杂志管理方面的潜在应用，提高了透明度、知识产权保护、身份验证和自动化审稿流程。随着这些技术的不断发展，它们将有望为学术界提供更多的创新和效率。
 
-\subsection{Web3-Based Journal DAO Framework}
 
-\begin{figure*}[h!]
+\subsection{The Framework with Blockchain and DAO}
+% \subsection{The Framework}1页
+% 本小节给出Journal DAO的framework，建议画一张框架图，图中要包含所有参与者，还要包含完整的运行流程，以及token和finance的流转。
+% 在框架图的基础上，简要介绍框架图，并说明区块链和DAO在其中如何发挥作用。
+
+Based on the depicted framework in Figure \ref{fig:frameworkofblockchain}, it is evident that the operational flow of the blockchain and DAO framework, along with the roles of various participants, can be succinctly understood. 
+
+\begin{figure}[h!]
   \centering
-  \subfloat[Database]{
-    \includegraphics[width=2.4in]{assets/journalsite.png}
-    \label{fig:database}
-  }
-  \hfil
-  \subfloat[Blockchain]{
-    \includegraphics[width=3.6in]{assets/journalchain.png}
-    \label{fig:blockchain}
-    }
-  \caption{Article in Database or Blockchain}
-  \label{fig:storage}
-\end{figure*}
+  \includegraphics[width=\linewidth]{assets/workflow.png}
+  \caption{Framework of Blockchain.}
+  \label{fig:frameworkofblockchain}
+\end{figure}
 
 
+Initially, authors generate manuscripts that can be submitted for publication. However, unlike conventional websites where manuscripts reside solely on publishing servers, this framework ensures their credibility by immutably recording the publication process on the blockchain. 
 
-In the traditional landscape of Web 2.0, the ownership of articles remains with the creators, yet the entirety of the associated data is ensconced within the databases of publishers, shrouded in a lack of transparency. This opaqueness extends to financial allocations, where, even if publishers express willingness to distribute funds, the absence of intermediary oversight poses challenges to ensuring fairness and accountability in the process. This paper delves into the transformative potential of Web 3.0 and blockchain technology within the DAO framework to rectify these issues, ushering in a new era of decentralized, transparent, and equitable financial distribution for content creators \cite{nath2014web}.
-%在传统的Web 2.0领域，文章的所有权虽然归属于创作者，但所有相关数据都存储在由出版商的数据库中，缺乏透明度。即使出版商愿意分配资金，由于缺乏中介监管，这一过程也存在公正性和责任问题。本文深入探讨了Web 3.0和区块链技术在DAO框架内的转变潜力，以解决这些问题，引领创作者进入一个新时代，其中财务分配更为去中心化、透明和公平。
-  
+Subsequently, manuscripts undergo a rigorous peer review process, involving multiple reviewers who diligently evaluate them. Only manuscripts that successfully pass the review are considered for publication. In cases where revisions are necessary, manuscripts are returned to the authors accompanied by specific feedback. Importantly, this entire review process is transparently recorded on the blockchain, thereby ensuring objectivity and effectiveness in the evaluation. 
+In the event of manuscript rejection, authors have the opportunity to resubmit their work for publication, with this resubmission process meticulously documented on the blockchain. This traceability feature guarantees complete transparency throughout the submission process. 
 
+Upon successful completion of the review process, approved manuscripts are published. This publication is also recorded on the blockchain and subsequently integrated into the DAO framework, where contribution allocation occurs in accordance with established procedures. 
+Readers can access and download published articles, with this downloading process also being recorded on the blockchain. Such a record ensures an accurate reflection of article downloads and citations. Furthermore, downloads and citations are incorporated into the DAO framework, facilitating the equitable allocation of contributions. Readers, being pivotal in determining the value of articles, receive corresponding contributions within the framework.
+% 根据图1中的框架，可以简单的看出区块链和DAO的框架的运行流程，以及各个参与者的角色在框架中的作用。首先，作者撰写了文章，可以发布手稿。发布之后，不是跟传统网站一样，只存在了出版上的服务器中，这个过程会上链，保证了文章的可信性。然后，手稿进入了审稿流程，多个审稿人对文章进行了审查，通过了审查，才能发布出版。如果需要修改，会退还给作者，并且附上修改意见，这个过程也会上链，保证了评审的客观有效。被退回的文章会被重新发布，这个过程依然上链，整个申购流程完全透明可回溯。最后，文章被通过了审查，会被发表出版，这个过程也会上链，并且上链之后，进入了DAO框架，按照流程进行贡献分配。读者可以下载发布后的文章，这个过程也会上链，能真实反映文章的下载以及引用。并且下载以及引用之后，也会进入DAO框架，按照流程进行贡献分配，读者是文章价值的最好体现，所以会得到应有的贡献。
 
-From a physical perspective, the data of articles is stored in the database of the journal website, as shown in Figure \ref{fig:database}. When regular users access the journal website, they can browse and download articles of interest. The interaction between users and the journal website typically involves the following steps.
-When an article is uploaded to a blockchain, as shown in Figure \ref{fig:blockchain}, its content, timestamp, and relevant metadata are all recorded on the blockchain \cite{chowdhury2018blockchain}. This means that anyone can verify the existence, content, and timestamp of the article. This provides a high level of assurance for the immutability and transparency of documents, particularly with potential significance in research, intellectual property protection, and copyright. Uploading articles to the blockchain also enables decentralized data storage, reducing reliance on centralized institutions. This offers a more open and trustworthy means of data sharing for the academic community and other domains.Uploading an article to a blockchain, as compared to storing it in a traditional database, provides the author with a clear and objective ownership of the article. In a traditional database, the ownership of the data and the integrity of the database are controlled by the entity or organization managing the database. Authors and other stakeholders may not have direct control or visibility into the ownership and usage of the data.
-%从物理层出发，期刊网站的数据库是文章数据的关键存储点。这些数据库通常位于服务器上，这些服务器可以分布在数据中心或云服务提供商的设施中。当普通用户访问期刊网站时，他们可以通过网络连接访问这些数据库以浏览和下载感兴趣的论文。
-%%当一篇文章被上链到区块链中，它的内容、时间戳以及相关的元数据都会被记录在区块链上。这意味着任何人都可以验证这篇文章的存在、内容和时间。这为文献的不可篡改性和透明性提供了极高的保障，尤其在科研、知识产权保护和版权方面具有潜在的重要应用。上链文章还可以实现去中心化的数据存储，减少对中央化机构的依赖。这为学术界和其他领域提供了更开放和可信的数据共享方式。将文章上传至区块链，与将其存储在传统数据库中相比，可以让作者更明确且客观地拥有文章。在传统数据库中，数据的所有权和数据库的完整性由管理数据库的实体或组织控制。作者和其他利益相关方可能无法直接控制或了解数据的所有权和使用情况。
-
-On the other hand, when an article is uploaded to a blockchain, the author can have greater confidence in their ownership and control over the article \cite{mcconaghy2017visibility}. The blockchain's decentralized and immutable nature ensures that the ownership records are transparent, tamper-resistant, and not under the sole control of a centralized authority. This empowers authors to have a direct and verifiable claim to their work, which can be particularly important for intellectual property protection, copyright, and ensuring that the author's rights are respected.
-%另一方面，当文章上传至区块链时，作者可以更有信心地拥有和控制文章。区块链的去中心化和不可篡改性确保了所有权记录的透明性、防篡改性，并不受中心化权威的独立控制。这使作者能够直接并且可验证地主张他们的作品，这对于知识产权保护、版权以及确保作者的权利得到尊重尤为重要。
-
-
-
-\subsection{Advantages of Finance in Journal DAO}
-
-
-\begin{figure*}[!hb]
+\begin{figure}[h]
   \centering
-  \subfloat[Web2.0]{
-    \includegraphics[width=3.2in]{assets/web2.png}
-    \label{fig:payweb2}
-  }
-  \hfil
-  \subfloat[Web3.0]{
-    \includegraphics[width=3.2in]{assets/web3.png}
-    \label{fig:payweb3}
-  }
-  \caption{Reader Pay for Download}
-  \label{artcledownload}
-\end{figure*}
+  \includegraphics[width=3.2in]{assets/finance.png}
+  \caption{Distribute Finance by Tokens}
+  \label{fig:frameworkoffinance}
+\end{figure}
+
+In the DAO framework, as illustrated in Figure \ref{fig:frameworkoffinance}, token allocation follows a process where all participants, including authors, reviewers, readers, and publishers, are assigned contributions represented by tokens. This allocation is carried out based on the established procedures within the framework.
+Within this context, Non-Fungible Tokens (NFTs) can be utilized as a means to determine the distribution proportions of tokens. NFTs are unique tokens that represent specific assets or contributions. By employing NFTs, the token allocation process becomes more granular, allowing for a more precise distribution based on the individual contributions of each participant.
+When finance is generated within the framework, it is distributed among all token holders according to the predetermined token allocation mechanism. The allocation is determined by the proportion of tokens held by each participant, reflecting their respective contributions and responsibilities within the framework.
+By implementing token allocation based on NFTs and distributing finance according to the token distribution mechanism, all stakeholders in the DAO framework receive their fair shares in proportion to their token holdings. This incentivizes active participation and ensures that contributors are rewarded appropriately for their contributions within the framework.
+% DAO中的token分配如图2所示，参与框架的所有角色，如作者、审稿人、读者，再加上出版商，会按照流程进行贡献分配，贡献的用token来表示。此时，按照NFT的方式，把token作为分配的比例，一旦框架中产生了finance，就会按照token的分配方式进行分配，发放给所有holder。
 
 
-In the evolution of electronic journals, websites have become the primary medium for disseminating research papers. Although the content of users' papers remains the intellectual property of the authors, the wealth generated by journals through these papers often belongs predominantly to the journals rather than the authors.In our hypothetical scenario, we contemplate a shift in this paradigm, envisioning a system where a certain proportion of the generated wealth is allocated back to the authors. Taking paid downloads as a simple example, this mechanism aims to provide authors with a more direct economic incentive. Such a transformation not only has the potential to enhance authors' motivation and creativity but also holds the promise of establishing a more equitable wealth distribution system. This envisioned change could contribute to fostering a sustainable and mutually beneficial development model in the realm of electronic journals, addressing the balance of interests between authors and journals more effectively.
-% %在电子期刊的发展历程中，论文的载体逐渐从传统的印刷版本过渡到了数字化的网站形式。尽管用户的论文内容仍然属于作者的创作成果，然而，由于现行模式下，杂志通过论文创造的财富往往主要归属于杂志自身，而非作者。在当前设想下，我们可以假设一种改进模式，即按照一定比例将创造的财富回馈给作者。以付费下载为例，这一机制可以为作者提供更直接的经济回报。这种变革不仅有助于激发作者的积极性和创作动力，同时也有望促进更公正的财富分配体系的建立。这样的改变有望在电子期刊领域引入更加可持续和互惠的发展模式，从而更好地满足作者和杂志之间的利益平衡。
-
-
-Web2, also known as the social web, refers to the current state of the internet that we use today, which is primarily focused on social media, e-commerce, and other web-based applications that allow users to interact with each other and with content in various ways. In Web2, payment systems are typically centralized, meaning that they are controlled by a single entity or organization. 
-As the Figure \ref{fig:payweb2} shows. In the context of Web 2.0, the establishment of a platform for downloading articles entails several steps. Firstly, the creation of a functional website serves as the primary interface for users. This website acts as a centralized hub, hosting a database that stores a diverse range of articles across various disciplines.When a user decides to download a specific article, a payment system is in place to facilitate the transaction. The user pays a designated fee for the download, and the platform, acting as an intermediary, manages the distribution of funds. The allocation of funds may involve a proportional distribution to the authors, and this process is typically administered by the central entity running the website.This centralized model means that all user interactions, content storage, and payment transactions occur within the controlled environment of the website. Users depend on the centralized platform to oversee and coordinate all aspects of the transactional process, creating a reliance on a single authority for the entire operation \cite{yu2002electronic}.
-%Web2，也称为社交网络，指的是我们今天使用的互联网的现状，主要集中在社交媒体、电子商务和其他基于网络的应用程序，这些应用程序允许用户相互交互以及与其他人进行交互。内容以多种方式呈现。在 Web2 中，支付系统通常是集中式的，这意味着它们由单个实体或组织控制。
-%在Web 2.0的背景下，建立一个文章下载平台涉及到几个步骤。首先，创建一个功能齐全的网站作为用户的主要接口。这个网站充当了一个中心枢纽，托管一个数据库，存储了各个学科领域的多样化文章。当用户决定下载特定文章时，将会有一个支付系统来促成交易。用户支付一定费用进行下载，而平台则作为中介管理资金的分配。资金的分配可能涉及按比例分配给作者，这个过程通常由运营该网站的中央实体管理。这种中心化模式意味着所有用户交互、内容存储和支付交易都发生在网站的受控环境中。用户依赖于中心化平台监督和协调整个交易过程，因此对于整个操作都存在对单一权威的依赖。
-
-
-
-Web3, also known as the decentralized web as shown in the Figure \ref{fig:payweb3}, represents a shift toward a more open, decentralized, and secure internet that is built on blockchain technology \cite{alabdulwahhab2018web}. In Web3, payment systems are decentralized, meaning that they are not controlled by a single entity or organization \cite{cao2022decentralized}. Instead, payments are made using cryptocurrency, which is a digital asset that is secured by cryptographic techniques and operates independently of central banks and other financial institutions. Cryptocurrency payments are processed directly between users without the need for intermediaries, which can result in lower transaction fees and faster processing times.
-In the realm of Web 3.0, we witness a fundamental transformation in the dissemination of academic articles. Unlike the traditional Web 2.0 model, it introduces a paradigm shift. In this innovative framework, the data entity of articles resides directly on the blockchain, with the website serving as a mere interface reflecting the blockchain data. When users make payments for downloads, the entire fund allocation process is automated through smart contracts, eliminating the need for manual intervention. This groundbreaking framework ensures complete transparency and traceability throughout the process. As users pay to download articles, funds are automatically distributed according to the rules set within the DAO framework, without any centralized oversight.In the Web 3.0 paradigm, this novel model signifies a departure from reliance on traditional intermediaries. Instead, it empowers users with the direct participation in DAO frameworks, utilizing smart contracts for automated and secure fund distribution. This shift not only achieves decentralization in the transaction process but also enhances the efficiency of academic article transactions.In the Web 3.0 environment, articles are directly uploaded to the blockchain. All operations, including payment processing and fund distribution, are seamlessly executed through smart contracts. This innovative framework ensures complete transparency and traceability throughout the entire process. When users pay to download articles, the funds are automatically allocated according to the rules established within the DAO framework, eliminating the need for any centralized oversight.
-%Web3，也称为去中心化网络，代表着向基于区块链技术构建的更加开放、去中心化和安全的互联网的转变。在 Web3 中，支付系统是去中心化的，这意味着它们不受单个实体或组织的控制。相反，支付是使用加密货币进行的，加密货币是一种由加密技术保护并独立于中央银行和其他金融机构运作的数字资产。加密货币支付直接在用户之间进行处理，无需中介机构，这可以降低交易费用并缩短处理时间。
-%在Web 3.0的领域中，我们对待学术文章传播方式发生了根本性的变革。与传统的Web 2.0模式不同，它引入了一种新的框架。文章数据主体直接存在于区块链上，而网站仅仅是对区块链数据的映射。在这一新的框架下，用户支付下载后，整个资金分配的过程都通过智能合约进行自动化执行，无需手动干预。这一创新性框架确保了整个过程的完全透明性和可追溯性。当用户支付下载文章时，资金会根据去中心化自治组织（DAO）框架内设立的规则自动分配，无需任何集中监管。
-%在Web 3.0的范式中，这一新兴模式标志着我们不再依赖传统中介机构。相反，它赋予用户直接参与DAO框架的权力，利用智能合约实现资金的自动化和安全分配。这一转变不仅实现了交易过程的去中心化，还提高了学术文章交易的效率。
-%在Web 3.0的环境中，文章直接上链。所有操作，包括支付处理和资金分配，都通过智能合约无缝执行。这一创新性框架确保了整个过程的完全透明性和可追溯性。当用户支付下载文章时，资金会根据去中心化自治组织（DAO）框架内设立的规则自动分配，无需任何集中监管。
-
-
-
-\subsection{The Operation Process of the Journal DAO}
+\subsection{The Operation Process}
+% 1页
+% 介绍Journal DAO框架中参与者的各类角色，Journal DAO运行流程和实现的功能，以及token和finance如何流转。
 
 In the practical implementation of the Journal DAO, this paper leveraged the Aragon framework to establish a decentralized and transparent infrastructure for academic publishing. The execution of the DAO involved several key steps to ensure a seamless and fair distribution of tokens among participants \cite{el2020overview}.
 In a DAO, the concept of incentive mechanisms plays a crucial role in driving active participation and contributions. These mechanisms are designed to provide incentives and rewards to individuals or entities involved in the DAO's activities. By offering tangible benefits such as token rewards, governance rights, or recognition, participants are motivated to actively engage and contribute to the DAO's growth and development. Effective incentive mechanisms foster collaboration, maintain long-term motivation, and encourage innovation within the DAO community. The incentive design of journal dao promotes collaboration, maintains long-term incentives, and promotes innovation within the DAO community in the following aspects.
@@ -271,66 +239,63 @@ In a DAO, the concept of incentive mechanisms plays a crucial role in driving ac
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=3.2in]{assets/daopaper.png}
-  \caption{Distribute Token by DAO}
-  \label{fig:distributetoken}
+  \includegraphics[width=3.2in]{assets/publishtoken.png}
+  \caption{Distribute Token by DAO When Publishing}
+  \label{fig:publishtoken}
 \end{figure}
 
 
-As Figure \ref{fig:distributetoken} shows, the process initiates with a user submitting a paper for publication. As the DAO initiates the coin minting process, specific rules govern the allocation of tokens. Authors are categorized based on their roles in the paper, including corresponding authors, first authors, second authors, and third authors, and so on, each receiving distinct token allocations.Simultaneously, reviewers play a pivotal role in the distribution of tokens. Their allocations are determined by their roles in the review process and the scores they assign to the submitted papers. This meticulous token distribution mechanism ensures that each contributor, whether an author or reviewer, is fairly rewarded according to their specific contributions and responsibilities.By implementing such a structured system, the DAO creates a transparent and equitable environment, aligning the incentives of authors and reviewers. This not only fosters a sense of fairness within the system but also encourages active and meaningful participation from all contributors. The workflow, guided by DAO principles, facilitates a seamless integration of various stakeholders, ensuring a well-functioning and self-sustaining ecosystem.
-%在图示的工作流程中，流程始于用户提交论文进行出版。随着DAO启动铸币过程，特定规则指导着代币的分配。作者根据其在论文中的角色分为通讯作者、第一作者、第二作者和第三作者，每个人都获得不同的代币分配。同时，审稿人在代币分配中发挥着至关重要的作用。他们的分配由他们在审稿过程中的角色和对提交的论文的评分决定。这种细致入微的代币分配机制确保了每个贡献者，无论是作者还是审稿人，都能根据其具体的贡献和责任公正获得奖励。通过实施这样一个结构化的系统，DAO创造了一个透明而公平的环境，使作者和审稿人的激励保持一致。这不仅在系统内部培养了公正感，还鼓励各方积极而有意义地参与。受DAO原则指导的工作流程促进了各利益相关方的无缝整合，确保了一个运行良好且自我维持的生态系统。
+The workflow of the DAO, as shown in Figure \ref{fig:publishtoken} depicted in the diagram begins with the submission of a manuscript by the user for publication. As the DAO initiates the token minting process, specific rules guide the allocation of tokens. Authors are categorized into corresponding roles such as corresponding author, first author, second author, and third author, and so on, each receiving a different token allocation based on their contributions and responsibilities within the manuscript. Similarly, reviewers play a crucial role in the token allocation process. Their allocation is determined by their role in the review process and the ratings they provide for the submitted manuscripts. The publisher, as the platform responsible for facilitating manuscript publication, also receives a certain allocation of tokens due to their administrative role in managing the manuscripts. 
 
-\begin{figure}[h]
+This meticulous token allocation mechanism ensures that each contributor, be it an author or a reviewer, receives fair rewards based on their specific contributions and responsibilities. By implementing such a structured system, the DAO creates a transparent and equitable environment, aligning the incentives for authors and reviewers. This not only cultivates a sense of fairness within the system but also encourages active and meaningful participation from all parties. Guided by DAO principles, the workflow fosters seamless integration of all stakeholders, ensuring a well-functioning and self-sustaining ecosystem.
+%在图示的工作流程中，流程始于用户提交论文进行出版。随着DAO启动铸币过程，特定规则指导着代币的分配。作者根据其在论文中的角色分为通讯作者、第一作者、第二作者和第三作者，每个人按照贡献和责任都获得不同的代币分配。同时，审稿人在代币分配中发挥着至关重要的作用。他们的分配由他们在审稿过程中的角色和对提交的论文的评分决定。出版商作为提供论文发布的平台，又有管理论文的职责，也分配了一定的代币。这种细致入微的代币分配机制确保了每个贡献者，无论是作者还是审稿人，都能根据其具体的贡献和责任公正获得奖励。通过实施这样一个结构化的系统，DAO创造了一个透明而公平的环境，使作者和审稿人的激励保持一致。这不仅在系统内部培养了公正感，还鼓励各方积极而有意义地参与。受DAO原则指导的工作流程促进了各利益相关方的无缝整合，确保了一个运行良好且自我维持的生态系统。
+
+
+
+\begin{figure}[h!]
   \centering
-  \includegraphics[width=3.2in]{assets/addtoken.png}
-  \caption{Distribute Token while Download or cited}
-  \label{fig:addtoken}
+  \includegraphics[width=3.2in]{assets/downloadfinance.png}
+  \caption{Distribute Token and Dinance by DAO When Downloading}
+  \label{fig:downloadfinance}
 \end{figure}
 
-As Figure \ref{fig:addtoken} shows, upon the download or citation of a paper, the DAO employs specific rules for the allocation of tokens to the downloader and the citers. This ensures that contributors beyond the authorship and reviewing process are also recognized and rewarded within the DAO framework.For downloaders, the token allocation is determined by the extent and impact of their engagement with the paper. High download counts result in increased token rewards, creating a dynamic and merit-based incentive system.Similarly, when a paper is cited, the citers receive token allocations based on the significance and reach of their citations. This encourages users to engage in scholarly discussions, contribute to the academic community, and actively participate in the dissemination of knowledge.These token allocation mechanisms not only acknowledge the efforts of those who contribute by downloading or citing papers but also foster a collaborative environment where users are motivated to interact with the content and contribute meaningfully to the scholarly ecosystem \cite{9994617}. The DAO's commitment to recognizing various forms of contribution ensures a comprehensive and inclusive reward system, aligning incentives with the broader goals of the academic community.
-%在论文被下载或引用时，DAO会根据一定的规则给予下载者和引用者的token分配。这确保了在DAO框架内，除了作者和审稿过程之外的贡献者也能够得到认可和奖励。对于下载者，token的分配取决于他们与论文的互动程度和影响力。高下载次数会导致更多的token奖励，形成了一个动态且基于贡献的激励体系。同样，当论文被引用时，引用者将根据其引用的重要性和影响力获得token分配。这鼓励用户参与学术讨论，为学术界做出贡献，并积极参与知识的传播。这些token分配机制不仅承认了那些通过下载或引用论文做出贡献的人的努力，还促进了一个协作的环境，激励用户与内容互动，并有意义地为学术生态系统做出贡献。DAO对于认可各种形式贡献的承诺确保了一个全面而包容性的奖励体系，将激励机制与学术界更广泛的目标保持一致。
 
-
-Non-Fungible Tokens (NFTs) are a type of digital asset that represent ownership or proof of authenticity of a unique item or piece of content on the blockchain \cite{wang2021non}. Unlike cryptocurrencies like Bitcoin or Ethereum, which are fungible and can be exchanged for one another, NFTs are unique and cannot be exchanged on a one-to-one basis.
-The finance generated within the Journal DAO is distributed based on the NFT model, where each token holder is entitled to a proportional share. This innovative approach ensures that the financial rewards align with the level of contribution and engagement at various stages of the academic process \cite{nadini2021mapping}.
-%不可替代代币（NFT）是一种数字资产，代表区块链上独特项目或内容的所有权或真实性证明。与比特币或以太坊等可替代且可以相互交换的加密货币不同，NFT 是独一无二的，不能一对一地进行交换。
-%期刊 DAO 内生成的财务基于 NFT 模型进行分配，其中每个代币持有者有权获得相应份额。这种创新方法确保了财务奖励与在学术流程的各个阶段的贡献和参与程度相一致。
-
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=3.2in]{assets/finance.png}
-  \caption{Distribute Finance by NFTs}
-  \label{fig:financenft}
-\end{figure}
-
-As Figure \ref{fig:financenft} shows, in this system, authors, reviewers, download users, and reference users all possess a specific quantity of tokens. These tokens are considered as NFTs due to their unique nature. Once finance is generated, such as when a user pays to download a paper, the system allocates this finance based on the number of tokens held by the respective parties.This design ensures objectivity, fairness, and transparency within the system. Each participant's contribution is reflected in a specific number of tokens, and the allocation mechanism operates according to the quantity of these tokens. Such a design not only enhances the fairness of the incentive mechanism but also makes the entire system more transparent, allowing participants to clearly understand the relationship between their contributions and rewards.This NFT-based token system provides tangible and verifiable returns for contributors while establishing an effective and operable incentive mechanism for the entire ecosystem \cite{kong2021alternative}. This fair and transparent allocation method is expected to drive collaboration and development in the academic community, creating a mutually beneficial environment for all stakeholders.
+In this system, authors, reviewers, publisher, readers(who download the papers or references) all possess a specific quantity of tokens. These tokens are considered as NFTs due to their unique nature. Once finance is generated, such as when a user pays to download a paper as Figure \ref{fig:downloadfinance}, the system allocates this finance based on the number of tokens held by the respective parties.This design ensures objectivity, fairness, and transparency within the system. Each participant's contribution is reflected in a specific number of tokens, and the allocation mechanism operates according to the quantity of these tokens. Such a design not only enhances the fairness of the incentive mechanism but also makes the entire system more transparent, allowing participants to clearly understand the relationship between their contributions and rewards.This NFT-based token system provides tangible and verifiable returns for contributors while establishing an effective and operable incentive mechanism for the entire ecosystem \cite{kong2021alternative}. This fair and transparent allocation method is expected to drive collaboration and development in the academic community, creating a mutually beneficial environment for all stakeholders.
 
 %在这个系统中，作者、审稿人、下载用户和引用用户都拥有一定数量的token。这些token具有唯一性，可以被视为NFT（非同质化代币）。一旦产生了finance，比如用户通过付费下载论文，系统会按照持有者的token数量来分配这部分finance。这个设计确保了系统的客观性、公正性和透明性。每个参与者的贡献都以特定数量的token体现，而分配机制则按照这些token的数量来进行。这样的设计不仅提高了激励机制的公正性，也使得整个系统更加透明，参与者可以清晰地了解他们的贡献与奖励之间的关系。这种以NFT为基础的token系统为贡献者提供了具体的、可证明的回报，同时也为整个生态系统提供了一种有效的、可操作的激励机制。这种公正而透明的分配方式有望推动学术界的合作与发展，为各方创造一个共赢的环境。
 
 
 
-
-\subsection{Summary of Journal DAO}
-
+\subsection{Advantages of Finance in Journal DAO}
 
 
 
-Overall, the main difference in payment systems between Web2 and Web3 is the degree of centralization. Web2 payment systems are centralized, while Web3 payment systems are decentralized. While Web3 is still in its early stages, it has the potential to revolutionize the way we think about payments, transactions, and financial systems.
-In the current era of digitization, the act of anchoring a paper on the blockchain signifies the author's complete ownership of the work, opening up boundless possibilities. The introduction of blockchain technology empowers authors with more rights and limitless potential. Once a paper is inscribed on the immutable blockchain, authors not only possess intellectual property rights but also gain absolute control over their creations. This shift in ownership implies that authors can explore innovation more freely, facilitate transparent data sharing, and attain fairer returns from the wealth generated by their works \cite{wang2023decentralized}. The immutability and transparency afforded by blockchain provide robust protection for the rights of paper owners, ushering in new possibilities for academic research and knowledge sharing. This profound ownership transformation elevates a paper beyond being merely a conduit for academic dissemination; it becomes a symbol of the unique wealth created by the author, sparking a profound revolution in the relationship between academia and authors.
-%总体而言，Web2和Web3支付系统的主要区别在于中心化程度。 Web2支付系统是中心化的，而Web3支付系统是去中心化的。虽然 Web3 仍处于早期阶段，但它有潜力彻底改变我们对支付、交易和金融系统的看法。
-%在这个时代，随着论文数字化的趋势，将论文上链意味着作者对其作品的彻底拥有。区块链技术的引入赋予了作者更多的权利和无限的可能性。一旦论文被写入不可篡改的区块链，作者不仅仅拥有了知识产权，更获得了对其作品的完全掌控。这样的所有权转变意味着作者可以更自由地探索创新、实现数据的透明共享，并在作品创造的财富中获得更为公平的回报。通过区块链的不可篡改性和透明性，论文的所有者权益得到了更强有力的保障，为学术研究和知识共享带来了新的可能性。这种彻底的拥有使得论文不再仅仅是学术传播的载体，更是作者创造的独特财富的象征，为学术界和作者之间的关系带来了深刻的变革。
+In the evolution of electronic journals, websites have become the primary medium for disseminating research papers. Although the content of users' papers remains the intellectual property of the authors, the wealth generated by journals through these papers often belongs predominantly to the journals rather than the authors.In our hypothetical scenario, we contemplate a shift in this paradigm, envisioning a system where a certain proportion of the generated wealth is allocated back to the authors. Taking paid downloads as a simple example, this mechanism aims to provide authors with a more direct economic incentive. Such a transformation not only has the potential to enhance authors' motivation and creativity but also holds the promise of establishing a more equitable wealth distribution system. This envisioned change could contribute to fostering a sustainable and mutually beneficial development model in the realm of electronic journals, addressing the balance of interests between authors and journals more effectively.
+% %在电子期刊的发展历程中，论文的载体逐渐从传统的印刷版本过渡到了数字化的网站形式。尽管用户的论文内容仍然属于作者的创作成果，然而，由于现行模式下，杂志通过论文创造的财富往往主要归属于杂志自身，而非作者。在当前设想下，我们可以假设一种改进模式，即按照一定比例将创造的财富回馈给作者。以付费下载为例，这一机制可以为作者提供更直接的经济回报。这种变革不仅有助于激发作者的积极性和创作动力，同时也有望促进更公正的财富分配体系的建立。这样的改变有望在电子期刊领域引入更加可持续和互惠的发展模式，从而更好地满足作者和杂志之间的利益平衡。
 
-
-
+Web2, also known as the social web, refers to the current state of the internet that we use today, which is primarily focused on social media, e-commerce, and other web-based applications that allow users to interact with each other and with content in various ways. In Web2, payment systems are typically centralized, meaning that they are controlled by a single entity or organization. 
+Web3, also known as the decentralized web, represents a shift toward a more open, decentralized, and secure internet that is built on blockchain technology \cite{alabdulwahhab2018web}. In Web3, payment systems are decentralized, meaning that they are not controlled by a single entity or organization \cite{cao2022decentralized}. Instead, payments are made using cryptocurrency, which is a digital asset that is secured by cryptographic techniques and operates independently of central banks and other financial institutions. Cryptocurrency payments are processed directly between users without the need for intermediaries, which can result in lower transaction fees and faster processing times.
+In the realm of Web 3.0, we witness a fundamental transformation in the dissemination of academic articles. Unlike the traditional Web 2.0 model, it introduces a paradigm shift. In this innovative framework, the data entity of articles resides directly on the blockchain, with the website serving as a mere interface reflecting the blockchain data. When users make payments for downloads, the entire fund allocation process is automated through smart contracts, eliminating the need for manual intervention. This groundbreaking framework ensures complete transparency and traceability throughout the process. As users pay to download articles, funds are automatically distributed according to the rules set within the DAO framework, without any centralized oversight.In the Web 3.0 paradigm, this novel model signifies a departure from reliance on traditional intermediaries. Instead, it empowers users with the direct participation in DAO frameworks, utilizing smart contracts for automated and secure fund distribution. This shift not only achieves decentralization in the transaction process but also enhances the efficiency of academic article transactions.In the Web 3.0 environment, articles are directly uploaded to the blockchain. All operations, including payment processing and fund distribution, are seamlessly executed through smart contracts. This innovative framework ensures complete transparency and traceability throughout the entire process. When users pay to download articles, the funds are automatically allocated according to the rules established within the DAO framework, eliminating the need for any centralized oversight.
+%Web2，也称为社交网络，指的是我们今天使用的互联网的现状，主要集中在社交媒体、电子商务和其他基于网络的应用程序，这些应用程序允许用户相互交互以及与其他人进行交互。内容以多种方式呈现。在 Web2 中，支付系统通常是集中式的，这意味着它们由单个实体或组织控制。
+%Web3，也称为去中心化网络，代表着向基于区块链技术构建的更加开放、去中心化和安全的互联网的转变。在 Web3 中，支付系统是去中心化的，这意味着它们不受单个实体或组织的控制。相反，支付是使用加密货币进行的，加密货币是一种由加密技术保护并独立于中央银行和其他金融机构运作的数字资产。加密货币支付直接在用户之间进行处理，无需中介机构，这可以降低交易费用并缩短处理时间。
+%在Web 3.0的领域中，我们对待学术文章传播方式发生了根本性的变革。与传统的Web 2.0模式不同，它引入了一种新的框架。文章数据主体直接存在于区块链上，而网站仅仅是对区块链数据的映射。在这一新的框架下，用户支付下载后，整个资金分配的过程都通过智能合约进行自动化执行，无需手动干预。这一创新性框架确保了整个过程的完全透明性和可追溯性。当用户支付下载文章时，资金会根据去中心化自治组织（DAO）框架内设立的规则自动分配，无需任何集中监管。
+%在Web 3.0的范式中，这一新兴模式标志着我们不再依赖传统中介机构。相反，它赋予用户直接参与DAO框架的权力，利用智能合约实现资金的自动化和安全分配。这一转变不仅实现了交易过程的去中心化，还提高了学术文章交易的效率。
+%在Web 3.0的环境中，文章直接上链。所有操作，包括支付处理和资金分配，都通过智能合约无缝执行。这一创新性框架确保了整个过程的完全透明性和可追溯性。当用户支付下载文章时，资金会根据去中心化自治组织（DAO）框架内设立的规则自动分配，无需任何集中监管。
 
   
 \section{Mechanism Design of Journal DAO \label{sec:mechanism}}
-% 这部分建议给一些符号和公式，如投稿时怎么分token，审稿时token怎么流转，下载和引用时token和finance怎么变化，这些都用公式描述出来
+% \section{Mechanism Design of Journal DAO \label{sec:mechanism}}本节共2页
+% 简要写一下本节的思路，3-5行即可。
 
-%把dao应用在journal。
+% \subsection{Decentralized Governance}
 
-%把dao应用在journal。作者，审稿人，读者都能受益。作者作为文章的拥有者，占有最多的最多的收益，并且随着时间的推移，收益会越来越高。审稿人作为文章的负责人，前期占有较高的收益，后期逐渐降低。读者作为文章的参与者，收益相对较低，但是越早参与，收益就越高。
+% \subsection{Initial Token Distributions}
+
+% \subsection{Token Distributions upon Article Download or Citation}
+
+% \subsection{Finance Distributions}
+
+
 
 
 % 本文结合DAO的基本概念，创建DAO的框架。首先是铸币，其中为所有与论文相关的参与者，包括审稿人，作者，读者，按照一定的机制分配token。token可以用来决定proposal的权重，本框架根据token分配finance。
