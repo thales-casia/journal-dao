@@ -26,7 +26,7 @@
 \thanks{This work was supported by the Science and Technology Development Fund of Macau SAR under Grant 0093/2023/RIA2 and  Grant 0050/2020/A1.}% <-this % stops a space
 \thanks{Manuscript received February 15, 2023; revised February 15, 2023.}
 \thanks{Tai Jiang is with the Department of Engineering Science, Faculty of Innovation Engineering, Macau University of Science and Technology, Macao, 999078, China (e-mail: jiangtai20@mails.ucas.ac.cn).}
-\thanks{Rui Qin is with the State Key Laboratory for Management and Control of Complex Systems and the State Key Laboratory of Multimodal Artificial Intelligence Systems, Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China (e-mail: rui.qin@ia.ac.cn).}
+\thanks{Rui Qin is with Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China (e-mail: rui.qin@ia.ac.cn).}
 \thanks{Yuhang Liu is with the State Key Laboratory for Management and Control of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China, and also with the School of Artificial Intelligence, University of Chinese Academy of Sciences, Beijing 100049, China (e-mail: liuyuhang21@mails.ucas.ac.cn).}
 \thanks{Fei-Yue Wang is with the State Key Laboratory for Management and Control of Complex Systems, Chinese Academy of Sciences, Beijing 100190, China, and also with the Macao Institute of Systems Engineering, Macau University of Science and Technology, Macao 999078, China (e-mail: feiyue.wang@ia.ac.cn).}
 
@@ -44,7 +44,7 @@
 
 \begin{abstract}
 
-The academic publishing industry is currently undergoing significant growth but also faces several challenges, mainly including the lack of transparency in the peer review process and the limited rights of authors. The rise of Web3, emphasizing decentralization, openness, and user control over data, opens up new perspectives for academic publishing. This article introduces an innovative academic publishing model, named Journal DAO, leveraging emerging Web3 technologies such as blockchain and decentralized autonomous organization (DAO). First, by recording articles on the blockchain rather than a specific database, Journal DAO can ensure data security and traceability of the articles. Second, through the governance framework of DAO, tokens are distributed among all the participants of Journal DAO based on the their contributions, safeguarding the rights of each role in the publishing process. Third, effective incentive mechanisms are proposed to reward all participants, ensuring the sustainability of the framework and its autonomous functionality. This work proposes a prospective academic publishing model that aims to reshape the industry through the application of blockchain and DAO in Web3, making a significant contribution to future academic publishing.
+The academic publishing industry is currently undergoing significant growth but also faces several challenges, mainly including the lack of transparency in the peer review process and the limited rights of authors. The rise of Web3, emphasizing decentralization, openness, and user control over data, opens up new perspectives for academic publishing. This article introduces an innovative academic publishing model, named Journal DAO, leveraging emerging Web3 technologies such as blockchain and decentralized autonomous organization (DAO). First, by recording articles on the blockchain rather than a centralized database, Journal DAO can ensure data security and traceability of the articles. Second, through the governance framework of DAO, tokens are distributed among all the participants of Journal DAO based on the their contributions, safeguarding the rights of each role in the publishing process. Third, effective incentive mechanisms are proposed to reward all participants, ensuring the sustainability of the framework and its autonomous functionality. This work proposes a prospective academic publishing model that aims to reshape the industry through the application of blockchain and DAO in Web3, making a significant contribution to future academic publishing.
 
 
 \end{abstract}
@@ -64,7 +64,7 @@ The emergence of technologies such as Decentralized Autonomous Organizations (DA
 
 In the literature, the applications of blockchain-based decentralized technologies in academic publishing have received researchers' great attention \cite{8756390}. Blockchain technology was used to solve the security and efficiency concerns in the distribution and management of open journal systems, ensuring precise distribution, enhancing reputation and trust, and safeguarding paper management against potential hacker threats \cite{agustin2020blockchain}. Through decentralized InterPlanetary File System (IPFS) and blockchain technologies, the authenticity, trust and reliability of online publications can be ensured, which can effectively address the challenges related to security and privacy in online publications \cite{nizamuddin2018ipfs}. By leveraging blockchain-based decentralized technologies, a decentralized scientific publishing platform is established, which utilizes Ethereum smart contracts to expedite the publication process, reduce biases in peer review, and lower publication costs \cite{becstacs2023novel}. The platform can ensure complete traceability throughout the publication processes, and all the participants including the editors, reviewers, and authors will receive system tokens as rewards for their contributions.
 
-However, these existing studies primarily concentrate on specific aspects, such as the use of blockchain to address security and efficiency concerns or enhance transparency in the academic publishing process. They do not comprehensively address the multifaceted challenges prevalent in the current academic publishing landscape. This article proposes an innovative academic publishing model called Journal DAO, which applies emerging Web3 technologies, such as blockchain and DAO, to address these challenges. First, by recording articles on the blockchain, all operations are conducted on the chain rather than belonging to a specific database, ensuring data security and traceability. Second, through the DAO framework, tokens are distributed based on role contributions, protecting the rights of researchers. Third, by designing effective incentive mechanisms, with the consideration of rewarding each participant according to their contributions to the article, which can realize a fully autonomous and economically sustainable Journal DAO ecosystem \cite{ding2022desci}.
+However, these existing studies primarily concentrate on specific aspects, such as the use of blockchain to address security and efficiency concerns or enhance transparency in the academic publishing process. They do not comprehensively address the multifaceted challenges prevalent in the current academic publishing landscape. This article proposes an innovative academic publishing model called Journal DAO, which applies emerging Web3 technologies, such as blockchain and DAO, to address these challenges. First, by recording articles on the blockchain, all operations are conducted on the chain rather than belonging to a specific database, ensuring data security and traceability. Second, through the DAO framework, tokens are distributed based on role contributions, protecting the rights of researchers. Third, by designing effective incentive mechanisms, with the consideration of rewarding each participant according to their contributions to the article, a fully autonomous and economically sustainable Journal DAO ecosystem can be realized \cite{ding2022desci}.
 
 The rest of this paper is arranged as follows. Section \ref{sec:framework} introduces the framework of Journal DAO framework. Section \ref{sec:mechanism} discusses the design and implementation of the incentive mechanism in Journal DAO. Section \ref{sec:performance} presents experimental results validating the effectiveness of the implemented incentive mechanism.
 Section \ref{sec:conclusion} concludes the paper.
@@ -118,6 +118,8 @@ Section \ref{sec:conclusion} concludes the paper.
 % 作者简介：0.75页
 
 
+This chapter introduces a web3-based Journal DAO system built on the foundation of blockchain technology. Leveraging NFTs, the system incorporates a set of incentive mechanisms, enabling the journal system to achieve perfect autonomy.
+% 本文在区块链的基础上，创建一个基于web3的journal DAO系统。系统基于NFT给予了一套激励机制，让杂志系统完美自治。
 
 
 
@@ -163,10 +165,11 @@ These application examples highlight the potential value of blockchain, smart co
 %这些应用示例突显了区块链、智能合约和DAO技术在学术出版和杂志管理方面的潜在应用，提高了透明度、知识产权保护、身份验证和自动化审稿流程。随着这些技术的不断发展，它们将有望为学术界提供更多的创新和效率。
 
 
-\subsection{The Framework with Blockchain and DAO}
+\subsection{The Framework}
 % \subsection{The Framework}1页
 % 本小节给出Journal DAO的framework，建议画一张框架图，图中要包含所有参与者，还要包含完整的运行流程，以及token和finance的流转。
 % 在框架图的基础上，简要介绍框架图，并说明区块链和DAO在其中如何发挥作用。
+% A节，简要介绍该框架，比如有哪些核心参与者，有哪些关键环节等，不需要详细介绍这些环节，详细的介绍可以放在B节中。
 
 Based on the depicted framework in Figure \ref{fig:frameworkofblockchain}, it is evident that the operational flow of the blockchain and DAO framework, along with the roles of various participants \cite{10459713}, can be succinctly understood. 
 
@@ -255,7 +258,7 @@ This meticulous token allocation mechanism ensures that each contributor, be it 
 \begin{figure}[h!]
   \centering
   \includegraphics[width=3.2in]{assets/downloadfinance.png}
-  \caption{Distribute Token and Dinance by DAO When Downloading}
+  \caption{Distribute Token and Finance by DAO When Downloading}
   \label{fig:downloadfinance}
 \end{figure}
 
@@ -678,7 +681,7 @@ These advancements indicate that the realm of DeSci can also benefit from these 
 \begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{assets/Rui.eps}}]{Rui Qin}
   (Member, IEEE) received the Ph.D. degree in computer application technology from the University of Chinese Academy of Sciences, Beijing, China, in 2016.
 
-  She is currently an Associate Professor with the State Key Laboratory for Management and Control of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing. Her research interests include blockchain, DAO, and parallel management.
+  She is currently an Associate Professor with State Key Laboratory of Multimodal Artificial Intelligence Systems, Institute of Automation, Chinese Academy of Sciences, Beijing. Her research interests include blockchain, DAO, and parallel management.
 \end{IEEEbiography}
 
 \vspace{-33pt}
