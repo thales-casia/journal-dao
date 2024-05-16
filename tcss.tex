@@ -118,51 +118,11 @@ Section \ref{sec:conclusion} concludes the paper.
 % 作者简介：0.75页
 
 
-This chapter introduces a web3-based Journal DAO system built on the foundation of blockchain technology. Leveraging NFTs, the system incorporates a set of incentive mechanisms, enabling the journal system to achieve perfect autonomy.
-% 本文在区块链的基础上，创建一个基于web3的journal DAO系统。系统基于NFT给予了一套激励机制，让杂志系统完美自治。
+%  
 
+This chapter present the implementation details and methodology of the web3-based Journal DAO system, which combines blockchain technology, smart contracts, and decentralized science(DeSci) practices. The system's design and development are rooted in the utilization of Non-Fungible Tokens (NFTs) to establish a robust incentive framework that benefits all participants. This chapter delves into the technical aspects of the system, outlining the steps taken to create a self-governing and autonomous journal ecosystem. Additionally, the methodology employed for the integration of blockchain, smart contracts, and decentralized scientific practices is discussed in detail. Through a comprehensive exploration of the implementation and methodology, this chapter offers insights into the practical application of the proposed Journal DAO system and its potential to transform traditional journal publication models.
+% 本文在区块链的基础上，利用智能合约，结合去中心化科学，创建一个基于web3的journal DAO系统。系统基于NFT制定了一套激励机制，让所有参与者都获利，最终杂志系统完美自治。
 
-
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=\linewidth]{assets/dao.png}
-  \caption{Application of DAO in Article and Journal}
-  \label{fig:applicationofdao}
-\end{figure}
-
-
-According to the development of district DAO, related blockchain technology, the following DAO to Decentralized Scientific (DeSci) framework can be summarized as shown in the figure \ref{fig:applicationofdao}.It aims to establish a decentralized scientific publishing platform using blockchain and smart contract technology \cite{szabo1996smart}, enabling fair, transparent, and efficient scientific research dissemination \cite{wang2022dao}\cite{10394624}\cite{shilina2023decentralized}.
-%按照区DAO，以及相关区块链技术的发展，可以如图总结出以下的DAO框架。它旨在通过区块链和智能合约技术，建立一个去中心化的科学出版平台，实现科学研究的公平、透明和高效。
-
-\begin{itemize}
-  \item \textbf{Transparent Peer Review and Publishing Process:} 
-  
-  Blockchain can be used to create a transparent academic publishing platform, ensuring transparency throughout the peer-review and publishing processes.\cite{nakamoto2008bitcoin} Smart contracts can manage review, publication, and payment procedures, ensuring traceability and fairness.
-  %透明的学术出版： 区块链可以用于创建透明的学术出版平台，确保审稿和出版过程的透明性。智能合约可以管理审稿、出版和付款流程，确保可追溯和公平。
-
-  \item \textbf{Protection of Intellectual Property:}
-  
-  Blockchain and smart contracts can safeguard authors' intellectual property, ensuring their works are not copied or distributed without permission \cite{gurkaynak2018intellectual}.
-  %知识产权保护： 区块链和智能合约可用于保护作者的知识产权，确保其作品不会未经许可就被复制或传播。
-  
-  \item \textbf{Identity Verification and Reputation Building:} 
-  
-  Blockchain can be employed to establish scholars' identities and reputations \cite{radziwill2018blockchain}. Smart contracts can automate the validation of scholars' achievements, storing them on the blockchain.
-  %身份验证和声誉建立： 区块链可用于建立学者的身份和声誉。智能合约可以自动化验证学者的成就，并将其存储在区块链上。
-  
-  \item \textbf{Data Sharing and Collaboration:} 
-  
-  Blockchain and smart contracts can facilitate data sharing and collaboration among scholars, ensuring data integrity and traceability \cite{praitheeshan2019security}.
-  %数据共享和合作： 区块链和智能合约可用于促进学者之间的数据共享和合作，确保数据的完整性和来源可追溯。
-  
-  \item \textbf{Finance and Incentive Mechanisms:} 
-  
-  DAO and cryptocurrencies can be used to support research finance and incentive mechanisms.Funds can be allocated according to token weights \cite{schar2021decentralized}.
-  %金融和激励机制： 区块链和加密货币可以用于支持学术研究的融资和激励机制。资金可以按照token为权重分配。
-\end{itemize}
-
-These application examples highlight the potential value of blockchain, smart contracts, and DAO technology in academic publishing and journal management. They enhance transparency, protect intellectual property, verify identity, automate processes, and encourage collaboration. As these technologies continue to evolve, they hold promise for further innovation and efficiency in academia \cite{vacca2021systematic}.
-%这些应用示例突显了区块链、智能合约和DAO技术在学术出版和杂志管理方面的潜在应用，提高了透明度、知识产权保护、身份验证和自动化审稿流程。随着这些技术的不断发展，它们将有望为学术界提供更多的创新和效率。
 
 
 \subsection{The Framework}
@@ -171,7 +131,11 @@ These application examples highlight the potential value of blockchain, smart co
 % 在框架图的基础上，简要介绍框架图，并说明区块链和DAO在其中如何发挥作用。
 % A节，简要介绍该框架，比如有哪些核心参与者，有哪些关键环节等，不需要详细介绍这些环节，详细的介绍可以放在B节中。
 
+
+
 Based on the depicted framework in Figure \ref{fig:frameworkofblockchain}, it is evident that the operational flow of the blockchain and DAO framework, along with the roles of various participants \cite{10459713}, can be succinctly understood. 
+%基于图中描绘的框架，显然可以简洁地理解区块链和 DAO 框架的操作流程，以及各个参与者的角色。
+
 
 \begin{figure}[h!]
   \centering
@@ -181,23 +145,13 @@ Based on the depicted framework in Figure \ref{fig:frameworkofblockchain}, it is
 \end{figure}
 
 
-Initially, authors generate manuscripts that can be submitted for publication. However, unlike conventional websites where manuscripts reside solely on publishing servers, this framework ensures their credibility by immutably recording the publication process on the blockchain. 
+In the DeSci framework, the core participants closely resemble those in traditional web2.0 journals. These include article authors, categorized as first author, second author, and so forth, as well as corresponding authors. The framework also involves peer reviewers, such as Editors in Chief (EIC), Senior Editors (SE), and Associate Editors (AE). Readers form another essential group, who can download articles and even become authors themselves by citing and downloading referenced papers. Additionally, there are publishers representing the journal.
+The submission process, review assignment, rejection, and final publication in this DeSci framework exhibit minimal differences from traditional journals. Similarly, readers can download articles without significant distinctions from web2.0 journals. However, within this framework, the requirement for cited articles to be downloaded ensures the smooth operation of the DAO Framework, guaranteeing the integrity and functionality of the decentralized ecosystem.
+% 在去中心化科学框架中，核心参与者跟传统web2.0杂志没有太多区别，有文章的作者，一作、二作……通讯作者；有审稿人，Editors in Chief(EIC)、Senior Editor(SE)、Associate Editor(AE)；有读者，读者可能下载论文，也可能成为一个新的作者引用下载的论文；还有代表杂志的出版商。作者投稿，EIC分配审稿人，退稿，以及最终发布，从流程上几乎没有区别。读者下载论文，也跟web2。0杂志没有区别，但是本框架下，要求了引用论文必须下载，以保证DAO框架的正常运行。
 
-Subsequently, manuscripts undergo a rigorous peer review process, involving multiple reviewers who diligently evaluate them. Only manuscripts that successfully pass the review are considered for publication. In cases where revisions are necessary, manuscripts are returned to the authors accompanied by specific feedback. Importantly, this entire review process is transparently recorded on the blockchain, thereby ensuring objectivity and effectiveness in the evaluation. 
-In the event of manuscript rejection, authors have the opportunity to resubmit their work for publication, with this resubmission process meticulously documented on the blockchain. This traceability feature guarantees complete transparency throughout the submission process. 
 
-Upon successful completion of the review process, approved manuscripts are published. This publication is also recorded on the blockchain and subsequently integrated into the DAO framework, where contribution allocation occurs in accordance with established procedures \cite{hsieh2018bitcoin}. 
-Readers can access and download published articles, with this downloading process also being recorded on the blockchain. Such a record ensures an accurate reflection of article downloads and citations. Furthermore, downloads and citations are incorporated into the DAO framework, facilitating the equitable allocation of contributions. Readers, being pivotal in determining the value of articles, receive corresponding contributions within the framework.
-% 根据图1中的框架，可以简单的看出区块链和DAO的框架的运行流程，以及各个参与者的角色在框架中的作用。首先，作者撰写了文章，可以发布手稿。发布之后，不是跟传统网站一样，只存在了出版上的服务器中，这个过程会上链，保证了文章的可信性。然后，手稿进入了审稿流程，多个审稿人对文章进行了审查，通过了审查，才能发布出版。如果需要修改，会退还给作者，并且附上修改意见，这个过程也会上链，保证了评审的客观有效。被退回的文章会被重新发布，这个过程依然上链，整个申购流程完全透明可回溯。最后，文章被通过了审查，会被发表出版，这个过程也会上链，并且上链之后，进入了DAO框架，按照流程进行贡献分配。读者可以下载发布后的文章，这个过程也会上链，能真实反映文章的下载以及引用。并且下载以及引用之后，也会进入DAO框架，按照流程进行贡献分配，读者是文章价值的最好体现，所以会得到应有的贡献。
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=3.2in]{assets/finance.png}
-  \caption{Distribute Finance by Tokens}
-  \label{fig:frameworkoffinance}
-\end{figure}
-
-In the DAO framework, as illustrated in Figure \ref{fig:frameworkoffinance}, token allocation follows a process where all participants, including authors, reviewers, readers, and publishers, are assigned contributions represented by tokens. This allocation is carried out based on the established procedures within the framework.
+In the DAO framework \cite{hsieh2018bitcoin}, token allocation follows a process where all participants, including authors, reviewers, readers, and publishers, are assigned contributions represented by tokens. This allocation is carried out based on the established procedures within the framework.
 Within this context, Non-Fungible Tokens (NFTs) can be utilized as a means to determine the distribution proportions of tokens. NFTs are unique tokens that represent specific assets or contributions \cite{10034436}. By employing NFTs, the token allocation process becomes more granular, allowing for a more precise distribution based on the individual contributions of each participant.
 When finance is generated within the framework, it is distributed among all token holders according to the predetermined token allocation mechanism. The allocation is determined by the proportion of tokens held by each participant, reflecting their respective contributions and responsibilities within the framework.
 By implementing token allocation based on NFTs and distributing finance according to the token distribution mechanism, all stakeholders in the DAO framework receive their fair shares in proportion to their token holdings. This incentivizes active participation and ensures that contributors are rewarded appropriately for their contributions within the framework.
@@ -207,6 +161,13 @@ By implementing token allocation based on NFTs and distributing finance accordin
 \subsection{The Operation Process}
 % 1页
 % 介绍Journal DAO框架中参与者的各类角色，Journal DAO运行流程和实现的功能，以及token和finance如何流转。
+
+In the operation of the web3.0 journal system, from the user's perspective, there are minimal differences compared to traditional Web2.0 journal systems. Only specific confirmation nodes require the use of blockchain wallet tools such as MetaMask to complete transactions, while the rest remains unchanged. However, from the backend data perspective, all information is no longer stored in the publisher's server database as in Web2.0 journal systems. Instead, data is recorded on the blockchain through smart contracts \cite{szabo1996smart}, and the displayed data is merely a mapping of the on-chain data.
+This approach ensures the authenticity and immutability of the data. All aspects of the article's lifecycle, from peer review to revisions and publication, are recorded on the blockchain, guaranteeing their veracity and effectiveness. Notably, the process of downloading, which holds potential value, is meticulously recorded, ensuring fairness and transparency.
+By leveraging blockchain technology, the web3.0 journal system establishes a decentralized and tamper-proof environment. The utilization of smart contracts ensures the integrity and reliability of the data, while maintaining transparency and accountability throughout the publication process. This paradigm shift in data storage and record-keeping ensures the highest level of trust and fairness in the journal ecosystem \cite{wang2022dao}\cite{10394624}\cite{shilina2023decentralized}.
+% web3.0的杂志系统运行时候，从用户的角度，只有特点的确认节点需要用区块链的钱包工具如MetaMask完成操作，其他没有任何区别。但是从后台数据角度，所有的信息都不再像Web2.0的杂志系统那样存在于出版商服务器的数据库中，而是通过智能合约把数据上链，真实数据存在于区块链，显示的数据只是链上数据的映射。这保证了数据的真实不可篡改，文章从审稿到修改以及发布全都真实有效，尤其是下载，这种可能创造价值的部分，更会完全清楚记录，保证公平，公正。
+
+
 
 In the practical implementation of the Journal DAO, this paper leveraged the Aragon framework to establish a decentralized and transparent infrastructure for academic publishing. The execution of the DAO involved several key steps to ensure a seamless and fair distribution of tokens among participants \cite{el2020overview}.
 In a DAO, the concept of incentive mechanisms plays a crucial role in driving active participation and contributions. These mechanisms are designed to provide incentives and rewards to individuals or entities involved in the DAO's activities. By offering tangible benefits such as token rewards, governance rights, or recognition, participants are motivated to actively engage and contribute to the DAO's growth and development. Effective incentive mechanisms foster collaboration, maintain long-term motivation, and encourage innovation within the DAO community. The incentive design of journal dao promotes collaboration, maintains long-term incentives, and promotes innovation within the DAO community in the following aspects.
@@ -272,12 +233,56 @@ In this system, authors, reviewers, publisher, readers(who download the papers o
 \subsection{Advantages of Finance in Journal DAO}
 
 
+
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\linewidth]{assets/dao.png}
+  \caption{Application of DAO in Article and Journal}
+  \label{fig:applicationofdao}
+\end{figure}
+
+
+According to the development of district DAO, related blockchain technology, the following DAO to Decentralized Science (DeSci) framework can be summarized as shown in the figure \ref{fig:applicationofdao}.It aims to establish a decentralized scientific publishing platform using blockchain and smart contract technology, enabling fair, transparent, and efficient scientific research dissemination.
+%按照区DAO，以及相关区块链技术的发展，可以如图总结出以下的DAO框架。它旨在通过区块链和智能合约技术，建立一个去中心化的科学出版平台，实现科学研究的公平、透明和高效。
+
+\begin{itemize}
+  \item \textbf{Transparent Peer Review and Publishing Process:} 
+  
+  Blockchain can be used to create a transparent academic publishing platform, ensuring transparency throughout the peer-review and publishing processes.\cite{nakamoto2008bitcoin} Smart contracts can manage review, publication, and payment procedures, ensuring traceability and fairness.
+  %透明的学术出版： 区块链可以用于创建透明的学术出版平台，确保审稿和出版过程的透明性。智能合约可以管理审稿、出版和付款流程，确保可追溯和公平。
+
+  \item \textbf{Protection of Intellectual Property:}
+  
+  Blockchain and smart contracts can safeguard authors' intellectual property, ensuring their works are not copied or distributed without permission \cite{gurkaynak2018intellectual}.
+  %知识产权保护： 区块链和智能合约可用于保护作者的知识产权，确保其作品不会未经许可就被复制或传播。
+  
+  \item \textbf{Identity Verification and Reputation Building:} 
+  
+  Blockchain can be employed to establish scholars' identities and reputations \cite{radziwill2018blockchain}. Smart contracts can automate the validation of scholars' achievements, storing them on the blockchain.
+  %身份验证和声誉建立： 区块链可用于建立学者的身份和声誉。智能合约可以自动化验证学者的成就，并将其存储在区块链上。
+  
+  \item \textbf{Data Sharing and Collaboration:} 
+  
+  Blockchain and smart contracts can facilitate data sharing and collaboration among scholars, ensuring data integrity and traceability \cite{praitheeshan2019security}.
+  %数据共享和合作： 区块链和智能合约可用于促进学者之间的数据共享和合作，确保数据的完整性和来源可追溯。
+  
+  \item \textbf{Finance and Incentive Mechanisms:} 
+  
+  DAO and cryptocurrencies can be used to support research finance and incentive mechanisms.Funds can be allocated according to token weights \cite{schar2021decentralized}.
+  %金融和激励机制： 区块链和加密货币可以用于支持学术研究的融资和激励机制。资金可以按照token为权重分配。
+\end{itemize}
+
+These application examples highlight the potential value of blockchain, smart contracts, and DAO technology in academic publishing and journal management. They enhance transparency, protect intellectual property, verify identity, automate processes, and encourage collaboration. As these technologies continue to evolve, they hold promise for further innovation and efficiency in academia \cite{vacca2021systematic}.
+%这些应用示例突显了区块链、智能合约和DAO技术在学术出版和杂志管理方面的潜在应用，提高了透明度、知识产权保护、身份验证和自动化审稿流程。随着这些技术的不断发展，它们将有望为学术界提供更多的创新和效率。
+
+
 In the current web2.0 landscape, both literature storage and payment systems are typically centralized, controlled by a single entity or organization. However, in the decentralized web3.0 network, article data resides directly on the blockchain \cite{alabdulwahhab2018web}, with websites serving as interfaces to access this data \cite{10402553} \cite{971982} \cite{6222336}. 
 In this new framework, payments for article downloads are automated and executed through smart contracts within the DAO framework \cite{cao2022decentralized}. This ensures complete transparency and traceability, as the fund distribution process follows predefined rules without centralized supervision \cite{10302676}. 
 
 
 In the Web 3.0 paradigm, this novel model signifies a departure from reliance on traditional intermediaries. Instead, it empowers users with the direct participation in DAO frameworks, utilizing smart contracts for automated and secure fund distribution \cite{10302435}. This shift not only achieves decentralization in the transaction process but also enhances the efficiency of academic article transactions.
-In the Web 3.0 environment, articles are directly uploaded to the blockchain. All operations, including payment processing and fund distribution, are seamlessly executed through smart contracts. This innovative framework ensures complete transparency and traceability throughout the entire process. When users pay to download articles, the funds are automatically allocated according to the rules established within the DAO framework, eliminating the need for any centralized oversight.
+% In the Web 3.0 environment, articles are directly uploaded to the blockchain. All operations, including payment processing and fund distribution, are seamlessly executed through smart contracts. This innovative framework ensures complete transparency and traceability throughout the entire process. When users pay to download articles, the funds are automatically allocated according to the rules established within the DAO framework, eliminating the need for any centralized oversight.
 % 在当今web2.0的下，无论文献的储存或者支付系统，通常都是集中式的，这意味着它们由单个实体或组织控制。在去中心化网络的web3.0，文章数据主体直接存在于区块链上，而网站仅仅是对区块链数据的映射。在这一新的框架下，用户支付下载后，整个资金分配的过程都通过智能合约进行自动化执行，无需手动干预。这一创新性框架确保了整个过程的完全透明性和可追溯性。当用户支付下载文章时，资金会根据去中心化自治组织（DAO）框架内设立的规则自动分配，无需任何集中监管。
 %在Web 3.0的范式中，这一新兴模式标志着我们不再依赖传统中介机构。相反，它赋予用户直接参与DAO框架的权力，利用智能合约实现资金的自动化和安全分配。这一转变不仅实现了交易过程的去中心化，还提高了学术文章交易的效率。
 %在Web 3.0的环境中，文章直接上链。所有操作，包括支付处理和资金分配，都通过智能合约无缝执行。这一创新性框架确保了整个过程的完全透明性和可追溯性。当用户支付下载文章时，资金会根据去中心化自治组织（DAO）框架内设立的规则自动分配，无需任何集中监管。
@@ -294,12 +299,37 @@ In the Web 3.0 environment, articles are directly uploaded to the blockchain. Al
 
 % \subsection{Finance Distributions}
 
+%【本节是最重要的部分，一定要体现创新性，想一想在机制设计的过程中，哪里可以有一些创新】
+
+
+% 开头1小段介绍本节要做什么。
+
+
+% A.治理机制？
+
+
+% B.代币分配机制
+
+
+% C.Finance分配机制
+
+
+% 本节是介绍具体的机制设计过程，要详细，不是像A部分那样笼统地说
+
+
 
 
 
 % 本文结合DAO的基本概念，创建DAO的框架。首先是铸币，其中为所有与论文相关的参与者，包括审稿人，作者，读者，按照一定的机制分配token。token可以用来决定proposal的权重，本框架根据token分配finance。
-This paper combines the fundamental concepts of DAO to establish a framework for implementing DAO in academic journals. The framework begins with the issuance of tokens, which are allocated to all participants involved in the publication process, including reviewers, authors, and readers, through a specified mechanism. These tokens serve as a means to determine the weightage of proposals, and the framework utilizes the token distribution to allocate financial resources accordingly. By integrating token-based incentives and governance mechanisms, this framework ensures a fair and transparent distribution of resources within the DAO-operated journal ecosystem. Participants holding tokens can actively participate in the processes of all aspects of the article publication, such as send articles, review articles, and download articles, thereby influencing the allocation of financial resources based on their token holdings. Through this framework, the DAO-operated journal can foster an inclusive and democratic environment, empowering participants to shape the direction and priorities of the journal based on their token weightage.
-%本文结合DAO的基本概念，创建了一个适用于学术期刊的DAO框架。该框架首先进行铸币操作，将与论文相关的所有参与者（包括审稿人、作者和读者）按照一定的机制分配代币。这些代币可以用来决定提案的权重，本框架则根据代币分配财务资源。通过整合代币激励和治理机制，该框架确保在DAO运营的学术期刊生态系统中资源的公平和透明分配。持有代币的参与者可以积极参与文章发布过程，例如发布文章、审阅文章和下载文章，从而根据其代币持有量影响财务资源的分配。通过该框架，DAO运营的学术期刊能够营造一个包容和民主的环境，赋予参与者根据其代币权重来塑造期刊的方向和优先事项的权力。
+
+
+% This paper combines the fundamental concepts of DAO to establish a framework for implementing DAO in academic journals. The framework begins with the issuance of tokens, which are allocated to all participants involved in the publication process, including reviewers, authors, and readers, through a specified mechanism. These tokens serve as a means to determine the weightage of proposals, and the framework utilizes the token distribution to allocate financial resources accordingly. By integrating token-based incentives and governance mechanisms, this framework ensures a fair and transparent distribution of resources within the DAO-operated journal ecosystem. Participants holding tokens can actively participate in the processes of all aspects of the article publication, such as send articles, review articles, and download articles, thereby influencing the allocation of financial resources based on their token holdings. Through this framework, the DAO-operated journal can foster an inclusive and democratic environment, empowering participants to shape the direction and priorities of the journal based on their token weightage.
+This paper introduces a DAO framework tailored for academic journals, incorporating fundamental concepts of DAO to achieve perfect autonomy within the organization. By implementing effective incentive mechanisms, the framework enables fair and autonomous governance. The framework initiates the minting process, wherein tokens are allocated to all participants involved in the scholarly publication process, including reviewers, authors, and readers, based on predefined mechanisms. These tokens hold the power to influence proposal weighting, and the framework allocates financial resources according to token distribution.
+The application of blockchain technology ensures equitable and transparent resource allocation within the scholarly journal ecosystem. Participants holding tokens actively engage in the article publication process, such as submitting articles, reviewing papers, and downloading research outputs, thereby influencing the distribution of financial resources based on their token holdings. Through this framework, academic journals operated by DAOs can foster an inclusive and democratic environment, prioritizing the interests of all stakeholders involved.
+By combining the principles of DAO with academic journal operations, this framework paves the way for a decentralized and community-driven approach to scholarly publishing. It empowers participants, promotes collaboration, and ensures the fair distribution of resources, ultimately leading to a more inclusive and sustainable academic publishing ecosystem.
+%本文结合DAO的基本概念，创建了一个适用于学术期刊的DAO框架，使用有效的激励机制，让整个机构完美自治。该框架首先进行铸币操作，将与论文相关的所有参与者（包括审稿人、作者和读者）按照一定的机制分配代币。这些代币可以用来决定提案的权重，本框架则根据代币分配finance资源。区块链技术的应用，使该框架下的学术期刊生态系统中的资源公平和透明分配。持有代币的参与者可以积极参与文章发布过程，例如发布文章、审阅文章和下载文章，从而根据其代币持有量影响财务资源的分配。通过该框架，DAO运营的学术期刊能够营造一个包容和民主的环境，最重要可以给所有参与者响应的利益。
+
+%
 
 
 \begin{equation}
