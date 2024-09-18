@@ -21,14 +21,14 @@
 \title{Journal DAO: \\ User-Incentivized Autonomous Decentralized Scientific Publishing in Web3}
 
 \author{Tai Jiang, Rui Qin,~\IEEEmembership{Member, IEEE}, Yuhang Liu, \\
- Fei-YueWang,~\IEEEmembership{Fellow,~IEEE}.
-        % <-this % stops a space
-\thanks{This work was supported by the Science and Technology Development Fund of Macau SAR under Grant 0093/2023/RIA2 and  Grant 0050/2020/A1.}% <-this % stops a space
-\thanks{Manuscript received February 15, 2023; revised February 15, 2023.}
-\thanks{Tai Jiang is with the Department of Engineering Science, Faculty of Innovation Engineering, Macau University of Science and Technology, Macao, 999078, China (e-mail: jiangtai20@mails.ucas.ac.cn).}
-\thanks{Rui Qin is with Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China (e-mail: rui.qin@ia.ac.cn).}
-\thanks{Yuhang Liu is with the State Key Laboratory for Management and Control of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China, and also with the School of Artificial Intelligence, University of Chinese Academy of Sciences, Beijing 100049, China (e-mail: liuyuhang21@mails.ucas.ac.cn).}
-\thanks{Fei-Yue Wang is with the State Key Laboratory for Management and Control of Complex Systems, Chinese Academy of Sciences, Beijing 100190, China, and also with the Macao Institute of Systems Engineering, Macau University of Science and Technology, Macao 999078, China (e-mail: feiyue.wang@ia.ac.cn).}
+  Fei-YueWang,~\IEEEmembership{Fellow,~IEEE}.
+  % <-this % stops a space
+  \thanks{This work was supported by the Science and Technology Development Fund of Macau SAR under Grant 0093/2023/RIA2 and  Grant 0050/2020/A1.}% <-this % stops a space
+  \thanks{Manuscript received February 15, 2023; revised February 15, 2023.}
+  \thanks{Tai Jiang is with the Department of Engineering Science, Faculty of Innovation Engineering, Macau University of Science and Technology, Macao, 999078, China (e-mail: jiangtai20@mails.ucas.ac.cn).}
+  \thanks{Rui Qin is with Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China (e-mail: rui.qin@ia.ac.cn).}
+  \thanks{Yuhang Liu is with the State Key Laboratory for Management and Control of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China, and also with the School of Artificial Intelligence, University of Chinese Academy of Sciences, Beijing 100049, China (e-mail: liuyuhang21@mails.ucas.ac.cn).}
+  \thanks{Fei-Yue Wang is with the State Key Laboratory for Management and Control of Complex Systems, Chinese Academy of Sciences, Beijing 100190, China, and also with the Macao Institute of Systems Engineering, Macau University of Science and Technology, Macao 999078, China (e-mail: feiyue.wang@ia.ac.cn).}
 
 }
 
@@ -44,14 +44,14 @@
 
 \begin{abstract}
 
-The academic publishing industry is currently undergoing significant growth but also faces several challenges, mainly including the lack of transparency in the peer review process and the limited rights of authors. The rise of Web3, emphasizing decentralization, openness, and user control over data, opens up new perspectives for academic publishing. This article introduces an innovative academic publishing model, named Journal DAO, leveraging emerging Web3 technologies such as blockchain and decentralized autonomous organization (DAO). First, by recording articles on the blockchain rather than a centralized database, Journal DAO can ensure data security and traceability of the articles. Second, through the governance framework of DAO, tokens are distributed among all the participants of Journal DAO based on the their contributions, safeguarding the rights of each role in the publishing process. Third, effective incentive mechanisms are proposed to reward all participants, ensuring the sustainability of the framework and its autonomous functionality. This work proposes a prospective academic publishing model that aims to reshape the industry through the application of blockchain and DAO in Web3, making a significant contribution to future academic publishing.
+  The academic publishing industry is currently undergoing significant growth but also faces several challenges, mainly including the lack of transparency in the peer review process and the limited rights of authors. The rise of Web3, emphasizing decentralization, openness, and user control over data, opens up new perspectives for academic publishing. This article introduces an innovative academic publishing model, named Journal DAO, leveraging emerging Web3 technologies such as blockchain and decentralized autonomous organization (DAO). First, by recording articles on the blockchain rather than a centralized database, Journal DAO can ensure data security and traceability of the articles. Second, through the governance framework of DAO, tokens are distributed among all the participants of Journal DAO based on the their contributions, safeguarding the rights of each role in the publishing process. Third, effective incentive mechanisms are proposed to reward all participants, ensuring the sustainability of the framework and its autonomous functionality. This work proposes a prospective academic publishing model that aims to reshape the industry through the application of blockchain and DAO in Web3, making a significant contribution to future academic publishing.
 
 
 \end{abstract}
 
 
 \begin{IEEEkeywords}
-Decentralized autonomous organizations, blockchain, Web3.0, decentralized funding, decentralized science
+  Decentralized autonomous organizations, blockchain, Web3.0, decentralized funding, decentralized science
 \end{IEEEkeywords}
 
 \section{Introduction \label{sec:introduction}}
@@ -138,7 +138,7 @@ This chapter present the implementation details and methodology of the web3-base
 
 
 
-Based on the depicted framework in Figure \ref{fig:frameworkofblockchain}, it is evident that the operational flow of the blockchain and DAO framework, along with the roles of various participants \cite{10459713}, can be succinctly understood. 
+Based on the depicted framework in Figure \ref{fig:frameworkofblockchain}, it is evident that the operational flow of the blockchain and DAO framework, along with the roles of various participants \cite{10459713}, can be succinctly understood.
 %基于图中描绘的框架，显然可以简洁地理解区块链和 DAO 框架的操作流程，以及各个参与者的角色。
 
 
@@ -183,12 +183,13 @@ By leveraging blockchain technology, the web3.0 journal system establishes a dec
 \begin{figure*}[h]
   \centering
   \includegraphics[width=\linewidth]{assets/inscription.jpg}
-  \caption{Inscriptions of Articles and User.}
+  \caption{Inscriptions of Article and User.}
   \label{fig:inscription}
 \end{figure*}
 
-In the framework of Journal DAO, an article resides in a block composed of multiple inscriptions. As shown in Figure \ref{fig:inscription}, the article's inscription records the title and abstract, with children for the authors, keywords, figures, citations, and detailed sections of the article. Once the article enters review, the results are documented in the blockchain's inscriptions; after publication, it can be cited by other article. The parent-child relationship of article inscriptions is similar to traditional article management, but in the blockchain, due to the 4MB size limit of a single inscription, recursive inscriptions allow the complete article to be stored on the blockchain, enabling true decentralization in the DAO system. The article's inscriptions also lay the groundwork for subsequent decision-making and incentive mechanisms. Each user profile is composed of research areas (keywords), published articles, reviewed articles and downloaded articles, with the published papers being inscriptions themselves, which in turn influence the user, capturing as many influencing factors as possible.
-% 在journal dao的框架中，一篇论文就在一个区块中，这个区块由多个铭文组成。如图2所示，文章的铭文记录了文章的标题以及摘要，此铭文的子铭文为：作者、关键字、图形、引用以及文章的详细章节。文章一旦进入了评审，会把评审的结果也记录在区块链的铭文中；文章发布之后，它还会被别的用户引用。文章铭文的父级与子级关系与传统的论文管理基本一致，但是在区块链中，因为单个铭文的大小限制为4MB，而一篇文章经常超过这个尺寸，使用递归铭文可以真正的把论文存于区块链中，让DAO系统真正的完成去中心化。文章的铭文，也给后面的决策部分以及激励机制创造了条件。每个用户也是由研究领域(关键字)，发表的文章，评审的文章组成的用户画像，尤其是发表的文章，本身就是铭文组成，又会反过来影响用户，尽可能多的记录了更多的影响因素。
+
+Within the Journal DAO framework, each paper is stored in a blockchain block, which consists of multiple inscriptions. As illustrated in Figure \ref{fig:inscription}, the primary inscription records the paper's title and abstract, with sub-inscriptions(children) for the authors, keywords, figures, references, and detailed sections of the article. Once a paper enters the peer review process, the review outcomes are recorded as inscriptions on the blockchain (ensuring objectivity by making the review results visible while keeping the authors anonymous). After publication, the paper can be downloaded and cited by other users, further extending its blockchain record. The hierarchical relationship between parent and child inscriptions mirrors traditional academic paper management, creating a network structure of inter-referencing articles. However, due to the 4MB size limit of individual blockchain inscriptions, and given that many papers exceed this limit, recursive inscriptions are used to fully store papers on the blockchain, allowing the DAO system to achieve true decentralization. In Web 2.0 journal systems, there are primarily used for cross searching articles, but in a Web 3.0 journal system, recursive inscriptions also lay the foundation for decision-making processes and incentive mechanisms. Each user is represented by a profile composed of their research areas (keywords), published papers, and reviewed papers. Published papers, made up of inscriptions, feed back into the user's profile, capturing a wide range of influence factors, thus promoting deeper participation and recording more diverse contributions within the decentralized system \cite{BERTUCCI2024102338}.
+% 在journal dao的框架中，一篇论文就在一个区块中，这个区块由多个铭文组成。如图2所示，文章的铭文记录了文章的标题以及摘要，此铭文的子铭文为：作者、关键字、图形、引用以及文章的详细章节。文章一旦进入了评审，会把评审的结果也记录在区块链的铭文中(为保障客观，文章的评审结果可见，作者不可见)；文章发布之后，它还会被别的用户下载，以及别的文章引用。文章铭文的父级与子级关系与传统的论文管理基本一致，会成为网状的结构，相互引用，但是在区块链中，因为单个铭文的大小限制为4MB，而一篇文章经常超过这个尺寸，使用递归铭文可以真正的把论文存于区块链中，让DAO系统真正的完成去中心化。文章内容相互引用，在web2.0杂志系统中，仅仅用来完成文章的交叉查询；但在web3.0杂志系统中，递归铭文，也给后面的决策部分以及激励机制创造了条件。每个用户也是由研究领域(关键字)，发表的文章，评审的文章组成的用户画像，尤其是发表的文章，本身就是铭文组成，又会反过来影响用户，尽可能多的记录了更多的影响因素。
 
 
 In the practical implementation of the Journal DAO, this paper leveraged the Aragon framework to establish a decentralized and transparent infrastructure for academic publishing. The execution of the DAO involved several key steps to ensure a seamless and fair distribution of tokens among participants \cite{el2020overview}.
@@ -198,37 +199,37 @@ In a DAO, the concept of incentive mechanisms plays a crucial role in driving ac
 
 \begin{enumerate}
   \item Author motivations:
-  %作者奖励：
+        %作者奖励：
 
-  Authors, as the initial owners of the articles, receive a significant number of tokens at the beginning. Furthermore, they continue to earn tokens through article downloads and citations. The quantity of downloads and citations serves as an objective measure of the article's quality, showcasing its excellence. With more tokens, authors gain access to increased financial resources, which serves as motivation for them to produce better articles.
+        Authors, as the initial owners of the articles, receive a significant number of tokens at the beginning. Furthermore, they continue to earn tokens through article downloads and citations. The quantity of downloads and citations serves as an objective measure of the article's quality, showcasing its excellence. With more tokens, authors gain access to increased financial resources, which serves as motivation for them to produce better articles.
 
   \item Reviewer Incentives:
-  %评审者激励：
-  
-  Reviewers are rewarded with tokens based on their contributions and responsibilities during the peer review process. Each time an article generates financial resources, reviewers receive their share based on their token holdings. This incentivizes more individuals to actively participate in the review process.
-  
+        %评审者激励：
+
+        Reviewers are rewarded with tokens based on their contributions and responsibilities during the peer review process. Each time an article generates financial resources, reviewers receive their share based on their token holdings. This incentivizes more individuals to actively participate in the review process.
+
   \item Publisher rewards:
-  %出版商：
-  
-  Publishers, being the providers of the entire journal system, initially receive the highest number of tokens, reflecting their responsibility for article publication. However, as articles are downloaded and cited multiple times, they will be surpassed by the author of the articles.
+        %出版商：
+
+        Publishers, being the providers of the entire journal system, initially receive the highest number of tokens, reflecting their responsibility for article publication. However, as articles are downloaded and cited multiple times, they will be surpassed by the author of the articles.
 
   \item Reader Bonuses:
-  %读者奖金：
+        %读者奖金：
 
-  Readers, when downloading and citing articles, also earn tokens. Although individual readers receive a smaller number of tokens, this opportunity allows them to generate income. This incentivizes readers to download and cite articles, and if the downloaded and cited article exhibit high quality, attracting more readers to engage with them, they can earn a substantial amount of financial resources.
+        Readers, when downloading and citing articles, also earn tokens. Although individual readers receive a smaller number of tokens, this opportunity allows them to generate income. This incentivizes readers to download and cite articles, and if the downloaded and cited article exhibit high quality, attracting more readers to engage with them, they can earn a substantial amount of financial resources.
 
 \end{enumerate}
 
-  % 作者作为article的第一拥有人，初期就会获得较高的token，文章下载或者引用时候，又会持续获得token。下载引用的数量一般会客观证明论文有比较好的质量，证明了论文的优秀。拥有更多的token，也就拥有了更多的finance，这样会激励作者写出更好的文章。
-  % 评审者根据评审的贡献和责任获得token，每次文章创造了finance，评审者也都会根据自己持有的token获得相应的finance，这样会激励更多的人参与到评审过程中。
-  % 出版商是整个文章系统的提供者，并且要对article负责，在初期，理应获得最高的token。但是后续文章被多次下载以及引用时候，应该让利，被作者超过。
-  % 读者下载和引用论文时，也会获得token。虽然单个读者获得的token是最少的，但是给了读者赚钱的机会。会激励读者下载和引用论文，如果下载引用的论文有比较好的质量，越来越多的读者下载引用，也会获得相当客观的finance。
+% 作者作为article的第一拥有人，初期就会获得较高的token，文章下载或者引用时候，又会持续获得token。下载引用的数量一般会客观证明论文有比较好的质量，证明了论文的优秀。拥有更多的token，也就拥有了更多的finance，这样会激励作者写出更好的文章。
+% 评审者根据评审的贡献和责任获得token，每次文章创造了finance，评审者也都会根据自己持有的token获得相应的finance，这样会激励更多的人参与到评审过程中。
+% 出版商是整个文章系统的提供者，并且要对article负责，在初期，理应获得最高的token。但是后续文章被多次下载以及引用时候，应该让利，被作者超过。
+% 读者下载和引用论文时，也会获得token。虽然单个读者获得的token是最少的，但是给了读者赚钱的机会。会激励读者下载和引用论文，如果下载引用的论文有比较好的质量，越来越多的读者下载引用，也会获得相当客观的finance。
 
 
 
 
 
-The workflow of the DAO, as shown in Figure \ref{fig:frameworkofblockchain} depicted. As the DAO initiates the token minting process, specific rules guide the allocation of tokens. Authors are categorized into corresponding roles such as corresponding author, first author, second author, and third author, and so on, each receiving a different token allocation based on their contributions and responsibilities within the manuscript. Similarly, reviewers play a crucial role in the token allocation process. Their allocation is determined by their role in the review process and the ratings they provide for the submitted manuscripts. The publisher, as the platform responsible for facilitating manuscript publication, also receives a certain allocation of tokens due to their administrative role in managing the manuscripts. 
+The workflow of the DAO, as shown in Figure \ref{fig:frameworkofblockchain} depicted. As the DAO initiates the token minting process, specific rules guide the allocation of tokens. Authors are categorized into corresponding roles such as corresponding author, first author, second author, and third author, and so on, each receiving a different token allocation based on their contributions and responsibilities within the manuscript. Similarly, reviewers play a crucial role in the token allocation process. Their allocation is determined by their role in the review process and the ratings they provide for the submitted manuscripts. The publisher, as the platform responsible for facilitating manuscript publication, also receives a certain allocation of tokens due to their administrative role in managing the manuscripts.
 
 This meticulous token allocation mechanism ensures that each contributor, be it an author or a reviewer, receives fair rewards based on their specific contributions and responsibilities \cite{10123021}. By implementing such a structured system, the DAO creates a transparent and equitable environment, aligning the incentives for authors and reviewers. This not only cultivates a sense of fairness within the system but also encourages active and meaningful participation from all parties. Guided by DAO principles, the workflow fosters seamless integration of all stakeholders, ensuring a well-functioning and self-sustaining ecosystem.
 %在图示的工作流程中，流程始于用户提交论文进行出版。随着DAO启动铸币过程，特定规则指导着代币的分配。作者根据其在论文中的角色分为通讯作者、第一作者、第二作者和第三作者，每个人按照贡献和责任都获得不同的代币分配。同时，审稿人在代币分配中发挥着至关重要的作用。他们的分配由他们在审稿过程中的角色和对提交的论文的评分决定。出版商作为提供论文发布的平台，又有管理论文的职责，也分配了一定的代币。这种细致入微的代币分配机制确保了每个贡献者，无论是作者还是审稿人，都能根据其具体的贡献和责任公正获得奖励。通过实施这样一个结构化的系统，DAO创造了一个透明而公平的环境，使作者和审稿人的激励保持一致。这不仅在系统内部培养了公正感，还鼓励各方积极而有意义地参与。受DAO原则指导的工作流程促进了各利益相关方的无缝整合，确保了一个运行良好且自我维持的生态系统。
@@ -236,9 +237,9 @@ This meticulous token allocation mechanism ensures that each contributor, be it 
 
 
 
-Every participant in the system has a specific number of tokens by contribution, then finance distributed according to the number of tokens. In this system, authors, reviewers, publisher, readers(who download the papers or references) all possess a specific quantity of tokens. These tokens are considered as NFTs due to their unique nature. Once finance is generated, such as when a user pays to download a paper, the system allocates this finance based on the number of tokens held by the respective parties.This design ensures objectivity, fairness, and transparency within the system. Each participant's contribution is reflected in a specific number of tokens, and the allocation mechanism operates according to the quantity of these tokens. Such a design not only enhances the fairness of the incentive mechanism but also makes the entire system more transparent, allowing participants to clearly understand the relationship between their contributions and rewards.This NFT-based token system provides tangible and verifiable returns for contributors while establishing an effective and operable incentive mechanism for the entire ecosystem \cite{kong2021alternative}. This fair and transparent allocation method is expected to drive collaboration and development in the academic community, creating a mutually beneficial environment for all stakeholders.
+Every participant in the system has a specific number of tokens by contribution, then finance distributed according to the number of tokens. In this system, authors, reviewers, publisher, readers(who download the papers or references) all possess a specific quantity of tokens. These tokens are considered as NFTs due to their unique nature. Once finance is generated, the system allocates this finance based on the number of tokens held by the respective parties.This design ensures objectivity, fairness, and transparency within the system. Each participant's contribution is reflected in a specific number of tokens, and the allocation mechanism operates according to the quantity of these tokens. Such a design not only enhances the fairness of the incentive mechanism but also makes the entire system more transparent, allowing participants to clearly understand the relationship between their contributions and rewards.This NFT-based token system provides tangible and verifiable returns for contributors while establishing an effective and operable incentive mechanism for the entire ecosystem \cite{kong2021alternative}. This fair and transparent allocation method is expected to drive collaboration and development in the academic community, creating a mutually beneficial environment for all stakeholders.
 
-%在这个系统中，作者、审稿人、下载用户和引用用户都拥有一定数量的token。这些token具有唯一性，可以被视为NFT（非同质化代币）。一旦产生了finance，比如用户通过付费下载论文，系统会按照持有者的token数量来分配这部分finance。这个设计确保了系统的客观性、公正性和透明性。每个参与者的贡献都以特定数量的token体现，而分配机制则按照这些token的数量来进行。这样的设计不仅提高了激励机制的公正性，也使得整个系统更加透明，参与者可以清晰地了解他们的贡献与奖励之间的关系。这种以NFT为基础的token系统为贡献者提供了具体的、可证明的回报，同时也为整个生态系统提供了一种有效的、可操作的激励机制。这种公正而透明的分配方式有望推动学术界的合作与发展，为各方创造一个共赢的环境。
+%在这个系统中，作者、审稿人、下载用户和引用用户都拥有一定数量的token。这些token具有唯一性，可以被视为NFT（非同质化代币）。一旦产生了finance，系统会按照持有者的token数量来分配这部分finance。这个设计确保了系统的客观性、公正性和透明性。每个参与者的贡献都以特定数量的token体现，而分配机制则按照这些token的数量来进行。这样的设计不仅提高了激励机制的公正性，也使得整个系统更加透明，参与者可以清晰地了解他们的贡献与奖励之间的关系。这种以NFT为基础的token系统为贡献者提供了具体的、可证明的回报，同时也为整个生态系统提供了一种有效的、可操作的激励机制。这种公正而透明的分配方式有望推动学术界的合作与发展，为各方创造一个共赢的环境。
 
 
 
@@ -259,46 +260,44 @@ According to the development of district DAO, related blockchain technology, the
 %按照区DAO，以及相关区块链技术的发展，可以如图总结出以下的DAO框架。它旨在通过区块链和智能合约技术，建立一个去中心化的科学出版平台，实现科学研究的公平、透明和高效。
 
 \begin{itemize}
-  \item \textbf{Transparent Peer Review and Publishing Process:} 
-  
-  Blockchain can be used to create a transparent academic publishing platform, ensuring transparency throughout the peer-review and publishing processes.\cite{nakamoto2008bitcoin} Smart contracts can manage review, publication, and payment procedures, ensuring traceability and fairness.
-  %透明的学术出版： 区块链可以用于创建透明的学术出版平台，确保审稿和出版过程的透明性。智能合约可以管理审稿、出版和付款流程，确保可追溯和公平。
+  \item \textbf{Transparent Peer Review and Publishing Process:}
+
+        Blockchain can be used to create a transparent academic publishing platform, ensuring transparency throughout the peer-review and publishing processes.\cite{nakamoto2008bitcoin} Smart contracts can manage review, publication, and payment procedures, ensuring traceability and fairness.
+        %透明的学术出版： 区块链可以用于创建透明的学术出版平台，确保审稿和出版过程的透明性。智能合约可以管理审稿、出版和付款流程，确保可追溯和公平。
 
   \item \textbf{Protection of Intellectual Property:}
-  
-  Blockchain and smart contracts can safeguard authors' intellectual property, ensuring their works are not copied or distributed without permission \cite{gurkaynak2018intellectual}.
-  %知识产权保护： 区块链和智能合约可用于保护作者的知识产权，确保其作品不会未经许可就被复制或传播。
-  
-  \item \textbf{Identity Verification and Reputation Building:} 
-  
-  Blockchain can be employed to establish scholars' identities and reputations \cite{radziwill2018blockchain}. Smart contracts can automate the validation of scholars' achievements, storing them on the blockchain.
-  %身份验证和声誉建立： 区块链可用于建立学者的身份和声誉。智能合约可以自动化验证学者的成就，并将其存储在区块链上。
-  
-  \item \textbf{Data Sharing and Collaboration:} 
-  
-  Blockchain and smart contracts can facilitate data sharing and collaboration among scholars, ensuring data integrity and traceability \cite{praitheeshan2019security}.
-  %数据共享和合作： 区块链和智能合约可用于促进学者之间的数据共享和合作，确保数据的完整性和来源可追溯。
-  
-  \item \textbf{Finance and Incentive Mechanisms:} 
-  
-  DAO and cryptocurrencies can be used to support research finance and incentive mechanisms.Funds can be allocated according to token weights \cite{schar2021decentralized}.
-  %金融和激励机制： 区块链和加密货币可以用于支持学术研究的融资和激励机制。资金可以按照token为权重分配。
+
+        Blockchain and smart contracts can safeguard authors' intellectual property, ensuring their works are not copied or distributed without permission \cite{gurkaynak2018intellectual}.
+        %知识产权保护： 区块链和智能合约可用于保护作者的知识产权，确保其作品不会未经许可就被复制或传播。
+
+  \item \textbf{Identity Verification and Reputation Building:}
+
+        Blockchain can be employed to establish scholars' identities and reputations \cite{radziwill2018blockchain}. Smart contracts can automate the validation of scholars' achievements, storing them on the blockchain.
+        %身份验证和声誉建立： 区块链可用于建立学者的身份和声誉。智能合约可以自动化验证学者的成就，并将其存储在区块链上。
+
+  \item \textbf{Data Sharing and Collaboration:}
+
+        Blockchain and smart contracts can facilitate data sharing and collaboration among scholars, ensuring data integrity and traceability \cite{praitheeshan2019security}.
+        %数据共享和合作： 区块链和智能合约可用于促进学者之间的数据共享和合作，确保数据的完整性和来源可追溯。
+
+  \item \textbf{Finance and Incentive Mechanisms:}
+
+        DAO and cryptocurrencies can be used to support research finance and incentive mechanisms.Funds can be allocated according to token weights \cite{schar2021decentralized}.
+        %金融和激励机制： 区块链和加密货币可以用于支持学术研究的融资和激励机制。资金可以按照token为权重分配。
 \end{itemize}
 
 These application examples highlight the potential value of blockchain, smart contracts, and DAO technology in academic publishing and journal management. They enhance transparency, protect intellectual property, verify identity, automate processes, and encourage collaboration. As these technologies continue to evolve, they hold promise for further innovation and efficiency in academia \cite{vacca2021systematic}.
 %这些应用示例突显了区块链、智能合约和DAO技术在学术出版和杂志管理方面的潜在应用，提高了透明度、知识产权保护、身份验证和自动化审稿流程。随着这些技术的不断发展，它们将有望为学术界提供更多的创新和效率。
 
 
-In the current web2.0 landscape, both literature storage and payment systems are typically centralized, controlled by a single entity or organization. However, in the decentralized web3.0 network, article data resides directly on the blockchain \cite{alabdulwahhab2018web}, with websites serving as interfaces to access this data \cite{10402553} \cite{971982} \cite{6222336}. 
-In this new framework, payments for article downloads are automated and executed through smart contracts within the DAO framework \cite{cao2022decentralized}. This ensures complete transparency and traceability, as the fund distribution process follows predefined rules without centralized supervision \cite{10302676}. 
-
-
+In the current web2.0 landscape, both literature storage and payment systems are typically centralized, controlled by a single entity or organization. However, in the decentralized web3.0 network, article data resides directly on the blockchain \cite{alabdulwahhab2018web}, with websites serving as interfaces to access this data \cite{10402553} \cite{971982} \cite{6222336}.
+In this new framework, payments are automated and executed through smart contracts within the DAO framework \cite{cao2022decentralized}. This ensures complete transparency and traceability, as the fund distribution process follows predefined rules without centralized supervision \cite{10302676}.
 In the Web 3.0 paradigm, this novel model signifies a departure from reliance on traditional intermediaries. Instead, it empowers users with the direct participation in DAO frameworks, utilizing smart contracts for automated and secure fund distribution \cite{10302435}. This shift not only achieves decentralization in the transaction process but also enhances the efficiency of academic article transactions.
-In the Web 3.0 environment, articles are directly uploaded to the blockchain. All operations, including payment processing and fund distribution, are seamlessly executed through smart contracts. This innovative framework ensures complete transparency and traceability throughout the entire process. When users pay to download articles, the funds are automatically allocated according to the rules established within the DAO framework, eliminating the need for any centralized oversight.
-% 在当今web2.0的下，无论文献的储存或者支付系统，通常都是集中式的，这意味着它们由单个实体或组织控制。在去中心化网络的web3.0，文章数据主体直接存在于区块链上，而网站仅仅是对区块链数据的映射。在这一新的框架下，用户支付下载后，整个资金分配的过程都通过智能合约进行自动化执行，无需手动干预。这一创新性框架确保了整个过程的完全透明性和可追溯性。当用户支付下载文章时，资金会根据去中心化自治组织（DAO）框架内设立的规则自动分配，无需任何集中监管。
+In the Web 3.0 environment, articles are directly uploaded to the blockchain. All operations, including payment processing and fund distribution, are seamlessly executed through smart contracts.
+% 在当今web2.0的下，无论文献的储存或者支付系统，通常都是集中式的，这意味着它们由单个实体或组织控制。在去中心化网络的web3.0，文章数据主体直接存在于区块链上，而网站仅仅是对区块链数据的映射。在这一新的框架下，整个资金分配的过程都通过智能合约进行自动化执行，无需手动干预。这一创新性框架确保了整个过程的完全透明性和可追溯性。当用户支付下载文章时，资金会根据去中心化自治组织（DAO）框架内设立的规则自动分配，无需任何集中监管。
 %在Web 3.0的范式中，这一新兴模式标志着我们不再依赖传统中介机构。相反，它赋予用户直接参与DAO框架的权力，利用智能合约实现资金的自动化和安全分配。这一转变不仅实现了交易过程的去中心化，还提高了学术文章交易的效率。
-%在Web 3.0的环境中，文章直接上链。所有操作，包括支付处理和资金分配，都通过智能合约无缝执行。这一创新性框架确保了整个过程的完全透明性和可追溯性。当用户支付下载文章时，资金会根据去中心化自治组织（DAO）框架内设立的规则自动分配，无需任何集中监管。
-  
+%在Web 3.0的环境中，文章直接上链。所有操作，包括支付处理和资金分配，都通过智能合约无缝执行。
+
 \section{Mechanism Design of Journal DAO \label{sec:mechanism}}
 % \section{Mechanism Design of Journal DAO \label{sec:mechanism}}本节共2页
 % 简要写一下本节的思路，3-5行即可。
@@ -336,10 +335,10 @@ In the Web 3.0 environment, articles are directly uploaded to the blockchain. Al
 
 
 % This paper combines the fundamental concepts of DAO to establish a framework for implementing DAO in academic journals. The framework begins with the issuance of tokens, which are allocated to all participants involved in the publication process, including reviewers, authors, and readers, through a specified mechanism. These tokens serve as a means to determine the weightage of proposals, and the framework utilizes the token distribution to allocate financial resources accordingly. By integrating token-based incentives and governance mechanisms, this framework ensures a fair and transparent distribution of resources within the DAO-operated journal ecosystem. Participants holding tokens can actively participate in the processes of all aspects of the article publication, such as send articles, review articles, and download articles, thereby influencing the allocation of financial resources based on their token holdings. Through this framework, the DAO-operated journal can foster an inclusive and democratic environment, empowering participants to shape the direction and priorities of the journal based on their token weightage.
-This paper introduces a DAO framework tailored for academic journals, incorporating fundamental concepts of DAO to achieve autonomy within the organization. By implementing effective incentive mechanisms, the framework enables fair and autonomous governance. The framework initiates the minting process, wherein tokens are allocated to all participants involved in the scholarly publication process, including reviewers, authors, and readers, based on predefined mechanisms. These tokens hold the power to influence proposal weighting, and the framework allocates financial resources according to token distribution.
+This paper introduces a DAO framework tailored for academic journals, incorporating fundamental concepts of DAO to achieve autonomy within the organization. By implementing effective incentive mechanisms, the framework enables fair and autonomous governance. The framework initiates the minting process, wherein tokens are allocated to all participants involved in the scholarly publication process, including reviewers, authors, and readers, based on predefined mechanisms. These tokens hold the power to influence proposal weighting, and allocates financial resources according to token distribution.
 The application of blockchain technology ensures equitable and transparent resource allocation within the scholarly journal ecosystem. Participants holding tokens actively engage in the article publication process, such as submitting articles, reviewing papers, and downloading research outputs, thereby influencing the distribution of financial resources based on their token holdings. Through this framework, academic journals operated by DAOs can foster an inclusive and democratic environment, prioritizing the interests of all stakeholders involved.
 By combining the principles of DAO with academic journal operations, this framework paves the way for a decentralized and community-driven approach to scholarly publishing \cite{10426804}. It empowers participants, promotes collaboration, and ensures the fair distribution of resources, ultimately leading to a more inclusive and sustainable academic publishing ecosystem.
-%本文结合DAO的基本概念，创建了一个适用于学术期刊的DAO框架，使用有效的激励机制，让整个机构实现自治。该框架首先进行铸币操作，将与论文相关的所有参与者（包括审稿人、作者和读者）按照一定的机制分配代币。这些代币可以用来决定提案的权重，本框架则根据代币分配finance资源。区块链技术的应用，使该框架下的学术期刊生态系统中的资源公平和透明分配。持有代币的参与者可以积极参与文章发布过程，例如发布文章、审阅文章和下载文章，从而根据其代币持有量影响财务资源的分配。通过该框架，DAO运营的学术期刊能够营造一个包容和民主的环境，最重要可以给所有参与者相应的利益。
+%本文结合DAO的基本概念，创建了一个适用于学术期刊的DAO框架，使用有效的激励机制，让整个机构实现自治。该框架首先进行铸币操作，将与论文相关的所有参与者（包括审稿人、作者和读者）按照一定的机制分配代币。这些代币可以用来决定提案的权重，也能根据代币分配finance资源。区块链技术的应用，使该框架下的学术期刊生态系统中的资源公平和透明分配。持有代币的参与者可以积极参与文章发布过程，例如发布文章、审阅文章和下载文章，从而根据其代币持有量影响财务资源的分配。通过该框架，DAO运营的学术期刊能够营造一个包容和民主的环境，最重要可以给所有参与者相应的利益。
 
 %
 
@@ -353,9 +352,9 @@ In this DAO framework, token distribution is determined by a formula that takes 
     A_t \\
     E_t \\
     P_t \\
-    R_t 
+    R_t
   \end{bmatrix}
-  = 
+  =
   \omega_{t-1}
   \begin{bmatrix}
     A_{t-1} \\
@@ -373,7 +372,7 @@ In this DAO framework, token distribution is determined by a formula that takes 
   \end{bmatrix}
   +
   \cdot
-  + 
+  +
   \omega_n
   \begin{bmatrix}
     A_n \\
@@ -387,10 +386,9 @@ In this DAO framework, token distribution is determined by a formula that takes 
 
 
 The variable $\omega$ represents the weight assigned to each event, indicating the impact of that event on token changes. This weight can be adjusted based on specific criteria, such as the quality of the article, the level of contribution by reviewers, or the number of downloads and citations by readers.
-By incorporating this formula into the DAO framework, token distribution becomes a dynamic process that reflects the contributions and activities of all participants. 
+By incorporating this formula into the DAO framework, token distribution becomes a dynamic process that reflects the contributions and activities of all participants.
 % 公式1中，A代表了作者的token持有量，E代表了审稿人的token持有量，P代表了出版商的token持有量，R代表了读者的token持有量。w代表了分配机制，最终的token持有量为所有的t次事件造成的token改变的总和。
 
-% change 4 增加一个公式专门计算finance
 
 
 \subsection{Decentralized Governance}
@@ -407,28 +405,17 @@ By incorporating this formula into the DAO framework, token distribution becomes
 DAO, adopting a decentralized governance model, allows token holders to participate in the decision-making process. This ensures community involvement in platform development, creating a democratic and inclusive environment. With robust incentives in place, token holders have made outstanding contributions while also receiving greater rewards. This positive feedback loop forms a self-sustaining ecosystem of active governance \cite{beck2018governance}. DAOs leverage blockchain technology to provide transparency and trust, recording all proposals, votes, and transactions on the blockchain for public verification. Incentives motivate token holders to actively engage in the governance process, while DAOs offer a meritocratic approach that values expertise. The flexibility and adaptability of DAOs allow them to evolve and respond to the needs of the community. However, challenges such as active participation, governance gridlocks, and power concentration need to be addressed through clear rules and mechanisms. Overall, DAOs empower token holders, foster community involvement, and create a democratic and inclusive environment \cite{jensen2019theory}.
 %DAO采用去中心化治理模型，允许代币持有者参与决策过程。这确保了社区能够参与平台发展，创造了一个民主和包容的环境。在比较优秀的激励下，代币持有者做了出色的贡献，同时也获得更多的奖励。一个积极的自治体系完美闭环。DAO借助区块链技术提供透明度和信任度，将所有提案、投票和交易记录在区块链上，供公众验证。激励机制激励代币持有者积极参与治理过程，而DAO则提供了重视专业知识的优秀人才的机会。DAO的灵活性和适应性使其能够随着社区的需求而发展和应对变化。然而，需要通过明确的规则和机制来解决积极参与、治理僵局和权力集中等挑战。总体而言，DAO赋予代币持有者权力，促进社区参与，并创造民主和包容的环境。
 
-\begin{figure}[ht]
-  \begin{tikzpicture}[node distance=2.5cm, on grid]
-    \node[state, initial] (q1) {Draft};
-    \node[state, right=of q1] (q2) {Review};
-    \node[state, accepting, right=of q2] (q3) {DAO};
-  
-    \path[->]
-        (q1) edge[bend left, above] node {send} (q2)
-        (q2) edge[bend left, below] node {reject} (q1)
-        (q2) edge[left, above] node {publish} (q3)
-        (q3) edge[loop above] node {download} (q3)
-        (q3) edge[loop below] node {cite} (q3);
-  \end{tikzpicture}
-  \caption{Automata Machine of the Framework}
-  \label{fig:decentralized_governance}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=122px]{assets/govern.jpg}
+  \caption{User Roles.}
+  \label{fig:userRoles}
 \end{figure}
 
-% change 5 自动机换一个更完整的
 
-As illustrated in the state transition diagram depicted in Automaton of Figure \ref{fig:decentralized_governance}, the process of article publication within the DAO framework involves several stages. When an author submits an article, it undergoes a review process. If the article is rejected, the author is required to resubmit it, initiating a continuous cycle until it passes the review.
-Once the article successfully passes the review, it enters the DAO and is officially published. At this stage, the article becomes accessible for unlimited downloads and citations. The decentralized nature of the framework ensures that the article is available to a wide range of readers and can be referenced by other researchers, contributing to the dissemination of knowledge and scientific progress.
-% 如自动机1所示，作者发布了文章，审核如果拒稿，作者需要重新投递，一直循环下去。一旦通过了审核，文章就会发布，此时进入了DAO框架，文章可以无限下载以及引用。
+In the Journal DAO framework \ref{fig:userRoles}, after articles are divided into recursive inscriptions, each inscription is assigned a weight. During token minting events, tokens are distributed proportionally based on these weights. As authors, users receive a certain amount of tokens each time they publish an article, and these tokens will generate future finance. For reviewers, previously published articles contribute to increasing the weight of their research field(keywords), which directly influences their decision-making power during peer review, and in turn, affects their token allocation. Even readers can earn rewards; whether a user downloads an article through personal paid access or via institutional access, a small portion of tokens will be distributed according to the weight of the inscriptions, and readers will also participate in decision-making, thus receiving benefits. By participating in the DAO, users gain proposal rights and financial rewards, which incentivizes greater engagement within the framework, ensuring that the system operates autonomously and efficiently.
+% 用户用递归铭文划分之后，每一个铭文都是一个权重，在铸币事件的时候，会按照权重分配相应的token。用户作为作者，每次发布文章的时候，都会获得一定数量的token，这些token日后都会创造收益。用户作为审稿人，之前发布的文章会给自己研究的领域增加权重，这个权重会影响自己评审时决策的占比，这个占比又会反过来影响token的获得。用户甚至作为读者都会获得收益，不管用户个人知识付费下载论文，还是用机构下载论文，也都会按照权重分配少量的token，自己也会参与到决策中，也会获得收益。用户在DAO中可以获得权益以及收益，这会激励用户更好的参与到框架中，框架也完成了自治。
+
 
 
 The implementation of the Journal DAO has yielded positive results in terms of increased engagement, quality submissions, and a more inclusive academic ecosystem. The transparent and automated token distribution mechanisms have effectively addressed issues of ownership and reward distribution, fostering a collaborative and fair scholarly environment.
@@ -440,6 +427,15 @@ This incentive mechanism ensures that all contributors, including authors, revie
 
 \subsection{Initial Token Distributions}
 
+
+% DAO 框架中，token是至关重要的部分，它决定了决策成功的占比，更在财务分配时候决定了比例。token的生产，称之为铸币，一般会有多次铸币，一些行为都会影响token的分配数量。
+% 在本框架中，一篇论文的发表就创建了一个小的生态，如图1。创建时候的第一次铸币量非常大，其中包括了作者，审稿人，出版商。这三个群体中，按照责任制定了比例，token会按照这个比例分配。出版商只有一个，不多赘述。一篇文章，一般是由多个作者组成，每个作者都有自己的比例，比如一作和通讯作者会占比多一些。一个作者是由多个铭文组成，根据铭文又可以对占比做出一定的调整。文章在审稿过程中，会有多个审稿人，每个审稿人都有自己的比例。
+
+% 本框架分配了审稿人token，这个token即在审稿决策时候起到了关键作用，又在财务分配时候决定了其收入。传统的杂志系统，分配审稿人时候，首先可以参考审稿人的研究领域，然后是避免相同机构审稿，最后是数量要求，比如要求至少一定数量的审稿人完成审稿，AE才能继续审稿给SE以及EIC提交审稿意见。DAO框架中，按照审稿人的研究领域进行分配，以及避免相同机构审稿都会沿用，并且会更透明。审稿那部分不只是按照数量会按照审稿人的token限定，一般DAO框架中都会要求一个决议至少总参与人凑够多少token才能通过，然后才是投票时候按照比例决定是否通过。使用DAO完成决策会让审稿流程变得更加真实，更加透明。
+
+
+
+
 % change 6 大修改，去掉公式，改用图形表示，此处要有论文小修大修的展示
 In the DAO framework, tokens are minted during key events, first of all is article publication, then distributed to participants according to predetermined proportions. All these processes are executed through smart contracts, ensuring transparency and traceability. Having a well-designed token allocation mechanism forms the foundation of the entire framework, enabling a self-sustaining and self-regulating environment.
 
@@ -447,11 +443,11 @@ In the DAO framework, tokens are minted during key events, first of all is artic
 
 \begin{equation}
   \begin{aligned}
-    D_0 &= \sum_{i = 1}^{m}x_i \\
-    1 &= \alpha_1 + \alpha_2 + \alpha_3 \\
-    A_0 &= \alpha_1 D_0 \quad (A=\{a_0, a_1, a_2, a_3, \cdots a_n\}) \\
-    E_0 &= \alpha_2 D_0 \quad (E=\{e_1, e_2, e_3, \cdots e_m\}) \\
-    P_0 &= \alpha_3 D_0 \quad (P=\{p\})
+    D_0 & = \sum_{i = 1}^{m}x_i                                       \\
+    1   & = \alpha_1 + \alpha_2 + \alpha_3                            \\
+    A_0 & = \alpha_1 D_0 \quad (A=\{a_0, a_1, a_2, a_3, \cdots a_n\}) \\
+    E_0 & = \alpha_2 D_0 \quad (E=\{e_1, e_2, e_3, \cdots e_m\})      \\
+    P_0 & = \alpha_3 D_0 \quad (P=\{p\})
   \end{aligned}
   \label{eq:dao0}
 \end{equation}
@@ -462,10 +458,10 @@ Upon publication of an article, a DAO specific to that particular article is est
 
 \begin{equation}
   \begin{aligned}
-    1 &= \beta_0 + \beta_1 + \beta_2 + \beta_3 + \cdots + \beta_n \\
-    &(\beta_1 \geq  \beta_2 \geq \beta_3 \cdots \geq \beta_n)\\
-    a_{i} &= \beta_i A \quad (a \in A) \\
-    a_{i0} &= \beta_i A_0 \quad (a_0 \in A_0 )
+    1      & = \beta_0 + \beta_1 + \beta_2 + \beta_3 + \cdots + \beta_n \\
+           & (\beta_1 \geq  \beta_2 \geq \beta_3 \cdots \geq \beta_n)   \\
+    a_{i}  & = \beta_i A \quad (a \in A)                                \\
+    a_{i0} & = \beta_i A_0 \quad (a_0 \in A_0 )
   \end{aligned}
   \label{eq:authorrate}
 \end{equation}
@@ -475,9 +471,9 @@ In the case of having a total of $n$ authors, the allocation of tokens for each 
 
 \begin{equation}
   \begin{aligned}
-    1 &= \gamma_1 + \gamma_2 + \gamma_3 + \cdots + \gamma_m \\
-    e_{i} &= \gamma_i E \quad (e \in E) \\
-    e_{i0} &= \gamma_i E_0 \quad (e_0 \in E_0 )
+    1      & = \gamma_1 + \gamma_2 + \gamma_3 + \cdots + \gamma_m \\
+    e_{i}  & = \gamma_i E \quad (e \in E)                         \\
+    e_{i0} & = \gamma_i E_0 \quad (e_0 \in E_0 )
   \end{aligned}
   \label{eq:reviewerrate}
 \end{equation}
@@ -498,12 +494,12 @@ Furthermore, readers who download articles both recognize the value of the artic
 
 \begin{equation}
   \begin{aligned}
-    D_1 &= D_{1a} + D_{1r} \\
-    A_1 &= D_{1a} \\
-    \Sigma^A_1 &= A_0 + A_1 \\
-    E_1 &= 0 \\
-    P_1 &= 0 \\
-    R_1 &= D_{1r} \\
+    D_1        & = D_{1a} + D_{1r} \\
+    A_1        & = D_{1a}          \\
+    \Sigma^A_1 & = A_0 + A_1       \\
+    E_1        & = 0               \\
+    P_1        & = 0               \\
+    R_1        & = D_{1r}          \\
   \end{aligned}
   \label{eq:downloadtoken}
 \end{equation}
@@ -513,10 +509,10 @@ After the publication of the article, when users read and download the article, 
 
 \begin{equation}
   \begin{aligned}
-    1 &= \beta_{1, 0} + \beta_{1, 1} + \beta_{1, 2} \\
-    a_{1,0} &= A_1 \beta_{1, 0}  \\
-    a_{1,1} &= A_1 \beta_{1, 1}  \\
-    a_{1,2} &= A_1 \beta_{1, 2}  \\
+    1       & = \beta_{1, 0} + \beta_{1, 1} + \beta_{1, 2} \\
+    a_{1,0} & = A_1 \beta_{1, 0}                           \\
+    a_{1,1} & = A_1 \beta_{1, 1}                           \\
+    a_{1,2} & = A_1 \beta_{1, 2}                           \\
   \end{aligned}
   \label{eq:downloadrate}
 \end{equation}
@@ -527,13 +523,13 @@ According to Equation \ref{eq:downloadrate}, the tokens generated through the us
 
 \begin{equation}
   \begin{aligned}
-    D_2 &= D_{2a} + D_{2r} \\
-    A_2 &= D_{2a} \\
-    \Sigma^A_2 &= A_0 + A_1 + A_2 \\
-    E_2 &= 0 \\
-    P_2 &= 0 \\
-    R_2 &= D_{2r} \\
-    \Sigma_{r1} & = R_1 + R_2 \quad if \quad R_1 = R_2 \quad (r_1 \in R ) 
+    D_2         & = D_{2a} + D_{2r}                                       \\
+    A_2         & = D_{2a}                                                \\
+    \Sigma^A_2  & = A_0 + A_1 + A_2                                       \\
+    E_2         & = 0                                                     \\
+    P_2         & = 0                                                     \\
+    R_2         & = D_{2r}                                                \\
+    \Sigma_{r1} & = R_1 + R_2 \quad if \quad R_1 = R_2 \quad (r_1 \in R )
   \end{aligned}
   \label{eq:citetoken}
 \end{equation}
@@ -552,41 +548,41 @@ By employing token allocation based on NFT principles, the framework ensures a f
 
 \begin{equation}
   \begin{aligned}
-    1 &= \frac{A}{D} + \frac{E}{D} + \frac{P}{D} + \frac{R}{D} = \alpha_1 + \alpha_2 + \alpha_3 + \alpha_4 \\
-    F &\in \{ ETH, Bitcoin, \cdots \} \\
-    F_A &= \alpha_1 F \quad (A=\{a_0, a_1, a_2, a_3, \cdots a_n\}) \\
-    F_E &= \alpha_2 F \quad (E=\{e_1, e_2, e_3, \cdots e_m\}) \\
-    F_P &= \alpha_3 F \quad (P=\{p\}) \\ 
-    F_R &= \alpha_4 F \quad (R=\{r_1, r_2, r_3, \cdots r_i\})
+    1   & = \frac{A}{D} + \frac{E}{D} + \frac{P}{D} + \frac{R}{D} = \alpha_1 + \alpha_2 + \alpha_3 + \alpha_4 \\
+    F   & \in \{ ETH, Bitcoin, \cdots \}                                                                      \\
+    F_A & = \alpha_1 F \quad (A=\{a_0, a_1, a_2, a_3, \cdots a_n\})                                           \\
+    F_E & = \alpha_2 F \quad (E=\{e_1, e_2, e_3, \cdots e_m\})                                                \\
+    F_P & = \alpha_3 F \quad (P=\{p\})                                                                        \\
+    F_R & = \alpha_4 F \quad (R=\{r_1, r_2, r_3, \cdots r_i\})
   \end{aligned}
   \label{eq:finance}
 \end{equation}
 
 
-According to Equation \ref{eq:finance}, the token allocation ratios for authors, reviewers, publisher, and readers are denoted as $\alpha_1$, $\alpha_2$, $\alpha_3$, and $\alpha_4$, respectively. Once finance is generated, it is distributed to all token holders based on these ratios. 
-To respect intellectual property rights, many publishers require users to pay for downloading articles. In such cases, finance enters the DAO and is distributed to all authors, reviewers, publisher, and readers according to their token ratios. Articles typically attract a significant number of downloads, with exceptional ones garnering even more. Importantly, this distribution mechanism enables sustained earnings, thereby incentivizing authors to produce higher quality articles. 
-While users initially act as consumers when downloading articles, they also become partial owners of the downloaded articles. As a result, they are eligible to receive a portion of the generated finance based on their token ratios. Motivating readers is crucial as it encourages them to willingly pay for article downloads, ultimately creating more finance and fostering a real automated organization. 
+According to Equation \ref{eq:finance}, the token allocation ratios for authors, reviewers, publisher, and readers are denoted as $\alpha_1$, $\alpha_2$, $\alpha_3$, and $\alpha_4$, respectively. Once finance is generated, it is distributed to all token holders based on these ratios.
+To respect intellectual property rights, many publishers require users to pay for downloading articles. In such cases, finance enters the DAO and is distributed to all authors, reviewers, publisher, and readers according to their token ratios. Articles typically attract a significant number of downloads, with exceptional ones garnering even more. Importantly, this distribution mechanism enables sustained earnings, thereby incentivizing authors to produce higher quality articles.
+While users initially act as consumers when downloading articles, they also become partial owners of the downloaded articles. As a result, they are eligible to receive a portion of the generated finance based on their token ratios. Motivating readers is crucial as it encourages them to willingly pay for article downloads, ultimately creating more finance and fostering a real automated organization.
 By implementing this approach, all participants receive fair allocations for their contributions. The autonomous nature of the framework drives authors to produce outstanding articles and incentivizes readers to pay for downloads, thereby generating more finance and establishing a virtuous cycle within the system.
 % 根据公式\ref{eq:finance}，作者、审稿人、出版商、读者的token分配比例为$\alpha_1$, $\alpha_2$, $\alpha_3$, $\alpha_4$，一旦产生finance，会按照这个比例分给所有holder。比如为了尊重知识产权，很多出版商的论文需要用户付费下载，此时就有了finance进入DAO，并按照token的比例分给了所有作者、审稿人、出版商、读者。文章的下载量一般会很多，优秀的文章下载量更多，最重要的是可以持续收益，这种情况下，激励了作者写出更优秀的article。用户作为读者下载文章本是消费者，但是下载文章之后既变成文章的拥有者之一，之后的finance也会分给这个读者。对读者的激励十分重要，这让读者更愿意付费下载article，也就创造了更多的finance，形成一个完美的自治。
 
 
 \begin{equation}
   \begin{aligned}
-    F_{r}^* & = \sum_{i=0}^{n} F_{ei} \frac{T_{r}}{\sum_{j=0}^{i}T_j} \\
+    F_{r}^*  & = \sum_{i=0}^{n} F_{ei} \frac{T_{r}}{\sum_{j=0}^{i}T_j}           \\
     \omega_r & = \frac{F_{r}^*}{F_{e}} = \sum_{i=0}^{n} \frac{T_{r}}{T_0 + iT_1} \\
     \omega_r & = \sum_{i = 1}^{n} \frac{1}{W_0 + i W_1}
   \end{aligned}
   \label{eq:breakeven}
 \end{equation}
 
-According to Equation \ref{eq:breakeven}, the total income for readers who download articles within the DAO framework is denoted as $F_{r}^*$. Each download generates a financial gain, $F_{e}$, which is distributed among all token holders based on their respective token proportions. The reader's income from a specific download is represented as $F_{en} \frac{T_{r}}{\sum_{i=0}^{n}T_i}$. As other readers download articles more frequently, the total token holdings within the system gradually increase. Thus, while the reader's income may increase over time, the income from each individual download decreases. 
+According to Equation \ref{eq:breakeven}, the total income for readers who download articles within the DAO framework is denoted as $F_{r}^*$. Each download generates a financial gain, $F_{e}$, which is distributed among all token holders based on their respective token proportions. The reader's income from a specific download is represented as $F_{en} \frac{T_{r}}{\sum_{i=0}^{n}T_i}$. As other readers download articles more frequently, the total token holdings within the system gradually increase. Thus, while the reader's income may increase over time, the income from each individual download decreases.
 The finance received from each download event is fixed. By comparing the reader's total income with their expenses, which is equivalent to the finance per download event, a ratio called $\omega_r$ is obtained. When this ratio equals 1, the reader's income matches their expenses, and any subsequent income becomes additional. $T_r$ represents the number of tokens held by the reader and remains constant. To simplify the equation, $T_0$ and $T_1$ are expressed as ratios to $T_r$, denoted as $W_0$ and $W_1$, respectively. Ultimately, the balance between income and expenses is determined by $W_0$, and $W_1$,.
 % 按照公式9所示，Fr为DAO中，下载了article的读者的总收入。每一次下载，都会有Fe的finance进账，然后会按照token的比例分给所有的holder，读者本次的收入就是Wr。因为读者的贡献只有下载article那一次事件，所以token不会增加，但是随着别的读者下载论文次数越来越多，总token会越来越多，所以虽然读者的收入是逐渐增高的，但是每次都收入是逐渐减少的。每次下载论文的finance是固定的，现在把读者的总收入，比上用户自己下载论文时候的花销，也就是以后每次下载论文的finance，得到一个比例omega，当这个值为1时候，读者的收入跟复出持平，之后的收入全都是额外收入。Tr作为读者持有的token数，值不会改变，所以缩减此变量，T0和T1变成跟Tr的比例，W0和W1。最后可以明确表示收支平衡由W0和W1决定。
 
 
 \begin{equation}
   \begin{aligned}
-    \omega_r^1 & = \sum_{i = 2}^{n} \frac{1}{W_0 + i W_1} \\
+    \omega_r^1 & = \sum_{i = 2}^{n} \frac{1}{W_0 + i W_1}     \\
     \omega_r^t & = \sum_{i = t + 1}^{n} \frac{1}{W_0 + i W_1}
   \end{aligned}
   \label{eq:evenotherreader}
@@ -604,7 +600,7 @@ In this section, we present experimental results by adjusting several parameters
 
 \subsection{ Parameters Adjust and Simulation}
 
-According to Equation \ref{eq:breakeven}, the factors influencing the balance between income and expenses are represented by $W_0$ and $W_1$. To visualize these factors, we will now construct a heatmap. The value of $W_0$ is expected to be relatively large as it encompasses the major contributors within the current DAO, such as authors, reviewers, and publishers. On the other hand, the value of $W_1$ is expected to be relatively small and involves only authors and readers, but it continues to cycle and trigger recurrently. 
+According to Equation \ref{eq:breakeven}, the factors influencing the balance between income and expenses are represented by $W_0$ and $W_1$. To visualize these factors, we will now construct a heatmap. The value of $W_0$ is expected to be relatively large as it encompasses the major contributors within the current DAO, such as authors, reviewers, and publishers. On the other hand, the value of $W_1$ is expected to be relatively small and involves only authors and readers, but it continues to cycle and trigger recurrently.
 % 根据公式9，影响收支平衡率的因素，为w0和w1，现在绘制热力图。w0的值理应比较大，因为包含了当前DAO中贡献最大的作者，审稿人，以及出版商。w1的值理应比较小，并且只包含作者和读者，但是会一直循环触发。
 
 \begin{figure}[h]
@@ -614,7 +610,7 @@ According to Equation \ref{eq:breakeven}, the factors influencing the balance be
   \label{fig:heatmap-breakeven}
 \end{figure}
 
-In order to depict the relationship between different values of $W_0$ and $W_1$, a heatmap Figure \ref{fig:heatmap-breakeven} is constructed. As $W_0$ and $W_1$ increase, the number of required event triggers for break even tends to increase. It is suggested to define the values of $W_0$ and $W_1$ based on the download count of an outstanding article. By using this approach, the break even point can be optimized, ensuring a sufficient number of event triggers to achieve equilibrium. 
+In order to depict the relationship between different values of $W_0$ and $W_1$, a heatmap Figure \ref{fig:heatmap-breakeven} is constructed. As $W_0$ and $W_1$ increase, the number of required event triggers for break even tends to increase. It is suggested to define the values of $W_0$ and $W_1$ based on the download count of an outstanding article. By using this approach, the break even point can be optimized, ensuring a sufficient number of event triggers to achieve equilibrium.
 % 根据不同的w0和w1，绘制热力图 1，随着w0和w1的增大，收支平衡的需要事件触发的次数就会越多。此时可以可按照一个优秀论文的下载量来定义w0，和w1值。 
 
 
@@ -623,32 +619,32 @@ In order to depict the relationship between different values of $W_0$ and $W_1$,
     \caption{Finance for DAO.}
     \label{tab:finance}
     \begin{tabular}{r|l|l|l|l|l|l|l|l|l} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
-      & \multicolumn{4}{c|}{\textbf{Authors}} & \textbf{Publisher} & \multicolumn{2}{c|}{\textbf{Reviewers}} & \multicolumn{2}{c}{\textbf{Readers}}\\
+                     & \multicolumn{4}{c|}{\textbf{Authors}} & \textbf{Publisher} & \multicolumn{2}{c|}{\textbf{Reviewers}} & \multicolumn{2}{c}{\textbf{Readers}}                                                                                                    \\
       \hline
-      \textbf{index} & \textbf{Corresponding} & \textbf{Author1} & \textbf{Author2} & \textbf{Author3} & \textbf{Publisher} & \textbf{Reviewer1} & \textbf{Reviewer2} & \textbf{Download} & \textbf{Cite}\\
+      \textbf{index} & \textbf{Corresponding}                & \textbf{Author1}   & \textbf{Author2}                        & \textbf{Author3}                     & \textbf{Publisher} & \textbf{Reviewer1} & \textbf{Reviewer2} & \textbf{Download} & \textbf{Cite} \\
       \hline
-      0 & 0.122997 & 0.184696 & 0.061298 & 0.030449 & 0.200321 & 0.177885 & 0.222356 & 0 & 0 \\
-      1 & 0.124113 & 0.186367 & 0.061860 & 0.029945 & 0.197006 & 0.174941 & 0.218676 & 0.007092 & 0 \\
-      2 & 0.125194 & 0.187984 & 0.062403 & 0.029457 & 0.193798 & 0.172093 & 0.215116 & 0.006977 & 0 \\
-      3 & 0.125000 & 0.187688 & 0.062312 & 0.028529 & 0.187688 & 0.166667 & 0.208333 & 0.006757 & 0.013514 \\
-      4 & 0.126016 & 0.189209 & 0.062823 & 0.028086 & 0.184775 & 0.164080 & 0.205100 & 0.006652 & 0.013304 \\
-      5 & 0.127001 & 0.190684 & 0.063319 & 0.027656 & 0.181951 & 0.161572 & 0.201965 & 0.006550 & 0.013100 \\
-      6 & 0.127957 & 0.192115 & 0.063799 & 0.027240 & 0.179211 & 0.159140 & 0.198925 & 0.006452 & 0.012903 \\
-      7 & 0.128884 & 0.193503 & 0.064266 & 0.026836 & 0.176554 & 0.156780 & 0.195975 & 0.006356 & 0.012712 \\
-      8 & 0.129784 & 0.194850 & 0.064718 & 0.026444 & 0.173974 & 0.154489 & 0.193111 & 0.006263 & 0.012526 \\
-      9 & 0.130658 & 0.196159 & 0.065158 & 0.026063 & 0.171468 & 0.152263 & 0.190329 & 0.006173 & 0.012346 \\
-      10 & 0.131508 & 0.197431 & 0.065585 & 0.025693 & 0.169033 & 0.150101 & 0.187627 & 0.006085 & 0.012170 \\
-      11 & 0.132333 & 0.198667 & 0.066000 & 0.025333 & 0.166667 & 0.148000 & 0.185000 & 0.006000 & 0.012000 \\
-      12 & 0.133136 & 0.199869 & 0.066404 & 0.024984 & 0.164366 & 0.145957 & 0.182446 & 0.005917 & 0.011834 \\
-      13 & 0.133917 & 0.201038 & 0.066796 & 0.024643 & 0.162127 & 0.143969 & 0.179961 & 0.005837 & 0.011673 \\
-      14 & 0.134677 & 0.202175 & 0.067179 & 0.024312 & 0.159949 & 0.142035 & 0.177543 & 0.005758 & 0.011516 \\
-      15 & 0.134268 & 0.201558 & 0.066978 & 0.023676 & 0.155763 & 0.138318 & 0.172897 & 0.005607 & 0.011215 \\
-      16 & 0.134994 & 0.202645 & 0.067343 & 0.023370 & 0.153752 & 0.136531 & 0.170664 & 0.005535 & 0.011070 \\
-      17 & 0.135701 & 0.203704 & 0.067699 & 0.023072 & 0.151791 & 0.134791 & 0.168488 & 0.005464 & 0.010929 \\
-      18 & 0.136391 & 0.204736 & 0.068046 & 0.022782 & 0.149880 & 0.133094 & 0.166367 & 0.005396 & 0.010791 \\
-      19 & 0.137063 & 0.205743 & 0.068384 & 0.022499 & 0.148017 & 0.131439 & 0.164298 & 0.005329 & 0.010657 \\
-      20 & 0.137719 & 0.206725 & 0.068713 & 0.022222 & 0.146199 & 0.129825 & 0.162281 & 0.005263 & 0.010526 \\
-      Total & 2.749313 & 4.127544 & 1.371082 & 0.543292 & 3.574286 & 3.173966 & 3.967458 & 0.121463 & 0.214788 \\
+      0              & 0.122997                              & 0.184696           & 0.061298                                & 0.030449                             & 0.200321           & 0.177885           & 0.222356           & 0                 & 0             \\
+      1              & 0.124113                              & 0.186367           & 0.061860                                & 0.029945                             & 0.197006           & 0.174941           & 0.218676           & 0.007092          & 0             \\
+      2              & 0.125194                              & 0.187984           & 0.062403                                & 0.029457                             & 0.193798           & 0.172093           & 0.215116           & 0.006977          & 0             \\
+      3              & 0.125000                              & 0.187688           & 0.062312                                & 0.028529                             & 0.187688           & 0.166667           & 0.208333           & 0.006757          & 0.013514      \\
+      4              & 0.126016                              & 0.189209           & 0.062823                                & 0.028086                             & 0.184775           & 0.164080           & 0.205100           & 0.006652          & 0.013304      \\
+      5              & 0.127001                              & 0.190684           & 0.063319                                & 0.027656                             & 0.181951           & 0.161572           & 0.201965           & 0.006550          & 0.013100      \\
+      6              & 0.127957                              & 0.192115           & 0.063799                                & 0.027240                             & 0.179211           & 0.159140           & 0.198925           & 0.006452          & 0.012903      \\
+      7              & 0.128884                              & 0.193503           & 0.064266                                & 0.026836                             & 0.176554           & 0.156780           & 0.195975           & 0.006356          & 0.012712      \\
+      8              & 0.129784                              & 0.194850           & 0.064718                                & 0.026444                             & 0.173974           & 0.154489           & 0.193111           & 0.006263          & 0.012526      \\
+      9              & 0.130658                              & 0.196159           & 0.065158                                & 0.026063                             & 0.171468           & 0.152263           & 0.190329           & 0.006173          & 0.012346      \\
+      10             & 0.131508                              & 0.197431           & 0.065585                                & 0.025693                             & 0.169033           & 0.150101           & 0.187627           & 0.006085          & 0.012170      \\
+      11             & 0.132333                              & 0.198667           & 0.066000                                & 0.025333                             & 0.166667           & 0.148000           & 0.185000           & 0.006000          & 0.012000      \\
+      12             & 0.133136                              & 0.199869           & 0.066404                                & 0.024984                             & 0.164366           & 0.145957           & 0.182446           & 0.005917          & 0.011834      \\
+      13             & 0.133917                              & 0.201038           & 0.066796                                & 0.024643                             & 0.162127           & 0.143969           & 0.179961           & 0.005837          & 0.011673      \\
+      14             & 0.134677                              & 0.202175           & 0.067179                                & 0.024312                             & 0.159949           & 0.142035           & 0.177543           & 0.005758          & 0.011516      \\
+      15             & 0.134268                              & 0.201558           & 0.066978                                & 0.023676                             & 0.155763           & 0.138318           & 0.172897           & 0.005607          & 0.011215      \\
+      16             & 0.134994                              & 0.202645           & 0.067343                                & 0.023370                             & 0.153752           & 0.136531           & 0.170664           & 0.005535          & 0.011070      \\
+      17             & 0.135701                              & 0.203704           & 0.067699                                & 0.023072                             & 0.151791           & 0.134791           & 0.168488           & 0.005464          & 0.010929      \\
+      18             & 0.136391                              & 0.204736           & 0.068046                                & 0.022782                             & 0.149880           & 0.133094           & 0.166367           & 0.005396          & 0.010791      \\
+      19             & 0.137063                              & 0.205743           & 0.068384                                & 0.022499                             & 0.148017           & 0.131439           & 0.164298           & 0.005329          & 0.010657      \\
+      20             & 0.137719                              & 0.206725           & 0.068713                                & 0.022222                             & 0.146199           & 0.129825           & 0.162281           & 0.005263          & 0.010526      \\
+      Total          & 2.749313                              & 4.127544           & 1.371082                                & 0.543292                             & 3.574286           & 3.173966           & 3.967458           & 0.121463          & 0.214788      \\
     \end{tabular}
   \end{center}
 \end{table*}
@@ -710,31 +706,30 @@ This approach incentivizes readers to identify outstanding articles sooner, as t
     \caption{Finance of Real Article for DAO.}
     \label{tab:realpaper}
     \begin{tabular}{r|l|l|l|l|l|l|l|l|l} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
-      & \multicolumn{4}{c|}{\textbf{Authors}} & \textbf{Publisher} & \multicolumn{2}{c|}{\textbf{Reviewers}} & \multicolumn{2}{c}{\textbf{Readers}}\\
+                     & \multicolumn{4}{c|}{\textbf{Authors}} & \textbf{Publisher} & \multicolumn{2}{c|}{\textbf{Reviewers}} & \multicolumn{2}{c}{\textbf{Readers}}                                                                                                    \\
       \hline
-      \textbf{index} & \textbf{Corresponding} & \textbf{Author1} & \textbf{Author2} & \textbf{Author3} & \textbf{Publisher} & \textbf{Reviewer1} & \textbf{Reviewer2} & \textbf{Download} & \textbf{Cite}\\
+      \textbf{index} & \textbf{Corresponding}                & \textbf{Author1}   & \textbf{Author2}                        & \textbf{Author3}                     & \textbf{Publisher} & \textbf{Reviewer1} & \textbf{Reviewer2} & \textbf{Download} & \textbf{Cite} \\
       \hline
-      0 & 0.122997 & 0.184696 & 0.061298 & 0.030449 & 0.200321 & 0.177885 & 0.222356 & 0 & 0 \\
-      1 & 0.124113 & 0.186367 & 0.061860 & 0.029945 & 0.197006 & 0.174941 & 0.218676 & 0.007092 & 0 \\
-      2 & 0.125194 & 0.187984 & 0.062403 & 0.029457 & 0.193798 & 0.172093 & 0.215116 & 0.006977 & 0 \\
-      3 & 0.126240 & 0.189550 & 0.062929 & 0.028986 & 0.190694 & 0.169336 & 0.211670 & 0.006865 & 0 \\
-      4 & 0.127252 & 0.191066 & 0.063438 & 0.028529 & 0.187688 & 0.166667 & 0.208333 & 0.006757 & 0 \\
-      ... & ... & ... & ... & ... & ... & ... & ... & ... & ... \\
+      0              & 0.122997                              & 0.184696           & 0.061298                                & 0.030449                             & 0.200321           & 0.177885           & 0.222356           & 0                 & 0             \\
+      1              & 0.124113                              & 0.186367           & 0.061860                                & 0.029945                             & 0.197006           & 0.174941           & 0.218676           & 0.007092          & 0             \\
+      2              & 0.125194                              & 0.187984           & 0.062403                                & 0.029457                             & 0.193798           & 0.172093           & 0.215116           & 0.006977          & 0             \\
+      3              & 0.126240                              & 0.189550           & 0.062929                                & 0.028986                             & 0.190694           & 0.169336           & 0.211670           & 0.006865          & 0             \\
+      4              & 0.127252                              & 0.191066           & 0.063438                                & 0.028529                             & 0.187688           & 0.166667           & 0.208333           & 0.006757          & 0             \\
+      ...            & ...                                   & ...                & ...                                     & ...                                  & ...                & ...                & ...                & ...               & ...           \\
 
-      998 & 0.184995 & 0.277503 & 0.092486 & 0.001690 & 0.011121 & 0.009876 & 0.012345 & 0.000400 & 0.000801 \\
-      999 & 0.185000 & 0.277511 & 0.092489 & 0.001689 & 0.011111 & 0.009867 & 0.012333 & 0.000400 & 0.000800 \\
-      1000 & 0.185005 & 0.277519 & 0.092491 & 0.001687 & 0.011101 & 0.009857 & 0.012322 & 0.000400 & 0.000799 \\
-      1001 & 0.185010 & 0.277526 & 0.092494 & 0.001686 & 0.011090 & 0.009848 & 0.012310 & 0.000399 & 0.000799 \\
-      1002 & 0.185015 & 0.277534 & 0.092497 & 0.001684 & 0.011080 & 0.009839 & 0.012299 & 0.000399 & 0.000798 \\
-      
-      ... & ... & ... & ... & ... & ... & ... & ... & ... & ... \\
+      998            & 0.184995                              & 0.277503           & 0.092486                                & 0.001690                             & 0.011121           & 0.009876           & 0.012345           & 0.000400          & 0.000801      \\
+      999            & 0.185000                              & 0.277511           & 0.092489                                & 0.001689                             & 0.011111           & 0.009867           & 0.012333           & 0.000400          & 0.000800      \\
+      1000           & 0.185005                              & 0.277519           & 0.092491                                & 0.001687                             & 0.011101           & 0.009857           & 0.012322           & 0.000400          & 0.000799      \\
+      1001           & 0.185010                              & 0.277526           & 0.092494                                & 0.001686                             & 0.011090           & 0.009848           & 0.012310           & 0.000399          & 0.000799      \\
+      1002           & 0.185015                              & 0.277534           & 0.092497                                & 0.001684                             & 0.011080           & 0.009839           & 0.012299           & 0.000399          & 0.000798      \\
 
-      2151 & 0.186032 & 0.279053 & 0.093011 & 0.000803 & 0.005285 & 0.004693 & 0.005867 & 0.000190 & 0.000381 \\
-      2152 & 0.186034 & 0.279056 & 0.093012 & 0.000803 & 0.005283 & 0.004691 & 0.005864 & 0.000190 & 0.000380 \\
-      2153 & 0.186036 & 0.279059 & 0.093013 & 0.000803 & 0.005281 & 0.004689 & 0.005861 & 0.000190 & 0.000380 \\
-      2154 & 0.186038 & 0.279062 & 0.093014 & 0.000802 & 0.005278 & 0.004687 & 0.005859 & 0.000190 & 0.000380 \\
-      Total & 392.406327 & 588.652390 & 196.160264 & 6.520750 & 42.899672 & 38.094909 & 47.618636 & 1.537177 & 1.768627 \\
-      
+      ...            & ...                                   & ...                & ...                                     & ...                                  & ...                & ...                & ...                & ...               & ...           \\
+
+      2151           & 0.186032                              & 0.279053           & 0.093011                                & 0.000803                             & 0.005285           & 0.004693           & 0.005867           & 0.000190          & 0.000381      \\
+      2152           & 0.186034                              & 0.279056           & 0.093012                                & 0.000803                             & 0.005283           & 0.004691           & 0.005864           & 0.000190          & 0.000380      \\
+      2153           & 0.186036                              & 0.279059           & 0.093013                                & 0.000803                             & 0.005281           & 0.004689           & 0.005861           & 0.000190          & 0.000380      \\
+      2154           & 0.186038                              & 0.279062           & 0.093014                                & 0.000802                             & 0.005278           & 0.004687           & 0.005859           & 0.000190          & 0.000380      \\
+      Total          & 392.406327                            & 588.652390         & 196.160264                              & 6.520750                             & 42.899672          & 38.094909          & 47.618636          & 1.537177          & 1.768627      \\
     \end{tabular}
   \end{center}
 \end{table*}
@@ -768,7 +763,7 @@ Under this framework, users can not only pay for paper downloads but also receiv
 %本文深入探讨了去中心化自治组织（DAO）的框架，并就其在学术出版领域的潜在应用进行了详尽分析。通过将论文上链，我们实现了论文所有权的透明化，使作者能够完全拥有其作品，同时也为其创造了丰富的财务机会。DAO的自治性质使得用户能够直接参与决策和贡献，构建了一个开放、公正、具有良性循环的生态系统。
 %在这一框架下，用户不仅可以付费下载论文，还可以通过参与财务活动获得回报。这种新型的学术出版模式赋予了作者更大的创作自由，同时也激励了用户积极参与、贡献和分享知识。去中心化自治的设计为学术界带来了更加开放和公正的出版机制，突破了传统学术出版的限制。
 
-Once an article is recorded on the blockchain, it opens up endless possibilities for the future, and the application of DAOs is expected to become increasingly widespread. Starting with the initial use of tokens to govern proposals, the introduction of NFTs, and now the emergence of recursive inscriptions, we are witnessing the continuous development of new applications within the DAO ecosystem. 
+Once an article is recorded on the blockchain, it opens up endless possibilities for the future, and the application of DAOs is expected to become increasingly widespread. Starting with the initial use of tokens to govern proposals, the introduction of NFTs, and now the emergence of recursive inscriptions, we are witnessing the continuous development of new applications within the DAO ecosystem.
 These advancements indicate that the realm of DeSci can also benefit from these innovative applications. The integration of blockchain technology, NFTs, recursive inscriptions, and other emerging technologies within DeSci can revolutionize the way scientific research is conducted, incentivize collaboration, facilitate knowledge sharing, and enhance the overall efficiency and transparency of the scientific process. As the technological landscape continues to evolve, we can expect to see even more novel applications that will further enhance the capabilities and impact of DeSci.
 % 文章一旦上链，未来就有了无限可能，DAO的应用将会越来越广泛。从最初的token决定决策的权限，后面有了NFT的应用，现在又出现了递归铭文，越来越多新的应用都会出现，这些也势必可以应用在DeSci上。
 
@@ -779,11 +774,11 @@ These advancements indicate that the realm of DeSci can also benefit from these 
 
 \newpage
 
- 
+
 
 \begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{assets/thales.jpg}}]{Tai Jiang}
   received the master’s degree in Master of Business Administration from the University of Chinese Academy of Sciences, Beijing, in 2022, where he is currently pursuing the Ph.D. degree with the Institute of System Engineering, Macau University of Science and Technology, Macao, China.
-  
+
   he is with the Department of Engineering Science, Faculty of Innovation Engineering, Macau University of Science and Technology, Macao, 999078, China. His research interests include parallel intelligence, blockchain, DAOs, NFTs, Meta, and Decentralized Science.
 \end{IEEEbiography}
 
@@ -804,11 +799,11 @@ These advancements indicate that the realm of DeSci can also benefit from these 
 \vspace{-33pt}
 
 \begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{assets/FW.eps}}]{Fei-Yue Wang} (S’87–M’89–SM’94–F’03)
-received his Ph.D. degree in computer and systems engineering from the Rensselaer Polytechnic Institute, Troy, NY, USA, in 1990. He joined The University of Arizona in 1990 and became a Professor and the Director of the Robotics and Automation Laboratory and the Program in Advanced Research for Complex Systems. In 1999, he founded the Intelligent Control and Systems Engineering Center at the Institute of Automation, Chinese Academy of Sciences (CAS), Beijing, China, under the support of the Outstanding Chinese Talents Program from the State Planning Council, and in 2002, was appointed as the Director of the Key Laboratory of Complex Systems and Intelligence Science, CAS, and Vice President of Institute of Automation, CAS in 2006. He found CAS Center for Social Computing and Parallel Management in 2008, and became the State Specially Appointed Expert and the Founding Director of the State Key Laboratory for Management and Control of Complex Systems in 2011. He is a distinguished professor at the Macau University of Science and Technology.
+  received his Ph.D. degree in computer and systems engineering from the Rensselaer Polytechnic Institute, Troy, NY, USA, in 1990. He joined The University of Arizona in 1990 and became a Professor and the Director of the Robotics and Automation Laboratory and the Program in Advanced Research for Complex Systems. In 1999, he founded the Intelligent Control and Systems Engineering Center at the Institute of Automation, Chinese Academy of Sciences (CAS), Beijing, China, under the support of the Outstanding Chinese Talents Program from the State Planning Council, and in 2002, was appointed as the Director of the Key Laboratory of Complex Systems and Intelligence Science, CAS, and Vice President of Institute of Automation, CAS in 2006. He found CAS Center for Social Computing and Parallel Management in 2008, and became the State Specially Appointed Expert and the Founding Director of the State Key Laboratory for Management and Control of Complex Systems in 2011. He is a distinguished professor at the Macau University of Science and Technology.
 
-His current research focuses on methods and applications for parallel intelligence, social computing, and knowledge automation. He is a Fellow of International Council on Systems Engineering (INCOSE), International Federation of Automatic Control (IFAC), American Society of Mechanical Engineers (ASME), and American Association for the Advancement of Science (AAAS). In 2007, he received the National Prize in Natural Sciences of China, numerous best papers awards from IEEE Transactions, and became an Outstanding Scientist of Association for Computing Machinery(ACM) for his work in intelligent control and social computing. He received the IEEE Intelligent Transportation Systems (ITS) Outstanding Application and Research Awards in 2009, 2011, and 2015, respectively, the IEEE Systems, Man, and Cybernetics Society (SMC) Norbert Wiener Award in 2014, and became the IFAC Pavel J. Nowacki Distinguished Lecturer in 2021.
+  His current research focuses on methods and applications for parallel intelligence, social computing, and knowledge automation. He is a Fellow of International Council on Systems Engineering (INCOSE), International Federation of Automatic Control (IFAC), American Society of Mechanical Engineers (ASME), and American Association for the Advancement of Science (AAAS). In 2007, he received the National Prize in Natural Sciences of China, numerous best papers awards from IEEE Transactions, and became an Outstanding Scientist of Association for Computing Machinery(ACM) for his work in intelligent control and social computing. He received the IEEE Intelligent Transportation Systems (ITS) Outstanding Application and Research Awards in 2009, 2011, and 2015, respectively, the IEEE Systems, Man, and Cybernetics Society (SMC) Norbert Wiener Award in 2014, and became the IFAC Pavel J. Nowacki Distinguished Lecturer in 2021.
 
-Since 1997, he has been serving as the General or Program Chair of over 30 IEEE, Institute for Operations Research and the Management Sciences (INFORMS), IFAC, ACM, and ASME conferences. He was the President of the IEEE ITS Society from 2005 to 2007, the IEEE Council of Radio Frequency Identification (RFID) from 2019 to 2021, the Chinese Association for Science and Technology, USA, in 2005, the American Zhu Kezhen Education Foundation from 2007 to 2008, the Vice President of the ACM China Council from 2010 to 2011, the Vice President and the Secretary General of the Chinese Association of Automation (CAA) from 2008 to 2018, the Vice President of IEEE SMC from 2019 to 2021. He was the Founding Editor-in-Chief (EiC) of the International Journal of Intelligent Control and Systems from 1995 to 2000, IEEE ITS Magazine from 2006 to 2007, JOURNAL OF AUTOMATICA SINICA (IEEE/CAA) from 2014-2017, China's Journal of Command and Control from 2015-2021, and China's Journal of Intelligent Science and Technology from 2019 to 2021. He was the EiC of the IEEE Intelligent Systems from 2009 to 2012, IEEE TRANSACTIONS on ITS from 2009 to 2016, IEEE TRANSACTIONS ON COMPUTATIONAL SOCIAL SYSTEMS from 2017 to 2020. Currently, he is the President of CAA's Supervision Council, and the EiC of IEEE Trans. on Intelligent Vehicles.
+  Since 1997, he has been serving as the General or Program Chair of over 30 IEEE, Institute for Operations Research and the Management Sciences (INFORMS), IFAC, ACM, and ASME conferences. He was the President of the IEEE ITS Society from 2005 to 2007, the IEEE Council of Radio Frequency Identification (RFID) from 2019 to 2021, the Chinese Association for Science and Technology, USA, in 2005, the American Zhu Kezhen Education Foundation from 2007 to 2008, the Vice President of the ACM China Council from 2010 to 2011, the Vice President and the Secretary General of the Chinese Association of Automation (CAA) from 2008 to 2018, the Vice President of IEEE SMC from 2019 to 2021. He was the Founding Editor-in-Chief (EiC) of the International Journal of Intelligent Control and Systems from 1995 to 2000, IEEE ITS Magazine from 2006 to 2007, JOURNAL OF AUTOMATICA SINICA (IEEE/CAA) from 2014-2017, China's Journal of Command and Control from 2015-2021, and China's Journal of Intelligent Science and Technology from 2019 to 2021. He was the EiC of the IEEE Intelligent Systems from 2009 to 2012, IEEE TRANSACTIONS on ITS from 2009 to 2016, IEEE TRANSACTIONS ON COMPUTATIONAL SOCIAL SYSTEMS from 2017 to 2020. Currently, he is the President of CAA's Supervision Council, and the EiC of IEEE Trans. on Intelligent Vehicles.
 \end{IEEEbiography}
 
 
